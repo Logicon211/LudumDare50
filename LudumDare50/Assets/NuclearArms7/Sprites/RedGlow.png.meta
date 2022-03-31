@@ -1,0 +1,609 @@
+fileFormatVersion: 2
+guid: 27df1dc64f481304f821ffd5540333d7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5313941687634734116
+    second: RedGlow_0
+  - first:
+      213: -4832227526347263818
+    second: RedGlow_1
+  - first:
+      213: -6534882040225753505
+    second: RedGlow_2
+  - first:
+      213: 6716191483483461978
+    second: RedGlow_3
+  - first:
+      213: -8087959675909834860
+    second: RedGlow_4
+  - first:
+      213: 1207321911684864272
+    second: RedGlow_5
+  - first:
+      213: -1996115295673273007
+    second: RedGlow_6
+  - first:
+      213: 2833221727259057015
+    second: RedGlow_7
+  - first:
+      213: 373255315489259544
+    second: RedGlow_8
+  - first:
+      213: -1257972728887502082
+    second: RedGlow_9
+  - first:
+      213: -7465455625527135917
+    second: RedGlow_10
+  - first:
+      213: -4677326992324628139
+    second: RedGlow_11
+  - first:
+      213: 5825101527423806208
+    second: RedGlow_12
+  - first:
+      213: 7503240712327765118
+    second: RedGlow_13
+  - first:
+      213: 7637176484687980884
+    second: RedGlow_14
+  - first:
+      213: 595165211246242437
+    second: RedGlow_15
+  - first:
+      213: 8058246283760057688
+    second: RedGlow_16
+  - first:
+      213: 7315860282816720523
+    second: RedGlow_17
+  - first:
+      213: 7902519104582675180
+    second: RedGlow_18
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RedGlow_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42cab987fc9eeb940800000000000000
+      internalID: 5313941687634734116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGlow_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b0f432caaa70fcb0800000000000000
+      internalID: -4832227526347263818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGlow_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f56934f586f6f45a0800000000000000
+      internalID: -6534882040225753505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGlow_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5919800294b43d50800000000000000
+      internalID: 6716191483483461978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGlow_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497f5bfc68bc1cf80800000000000000
+      internalID: -8087959675909834860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGlow_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019958bc1e441c010800000000000000
+      internalID: 1207321911684864272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGlow_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155bba6e6bf5c44e0800000000000000
+      internalID: -1996115295673273007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGlow_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77bd13f5620a15720800000000000000
+      internalID: 2833221727259057015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGlow_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810834a5bb11e2500800000000000000
+      internalID: 373255315489259544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGlow_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa1885d778ca8ee0800000000000000
+      internalID: -1257972728887502082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGlow_10
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 351730a89af556890800000000000000
+      internalID: -7465455625527135917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGlow_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551f42cc1ebc61fb0800000000000000
+      internalID: -4677326992324628139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGlow_12
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b6eaaf9fae6d050800000000000000
+      internalID: 5825101527423806208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGlow_13
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c9b8a8cadd02860800000000000000
+      internalID: 7503240712327765118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGlow_14
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4592bc0ac83bcf960800000000000000
+      internalID: 7637176484687980884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGlow_15
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58aa0073b93724800800000000000000
+      internalID: 595165211246242437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGlow_16
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d3128fc44a4df60800000000000000
+      internalID: 8058246283760057688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGlow_17
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8eeda78a28278560800000000000000
+      internalID: 7315860282816720523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedGlow_18
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 22
+        width: 10
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea636b91436bad60800000000000000
+      internalID: 7902519104582675180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1fbf263c219835d46808d50047f12d8b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      RedGlow_9: -1257972728887502082
+      RedGlow_7: 2833221727259057015
+      RedGlow_4: -8087959675909834860
+      RedGlow_17: 7315860282816720523
+      RedGlow_8: 373255315489259544
+      RedGlow_11: -4677326992324628139
+      RedGlow_12: 5825101527423806208
+      RedGlow_16: 8058246283760057688
+      RedGlow_18: 7902519104582675180
+      RedGlow_0: 5313941687634734116
+      RedGlow_5: 1207321911684864272
+      RedGlow_10: -7465455625527135917
+      RedGlow_15: 595165211246242437
+      RedGlow_1: -4832227526347263818
+      RedGlow_14: 7637176484687980884
+      RedGlow_6: -1996115295673273007
+      RedGlow_3: 6716191483483461978
+      RedGlow_13: 7503240712327765118
+      RedGlow_2: -6534882040225753505
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

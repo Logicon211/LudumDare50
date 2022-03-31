@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - PowerUpController
+  - Garbage
+  - Rocket
+  - Wall
+  - Health Bar
+  - Cooldown Bar
+  - RadiationEffect
+  - PowerUpSpawner
+  - Fire
+  - ControlPanel
+  - Nuke
+  - SF_Door
+  - Weapon
+  - FxTemporaire
+  - Dialog
+  - RoomManager
+  - GlobalMusic
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - SpikeBall
+  - Player
+  - Terrain
+  - Enemies
+  - PlayerBullet
+  - EnemyBullet
+  - Obstacle
+  - Debris
+  - Weapon
+  - DialogPickup
+  - Podium
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 809460871
+    locked: 0
+  - name: Tiles
+    uniqueID: 1731781259
+    locked: 0
+  - name: Level
+    uniqueID: 3161532485
+    locked: 0
+  - name: Garbage
+    uniqueID: 1913095267
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Falling Garbage
+    uniqueID: 4287016455
+    locked: 0
+  - name: Fists
+    uniqueID: 267325641
+    locked: 0
+  - name: Falling Fists
+    uniqueID: 2917124279
+    locked: 0
+  - name: UI
+    uniqueID: 1626492625
+    locked: 0

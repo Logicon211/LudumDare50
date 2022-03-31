@@ -1,0 +1,70 @@
+Main brain room
+-Dome shaped room
+-sunglasses shaped window that looks outside
+	-Outside is a press conference where you are answering questions.
+	-camera flashes and shutter sounds.
+	-You can hear the question come in.
+-Memory cavern, descend to a door 
+-Tutorial about answer quality?
+
+Room 5: orphan overdrive
+Question: I heard you threw babies around in Europe while on vacation.
+Answer 1: I used to be on the football team, go sports team!
+Answer 2: How else do you deliver a baby?
+Answer 3: It’s an efficient delivery method, those orphans are happily homed
+Layout: find a hidden baby, but the sound of it’s crying.
+best answer is given to you when you put 3 babies through doors.
+Medium answer is 1 baby into a door.
+
+
+Room 1: weed
+Question: Why did you destroy all the weed man? (extremely high voice)
+Answer 1: I have no idea what youre talking about.
+Answer 2: It violated the neo-geneva convention.
+Answer 3: The weed were poison.
+Layout: Barrel asset with weed logo
+Building assets, climb building
+Best answer, break barrel pile and find: “poison answer”
+Medium answer: on top of the building
+
+
+Room 3: one room skeleton
+Question: Repairs to your spaceship cost our government almost all of its money, why were they so expensive?
+Answer 1: You gotta spend money to make money.
+Answer 2: Spaceships cost money to make and fly and stuff.
+Answer 3: I was attacked by communist skeletons!
+Layout: One room, phone that rings after 3 seconds. Skeletons with small aggro range at the end of the room.
+Best answer: behind skeletons, can be seen from the start.
+Medium answer: spawns when you answer the phone.
+
+
+
+Room 2: garbage day
+Question: (Waste Wizard) Why did you destroy my beautiful trash star
+Answer 1: I’m sorry
+Answer 2: It was going to crash into the earth!
+Answer 3:  I had to take out the trash.
+Layout: whatever shaped room filled with trash. When you break enough trash the medium spawns, more then the best spawns
+
+Room 4: underground bears
+Question: Should we be worried about the giants and their shadow government?
+Answer 1: Probably?
+Answer 2: Yes, every government has a shadow.
+Answer 3: No, I destroyed their bear army.
+Layout:  fight bears, really loud footsteps.
+Really long hallway, just a fuckton of bears, and they all run at you right away.
+Maybe a polar bear is holding the best answer, medium answer
+
+Room 6: waste wizards tricks
+Question: Some say you cheated to win a fight against a handsome wizard, how guilty do you plead?
+Answer 1: I thought you died?
+Answer 2: Guilty as charged.
+Answer 3: I’ve never fought a handsome wizard, only trash.
+Layout another trash room. Maybe robots that try to shoot you? Trash spawns from the ceiling. (sound of waste wizard?)
+
+Room 7: Railway to heaven
+Question: Do you have anything to say to intergalactic fugitive killjane
+Answer 1: Big
+Answer 2: 
+Answer 3: 
+Layout: robots that try to shoot you, shoot them, killing some drops medium, killing all drops best.
