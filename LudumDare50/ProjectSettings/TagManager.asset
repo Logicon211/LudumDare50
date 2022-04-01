@@ -31,7 +31,7 @@ TagManager:
   - UI
   - 
   - 
-  - SpikeBall
+  - 
   - Player
   - Terrain
   - Enemies
@@ -40,8 +40,8 @@ TagManager:
   - Obstacle
   - Debris
   - Weapon
-  - DialogPickup
-  - Podium
+  - 
+  - 
   - 
   - 
   - 
@@ -65,20 +65,8 @@ TagManager:
   - name: Level
     uniqueID: 3161532485
     locked: 0
-  - name: Garbage
-    uniqueID: 1913095267
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Falling Garbage
-    uniqueID: 4287016455
-    locked: 0
-  - name: Fists
-    uniqueID: 267325641
-    locked: 0
-  - name: Falling Fists
-    uniqueID: 2917124279
     locked: 0
   - name: UI
     uniqueID: 1626492625
