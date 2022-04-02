@@ -297,7 +297,7 @@ MonoBehaviour:
   robot: {fileID: 5482988459403848574, guid: b347015e5047ba94f9a951a40e05228c, type: 3}
   ninja: {fileID: 0}
   finalBoss: {fileID: 0}
-  spawnInterval: 3
+  spawnInterval: 30
   spawnPositions:
   - {fileID: 1329201439}
   - {fileID: 1050026197}
@@ -702,12 +702,12 @@ PrefabInstance:
     - target: {fileID: 2790180050343780154, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.75830233
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2790180050343780154, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.3471594
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2790180050343780154, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
@@ -748,6 +748,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: phaseInEffect
+      value: 
+      objectReference: {fileID: 156964, guid: 55d9dca6fda674649b3dc9a1089b5ebc, type: 3}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: levelStats.Array.data[0].damage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: levelStats.Array.data[1].damage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: levelStats.Array.data[2].damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: levelStats.Array.data[0].cooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: levelStats.Array.data[1].cooldown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: levelStats.Array.data[2].cooldown
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9a477d38bb6d1b4a9308a2556fb6321, type: 3}
