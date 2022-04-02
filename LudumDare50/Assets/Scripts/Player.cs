@@ -23,7 +23,12 @@ public class Player : MonoBehaviour
 
     private GameManager gameManager;
 
+    private AudioSource AS;
     private SpriteRenderer renderer;
+
+    public AudioClip xpSound;
+    public AudioClip levelUpSound;
+    public AudioClip healSound;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +38,7 @@ public class Player : MonoBehaviour
         currentPlayerHealth = maxPlayerHealth;
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         renderer = this.GetComponent<SpriteRenderer>();
+        AS = this.GetComponent<AudioSource>();
 
         xpbar.SetXP(currentPlayerXP/xpNeededToLevel);
     }
@@ -87,6 +93,9 @@ public class Player : MonoBehaviour
 
     public void Heal(float health) {
         currentPlayerHealth += health;
+        if(healSound) {
+            AS.PlayOneShot(healSound);
+        }
         if(currentPlayerHealth > maxPlayerHealth) {
             currentPlayerHealth = maxPlayerHealth;
         }
@@ -95,7 +104,13 @@ public class Player : MonoBehaviour
 
     public void GainXP(float xpGained) {
         currentPlayerXP += xpGained;
+        if(xpSound) {
+            AS.PlayOneShot(xpSound);
+        }
         if (currentPlayerXP >= xpNeededToLevel) {
+            if(levelUpSound) {
+                AS.PlayOneShot(levelUpSound);
+            }
             currentPlayerXP = currentPlayerXP - xpNeededToLevel;
             gameManager.LevelUp();
         }

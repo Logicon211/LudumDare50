@@ -303,3 +303,8 @@ MonoBehaviour:
   errorPurchaseNoise: {fileID: 0}
   volumeMax: 0.2
   levelUpMenu: {fileID: 0}
+  powerupObjects:
+  - {fileID: 2745701221698915687, guid: f9a477d38bb6d1b4a9308a2556fb6321, type: 3}
+  - {fileID: 4832150350835955376, guid: e7a982e44e8592e418f050c5154c0d27, type: 3}
+  inactivePowerups: []
+  activePowerups: []
