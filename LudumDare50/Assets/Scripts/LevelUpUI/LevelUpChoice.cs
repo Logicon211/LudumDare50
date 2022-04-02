@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class LevelUpChoice : MonoBehaviour
@@ -10,6 +11,10 @@ public class LevelUpChoice : MonoBehaviour
     public TMP_Text content;
 
     public LevelUpPopup levelUpPopup;
+
+    public Image buttonIcon;
+
+    public Sprite testSprite;
 
     // Start is called before the first frame update
     void Start()
@@ -30,11 +35,15 @@ public class LevelUpChoice : MonoBehaviour
         levelUpPopup.ClosePopUp();
     }
 
-    public TMP_Text getTitle() {
-        return title;
+    public void setTitle(string text) {
+        title.text = text;
     }
 
-    public TMP_Text getContent() {
-        return content;
+    public void setContent(string text) {
+        content.text = text;
+    }
+
+    public void setIcon() {
+        buttonIcon.sprite = testSprite;
     }
 }
