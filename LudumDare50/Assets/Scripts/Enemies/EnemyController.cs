@@ -32,19 +32,19 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
 
     public GameObject[] debris;
 
-    private float originalXScale;
     
     private Vector3 moveDir = Vector3.zero;
     private Vector3 velocity = Vector3.zero;
 
     private float attackCooldown = 0.5f;
     private float currentAttackCooldown = 0f;
+    private SpriteRenderer renderer;
     private void Awake() {
         enemyBody = GetComponent<Rigidbody2D>();
         audio = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player");
-        originalXScale = transform.localScale.x;
+        renderer = this.GetComponent<SpriteRenderer>();
     }
     
     private void Start()
@@ -132,9 +132,9 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
         Vector3 targetVelocity = new Vector2(tarX * 10f, tarY * 10f);
         enemyBody.velocity = Vector3.SmoothDamp(enemyBody.velocity, targetVelocity, ref velocity, movementSmoothing);
         if (targetVelocity.x < 0f) {
-            transform.localScale = new Vector3(originalXScale * -1, transform.localScale.y, transform.localScale.z);
+            renderer.flipX = true;
         } else {
-            transform.localScale = new Vector3(originalXScale, transform.localScale.y, transform.localScale.z);
+            renderer.flipX = false;
         }
     }
 

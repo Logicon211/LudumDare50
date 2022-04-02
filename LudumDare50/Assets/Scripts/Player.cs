@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
     private float xpNeededToLevel = 100f;
     private float currentPlayerXP = 0f;
     private float playerspeed = 5f;
-    private float originalXScale;
 
     private GameManager gameManager;
 
@@ -31,7 +30,6 @@ public class Player : MonoBehaviour
     {
         PlayerRigidBody = this.GetComponent<Rigidbody2D>();
         animator = this.GetComponent<Animator>();
-        originalXScale = transform.localScale.x;
         currentPlayerHealth = maxPlayerHealth;
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         renderer = this.GetComponent<SpriteRenderer>();
