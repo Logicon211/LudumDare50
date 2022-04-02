@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
 
     private GameManager gameManager;
 
+    private SpriteRenderer renderer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,9 @@ public class Player : MonoBehaviour
         originalXScale = transform.localScale.x;
         currentPlayerHealth = maxPlayerHealth;
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        renderer = this.GetComponent<SpriteRenderer>();
+
+        xpbar.SetXP(currentPlayerXP/xpNeededToLevel);
     }
 
     // Update is called once per frame
@@ -49,9 +54,11 @@ public class Player : MonoBehaviour
         }
 
         if (horizontalMove < 0f) {
-            transform.localScale = new Vector3(originalXScale * -1, transform.localScale.y, transform.localScale.z);
+            renderer.flipX = true;
+            // transform.localScale = new Vector3(originalXScale * -1, transform.localScale.y, transform.localScale.z);
         } else {
-            transform.localScale = new Vector3(originalXScale, transform.localScale.y, transform.localScale.z);
+            renderer.flipX = false;
+            // transform.localScale = new Vector3(originalXScale, transform.localScale.y, transform.localScale.z);
         }
 
         // DEBUG LEVEL UP:
@@ -81,7 +88,7 @@ public class Player : MonoBehaviour
     }
 
     public void GainXP(float xpGained) {
-        currentPlayerHealth += xpGained;
+        currentPlayerXP += xpGained;
         if (currentPlayerXP >= xpNeededToLevel) {
             currentPlayerXP = currentPlayerXP - xpNeededToLevel;
             gameManager.LevelUp();
