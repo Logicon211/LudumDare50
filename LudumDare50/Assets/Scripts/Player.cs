@@ -59,10 +59,10 @@ public class Player : MonoBehaviour
             // transform.localScale = new Vector3(originalXScale, transform.localScale.y, transform.localScale.z);
         }
 
-        // DEBUG LEVEL UP:
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            gameManager.LevelUp();
-        }
+        // // DEBUG LEVEL UP:
+        // if (Input.GetKeyDown(KeyCode.Space)) {
+        //     gameManager.LevelUp();
+        // }
     }
 
     void FixedUpdate()
