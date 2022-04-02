@@ -72,3 +72,6 @@ LudumDare50/[Aa]ssets/[Ss]treamingAssets/aa/*
 LudumDare50/ProjectSettings/UnityConnectSettings.asset
 LudumDare50/.vsconfig
 LudumDare50/ProjectSettings/EditorBuildSettings.asset
+
+*.history
+*.vscode

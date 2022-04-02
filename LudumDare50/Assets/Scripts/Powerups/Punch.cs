@@ -11,7 +11,7 @@ public class Punch : Powerup
 
   public override void UsePowerup() {
     Debug.Log("testestestest");
-    SpawnProjectile();
+    CheckForHit();
   }
 
   public void SpawnProjectile() {
