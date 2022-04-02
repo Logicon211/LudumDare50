@@ -11,16 +11,19 @@ public class Punch : Powerup
 
   public override void UsePowerup() {
 
-    SpawnProjectile();
+    SpawnProjectile(false);
+    if (GetLevel() == 2) {
+      SpawnProjectile(true);
+    }
   }
 
-  public void SpawnProjectile() {
+  public void SpawnProjectile(bool reverse) {
     Vector3 spawn = new Vector3(playerObject.transform.position.x + 1.5f, playerObject.transform.position.y , 0);
     GameObject projectile = Instantiate(punchProjectile, player.transform);
-    if (player.GetDirection() == "left") {
+    if (player.GetDirection() == "left" && !reverse || (reverse && player.GetDirection() == "right")) {
      spawn.x = spawn.x - 3f;
      projectile.transform.Rotate(new Vector3(0,180,0));
-     } 
+     }
     projectile.transform.position = spawn;
     projectile.transform.parent = gameArea.transform;
   }

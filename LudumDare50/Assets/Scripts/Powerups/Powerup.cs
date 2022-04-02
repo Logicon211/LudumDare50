@@ -5,7 +5,7 @@ public abstract class Powerup : MonoBehaviour {
 
     [SerializeField] protected string[] levelDescriptions;
     [SerializeField] protected Stats[] levelStats;
-    private int Level;
+    public int Level;
     [SerializeField] protected int level {
         get {
             return Level;
