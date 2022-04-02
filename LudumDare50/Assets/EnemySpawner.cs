@@ -14,8 +14,10 @@ public class EnemySpawner : MonoBehaviour
     public GameObject finalBoss;
     // Start is called before the first frame update
 
-    private float currentTime = 10f;
+    private float currentTime = 1f;
     public float spawnInterval = 10f;
+
+    public Transform[] spawnPositions;
     void Start()
     {
         
@@ -27,8 +29,10 @@ public class EnemySpawner : MonoBehaviour
         currentTime -= Time.deltaTime;
         if(currentTime <= 0f) {
             // TODO, Ramp up spawn times as the game progresses
-            Debug.Log("SPAWN STUFF");
             currentTime = spawnInterval;
+
+            int spawnPositionIndex = Random.Range(0, spawnPositions.Length);
+            Instantiate(robot, new Vector3(spawnPositions[spawnPositionIndex].position.x, spawnPositions[spawnPositionIndex].position.y, spawnPositions[spawnPositionIndex].position.z), Quaternion.identity);
         }
     }
 
