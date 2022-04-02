@@ -22,6 +22,7 @@ TagManager:
   - Dialog
   - RoomManager
   - GlobalMusic
+  - ProjectileArea
   layers:
   - Default
   - TransparentFX
