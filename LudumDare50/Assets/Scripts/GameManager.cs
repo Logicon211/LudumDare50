@@ -37,8 +37,14 @@ public class GameManager : MonoBehaviour {
 
 	public GameObject levelUpMenu;
 
-	private void Awake() {
+	public GameObject[] powerupObjects;
 
+	public List<Powerup> inactivePowerups = new List<Powerup>();
+	public List<Powerup> activePowerups = new List<Powerup>();
+
+	private void Awake() {
+		// Load powerups
+		LoadPowerups();
 	}
 
 	// Use this for initialization
@@ -232,5 +238,28 @@ public class GameManager : MonoBehaviour {
 
 	public bool IsPaused () {
 		return paused;
+	}
+
+	// Retrieves game objects and adds them to the inactive pool
+	public void LoadPowerups() {
+		foreach (GameObject g in powerupObjects) {
+			Powerup powerup = g.GetComponent<Powerup>();
+			if (powerup != null) {
+				if (!powerup.active)	inactivePowerups.Add(powerup);
+				else activePowerups.Add(powerup);
+			}
+		}
+	}
+
+	public void SetPowerupToActive(Powerup powerup) {
+		powerup.SetActive();
+		inactivePowerups.Remove(powerup);
+		activePowerups.Add(powerup);
+	}
+
+	public void SetPowerupToInactive(Powerup powerup) {
+		powerup.SetInactive();
+		activePowerups.Remove(powerup);
+		inactivePowerups.Add(powerup);
 	}
 }

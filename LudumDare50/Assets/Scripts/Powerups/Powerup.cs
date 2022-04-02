@@ -10,6 +10,7 @@ public abstract class Powerup : MonoBehaviour {
         [SerializeField] public float speed;
         [SerializeField] public float cooldown;
         [SerializeField] public int projectiles;
+        [SerializeField] public float projectileSpeed;
     }
     [SerializeField] protected string[] levelDescriptions;
     [SerializeField] protected stats[] levelStats;
@@ -29,16 +30,26 @@ public abstract class Powerup : MonoBehaviour {
     [SerializeField] protected int projectiles;
     [SerializeField] protected stats currentStats;
 
+    public bool active = false;
     float currentCooldown = 0f;
 
     void Start() {
         level = 0;
+        // Get player object/manager script
     }
 
     void FixedUpdate() {
-        if (CanPerformAction()) {
+        if (active && CanPerformAction()) {
             UsePowerup();
         }
+    }
+
+    public void SetActive() {
+        active = true;
+    }
+
+    public void SetInactive() {
+        active = false;
     }
 
     // Should only need to override this function
@@ -53,6 +64,10 @@ public abstract class Powerup : MonoBehaviour {
     }
 
     public void LevelUp(int numberOfLevels) {
+        if (level >= levelStats.Length) {
+            Debug.Log("Cannot level up anymore, already at max level");
+            return;
+        }
         level += numberOfLevels;
     }
 
@@ -87,6 +102,7 @@ public abstract class Powerup : MonoBehaviour {
     }
 
     // Probably will work, just a generic entry point that we might be able to hit to calculate damage
+    // If we can get a generic summary of the players current bonuses, it'll make calculating damage faster
     protected void DoDamage(GameObject target) {
         IDamageable<float> targetDamage = target.GetComponent<IDamageable<float>>();
 
