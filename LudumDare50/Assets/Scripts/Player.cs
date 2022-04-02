@@ -75,13 +75,21 @@ public class Player : MonoBehaviour
 
     public void Damage(float damage) {
         currentPlayerHealth -= damage;
-        if (currentPlayerHealth <= 0) {
+        // if (currentPlayerHealth <= 0) {
             
-        }
+        // }
         // health -= damageTaken;
         // if(damageTaken > 0f) {
         //     AS.PlayOneShot(hurtSound);
         // }
+        healthbar.SetHealth(currentPlayerHealth/maxPlayerHealth);
+    }
+
+    public void Heal(float health) {
+        currentPlayerHealth += health;
+        if(currentPlayerHealth > maxPlayerHealth) {
+            currentPlayerHealth = maxPlayerHealth;
+        }
         healthbar.SetHealth(currentPlayerHealth/maxPlayerHealth);
     }
 

@@ -28,6 +28,8 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
 
     private bool isDead = false;
 
+    public GameObject xpOrb;
+
     public Transform explodeLocation;
 
     public GameObject[] debris;
@@ -92,6 +94,7 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
         if(!isDead) {
             isDead = true;
             Instantiate(explosion, explodeLocation.position, Quaternion.identity);
+            Instantiate(xpOrb, explodeLocation.position, Quaternion.identity);
             // if(roomController) {
             //     roomController.DecrementAliveEnemyCount();
             // }
