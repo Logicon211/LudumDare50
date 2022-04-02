@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour {
 
 	private bool changeToShopMusic;
 
+	public GameObject levelUpMenu;
 
 	private void Awake() {
 
@@ -168,6 +169,16 @@ public class GameManager : MonoBehaviour {
 
 	public void disableLowPassFilter() {
 		lpFilter.enabled = false;
+	}
+
+	public void LevelUp() {
+		if (levelUpMenu) {
+			levelUpMenu.SetActive(true);
+			LevelUpPopup popUp = levelUpMenu.GetComponent<LevelUpPopup>();
+			popUp.PopUp();
+		} else {
+			Debug.Log("No level up menu set in scene, cant open menu...");
+		}
 	}
 
 	// public void DecreaseEnemyCount() {

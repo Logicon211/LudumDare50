@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     private float playerspeed = 5f;
     private float originalXScale;
 
+    private GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class Player : MonoBehaviour
         animator = this.GetComponent<Animator>();
         originalXScale = transform.localScale.x;
         currentPlayerHealth = maxPlayerHealth;
+        gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -46,6 +49,11 @@ public class Player : MonoBehaviour
         } else {
             transform.localScale = new Vector3(originalXScale, transform.localScale.y, transform.localScale.z);
         }
+        
+        // DEBUG LEVEL UP:
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            gameManager.LevelUp();
+        }
     }
 
     void FixedUpdate()
@@ -53,6 +61,7 @@ public class Player : MonoBehaviour
         //Get Movement unputs
         horizontalMove = Input.GetAxisRaw("Horizontal");
         verticalMove = Input.GetAxisRaw("Vertical");
+
     }
 
     public void Damage(float damage) {
