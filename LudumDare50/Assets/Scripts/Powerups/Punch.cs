@@ -10,12 +10,12 @@ public class Punch : Powerup
   public GameObject punchProjectile;
 
   public override void UsePowerup() {
-    Debug.Log("testestestest");
-    CheckForHit();
+    SpawnProjectile();
   }
 
   public void SpawnProjectile() {
-    Instantiate(punchProjectile, rightPunch.transform);
+    GameObject projectile = Instantiate(punchProjectile, rightPunch.transform);
+    projectile.transform.parent = gameArea.transform;
   }
   public void CheckForHit() {
     List<Collider2D> results = new List<Collider2D>();

@@ -15,17 +15,18 @@ public abstract class Powerup : MonoBehaviour {
             SetStats(Level);
         }
     }
-    [SerializeField] protected Stats currentStats;
+    [SerializeField] public Stats currentStats;
     [SerializeField] protected Sprite powerupIcon;
 
     [SerializeField] protected string powerupName = "";
 
+    public GameObject gameArea;
+
     public bool active = false;
     float currentCooldown = 0f;
-
     protected GameObject player;
-
     protected void Start() {
+        gameArea = GameObject.FindGameObjectWithTag("ProjectileArea");
         level = 0;
         player = GameObject.FindGameObjectWithTag("Player");
         // Get player object/manager script
@@ -97,15 +98,20 @@ public abstract class Powerup : MonoBehaviour {
 
     // Probably will work, just a generic entry point that we might be able to hit to calculate damage
     // If we can get a generic summary of the players current bonuses, it'll make calculating damage faster
-    protected void DoDamage(GameObject target, float damage) {
+    public void DoDamage(GameObject target, float damage) {
         IDamageable<float> targetDamage = target.GetComponent<IDamageable<float>>();
 
         // Get the players total bonus
 
         // Add total bonus to damage
-        targetDamage.Damage(damage);
+        if (targetDamage != null) {
+            Debug.Log(
+                damage
+            );
+            targetDamage.Damage(damage);
+        }
     }
-    protected void DoDamage(GameObject target) {
+    public void DoDamage(GameObject target) {
         DoDamage(target, currentStats.damage);
     }
 
