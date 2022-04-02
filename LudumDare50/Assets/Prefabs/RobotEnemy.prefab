@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 5482988459403848570}
   - component: {fileID: 6323187773283562239}
   - component: {fileID: 36503153}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RobotEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

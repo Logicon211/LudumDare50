@@ -23,8 +23,11 @@ public abstract class Powerup : MonoBehaviour {
     public bool active = false;
     float currentCooldown = 0f;
 
-    void Start() {
+    protected GameObject player;
+
+    protected void Start() {
         level = 0;
+        player = GameObject.FindGameObjectWithTag("Player");
         // Get player object/manager script
     }
 

@@ -49,9 +49,9 @@ MonoBehaviour:
   - Increase in laser width
   - Reduced Cooldown
   levelStats:
-  - damage: 0
+  - damage: 10
     speed: 0
-    cooldown: 0
+    cooldown: 3
     projectiles: 0
     projectileSpeed: 0
   - damage: 0
@@ -64,10 +64,6 @@ MonoBehaviour:
     cooldown: 0
     projectiles: 0
     projectileSpeed: 0
-  damage: 0
-  speed: 0
-  cooldown: 0
-  projectiles: 0
   currentStats:
     damage: 0
     speed: 0
@@ -77,3 +73,5 @@ MonoBehaviour:
   powerupIcon: {fileID: 21300000, guid: 22900421687d84a7d84229230e9c8944, type: 3}
   powerupName: Laser
   active: 0
+  laserArm: {fileID: 3677676972966338108, guid: 9a8b00b43ef67bf43b585d168552f967,
+    type: 3}

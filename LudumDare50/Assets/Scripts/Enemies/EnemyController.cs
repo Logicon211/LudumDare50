@@ -84,6 +84,7 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
             Kill();
         if (health > currentHealth) 
         {
+            Instantiate(hitEffect, transform.position, Quaternion.identity);
             var healthPercentage = currentHealth/health;
             spriteRenderer.color = new Color(1f, healthPercentage, healthPercentage);
         }
@@ -146,7 +147,7 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
             if (currentAttackCooldown <= 0f) {
                 Player player = other.gameObject.GetComponent<Player>();
                 player.Damage(attackDamage);
-                Instantiate(hitEffect, other.transform.position, Quaternion.identity);
+                // Instantiate(hitEffect, other.transform.position, Quaternion.identity);
                 currentAttackCooldown = attackCooldown;
             }
         }
