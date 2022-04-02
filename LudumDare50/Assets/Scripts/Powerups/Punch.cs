@@ -17,21 +17,4 @@ public class Punch : Powerup
     GameObject projectile = Instantiate(punchProjectile, rightPunch.transform);
     projectile.transform.parent = gameArea.transform;
   }
-  public void CheckForHit() {
-    List<Collider2D> results = new List<Collider2D>();
-    Transform punchTransform = rightPunch.transform;
-    Physics2D.OverlapBox(
-      new Vector2(punchTransform.position.x, punchTransform.position.y),
-      rightPunch.size,
-      0,
-      new ContactFilter2D(),
-      results
-    );
-    if (results.Count > 0) {
-      foreach (Collider2D enemy in results) {
-        DoDamage(enemy.gameObject, currentStats.damage);
-      }
-    }
-  }
-
 }
