@@ -12,9 +12,13 @@ public class Player : MonoBehaviour
     private Animator animator;
     // private Transform transform;
     public HealthBar healthbar;
+    public XPBar xpbar;
     
     private float maxPlayerHealth = 100f;
     private float currentPlayerHealth;
+
+    private float xpNeededToLevel = 100f;
+    private float currentPlayerXP = 0f;
     private float playerspeed = 5f;
     private float originalXScale;
 
@@ -49,7 +53,7 @@ public class Player : MonoBehaviour
         } else {
             transform.localScale = new Vector3(originalXScale, transform.localScale.y, transform.localScale.z);
         }
-        
+
         // DEBUG LEVEL UP:
         if (Input.GetKeyDown(KeyCode.Space)) {
             gameManager.LevelUp();
@@ -74,6 +78,15 @@ public class Player : MonoBehaviour
         //     AS.PlayOneShot(hurtSound);
         // }
         healthbar.SetHealth(currentPlayerHealth/maxPlayerHealth);
+    }
+
+    public void GainXP(float xpGained) {
+        currentPlayerHealth += xpGained;
+        if (currentPlayerXP >= xpNeededToLevel) {
+            currentPlayerXP = currentPlayerXP - xpNeededToLevel;
+            gameManager.LevelUp();
+        }
+        xpbar.SetXP(currentPlayerXP/xpNeededToLevel);
     }
 
     public float GetHealth() {
