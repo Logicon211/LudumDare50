@@ -74,6 +74,7 @@ public abstract class Powerup : MonoBehaviour {
         currentStats.speed = levelStats[newLevel].speed;
         currentStats.cooldown = levelStats[newLevel].cooldown;
         currentStats.projectiles = levelStats[newLevel].projectiles;
+        currentStats.projectileSpeed = levelStats[newLevel].projectileSpeed;
     }
 
     public string GetPowerupLevelDescription(int level) {

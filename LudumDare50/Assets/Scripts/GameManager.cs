@@ -189,6 +189,13 @@ public class GameManager : MonoBehaviour {
 
 			levelUpMenu.SetActive(true);
 			LevelUpPopup popUp = levelUpMenu.GetComponent<LevelUpPopup>();
+			enableLowPassFilter();
+			// Disable constant laser sounds while this pop up is here:
+			GameObject[] laserObjects = GameObject.FindGameObjectsWithTag("Laser");
+			foreach(GameObject laser in laserObjects) {
+				AudioSource audio = laser.GetComponent<AudioSource>();
+				audio.Stop();
+			}
 			popUp.PopUp(powerupList);
 		} else {
 			Debug.Log("No level up menu set in scene, cant open menu...");

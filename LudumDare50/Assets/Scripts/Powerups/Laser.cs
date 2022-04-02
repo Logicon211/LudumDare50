@@ -23,7 +23,13 @@ public class Laser : Powerup
         }
 
         if(closest) {
-            Vector3 direction = closest.transform.position - player.transform.position;
+            // Generating a random area slightly around the player instead of directly on top
+            float xOffset = Random.Range(-2f, 2f);
+            float yOffset = Random.Range(-2f, 2f);
+
+            Vector3 offsetPosition = new Vector3(player.transform.position.x + xOffset, player.transform.position.y + yOffset, player.transform.position.z);
+
+            Vector3 direction = closest.transform.position - offsetPosition;
             direction.Normalize();
 
             // if (direction != Vector2.zero)
@@ -32,8 +38,8 @@ public class Laser : Powerup
             Quaternion rotationAmount = Quaternion.Euler(0, 0, 90);
             Quaternion postRotation = rotation * rotationAmount;
             // }
-            Instantiate(phaseInEffect, player.transform.position, Quaternion.identity);
-            GameObject createdArm = Instantiate(laserArm, player.transform.position, postRotation);
+            Instantiate(phaseInEffect, offsetPosition, Quaternion.identity);
+            GameObject createdArm = Instantiate(laserArm, offsetPosition, postRotation);
             if (postRotation.eulerAngles.z > 90 && postRotation.eulerAngles.z < 270) {
                 SpriteRenderer renderer = createdArm.GetComponent<SpriteRenderer>();
                 renderer.flipY = true;

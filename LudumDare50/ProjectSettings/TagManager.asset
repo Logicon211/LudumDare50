@@ -23,6 +23,7 @@ TagManager:
   - RoomManager
   - GlobalMusic
   - ProjectileArea
+  - Laser
   layers:
   - Default
   - TransparentFX

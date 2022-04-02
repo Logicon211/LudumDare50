@@ -8,6 +8,11 @@ public class LevelUpPopup : MonoBehaviour
 	public LevelUpChoice choice1;
 	public LevelUpChoice choice2;
 	public LevelUpChoice choice3;
+
+	private GameManager gameManager;
+	void Start() {
+		gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+	}
 	public void PopUp (Powerup[] powerupList) {
 		if (powerupList[0]) {
 			choice1.setPowerUp(powerupList[0]);
@@ -35,6 +40,7 @@ public class LevelUpPopup : MonoBehaviour
 
 	public void ClosePopUp() {
 		gameObject.SetActive(false);
+		gameManager.disableLowPassFilter();
 	}
 
 }
