@@ -30,7 +30,7 @@ public abstract class Powerup : MonoBehaviour {
     [SerializeField] protected int projectiles;
     [SerializeField] protected stats currentStats;
 
-    bool active = false;
+    public bool active = false;
     float currentCooldown = 0f;
 
     void Start() {
