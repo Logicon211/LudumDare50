@@ -61,7 +61,6 @@ public abstract class Powerup : MonoBehaviour {
             Debug.Log("No stats for that level");
             return;
         }
-        Debug.Log("yrdyrdy");
         currentStats.damage = levelStats[newLevel].damage;
         currentStats.speed = levelStats[newLevel].speed;
         currentStats.cooldown = levelStats[newLevel].cooldown;
