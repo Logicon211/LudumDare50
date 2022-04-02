@@ -30,6 +30,7 @@ public abstract class Powerup : MonoBehaviour {
     [SerializeField] protected int projectiles;
     [SerializeField] protected stats currentStats;
 
+    bool active = false;
     float currentCooldown = 0f;
 
     void Start() {
@@ -38,9 +39,17 @@ public abstract class Powerup : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        if (CanPerformAction()) {
+        if (active && CanPerformAction()) {
             UsePowerup();
         }
+    }
+
+    public void SetActive() {
+        active = true;
+    }
+
+    public void SetInactive() {
+        active = false;
     }
 
     // Should only need to override this function
