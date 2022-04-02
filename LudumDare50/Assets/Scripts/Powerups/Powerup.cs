@@ -30,7 +30,9 @@ public abstract class Powerup : MonoBehaviour {
     [SerializeField] protected float cooldown;
     [SerializeField] protected int projectiles;
     [SerializeField] protected stats currentStats;
-    [SerializeField] protected Image powerupIcon;
+    [SerializeField] protected Sprite powerupIcon;
+
+    [SerializeField] protected string powerupName = "";
 
     public bool active = false;
     float currentCooldown = 0f;
@@ -85,10 +87,11 @@ public abstract class Powerup : MonoBehaviour {
     }
 
     public string GetPowerupLevelDescription(int level) {
+        Debug.Log("Calling get description with index " + level);
         if (levelDescriptions.Length == 0) {
             return "No description";
         }
-        if (levelDescriptions.Length > level) {
+        if (levelDescriptions.Length < level) {
             return levelDescriptions[levelDescriptions.GetUpperBound(0)];
         }
         return levelDescriptions[level - 1];
@@ -112,5 +115,13 @@ public abstract class Powerup : MonoBehaviour {
 
         // Add total bonus to damage
         targetDamage.Damage(damage);
+    }
+
+    public string getPowerupName() {
+        return powerupName;
+    }
+
+    public Sprite getPowerupIcon() {
+        return powerupIcon;
     }
 }

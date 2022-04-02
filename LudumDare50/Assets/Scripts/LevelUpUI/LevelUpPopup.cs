@@ -8,19 +8,27 @@ public class LevelUpPopup : MonoBehaviour
 	public LevelUpChoice choice1;
 	public LevelUpChoice choice2;
 	public LevelUpChoice choice3;
-	public void PopUp () {
-		// TODO: Generate the new level up list
-		choice1.setTitle("TITLE FOR ONE");
-		choice2.setTitle("TITLE FOR TWO");
-		choice3.setTitle("title for three how long can I go");
+	public void PopUp (Powerup[] powerupList) {
+		if (powerupList[0]) {
+			choice1.setPowerUp(powerupList[0]);
+			choice1.setTitle(powerupList[0].getPowerupName());
+			choice1.setContent(powerupList[0].GetPowerupLevelDescription(powerupList[0].GetLevel()+1));
+			choice1.setIcon(powerupList[0].getPowerupIcon());
+		}
 
-		choice1.setContent("CONTENT FOR ONE");
-		choice2.setContent("The content on the second one");
-		choice3.setContent("How much text can I put in the third one and it not go crazy how much longer can I go oh my god I hope I don't need this much text");
+		if (powerupList[1]) {
+			choice2.setPowerUp(powerupList[1]);
+			choice2.setTitle(powerupList[1].getPowerupName());
+			choice2.setContent(powerupList[1].GetPowerupLevelDescription(powerupList[1].GetLevel()+1));
+			choice2.setIcon(powerupList[1].getPowerupIcon());
+		}
 
-		choice1.setIcon();
-		choice2.setIcon();
-		choice3.setIcon();
+		if (powerupList[2]) {
+			choice3.setPowerUp(powerupList[2]);
+			choice3.setTitle(powerupList[2].getPowerupName());
+			choice3.setContent(powerupList[2].GetPowerupLevelDescription(powerupList[2].GetLevel()+1));
+			choice3.setIcon(powerupList[2].getPowerupIcon());
+		}
 
 		Time.timeScale = 0f;
 	}

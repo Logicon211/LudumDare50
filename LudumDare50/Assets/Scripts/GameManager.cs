@@ -179,9 +179,17 @@ public class GameManager : MonoBehaviour {
 
 	public void LevelUp() {
 		if (levelUpMenu) {
+			// Generate 3 level up choices;
+			Powerup[] powerupList = new Powerup[3];
+			for (int i = 0; i < 3; i++) {
+				int randomSelection = Random.Range(0, powerupObjects.Length - 0);
+				Debug.Log("Chose Index: " + randomSelection);
+				powerupList[i] = powerupObjects[randomSelection].GetComponent<Powerup>();
+			}
+
 			levelUpMenu.SetActive(true);
 			LevelUpPopup popUp = levelUpMenu.GetComponent<LevelUpPopup>();
-			popUp.PopUp();
+			popUp.PopUp(powerupList);
 		} else {
 			Debug.Log("No level up menu set in scene, cant open menu...");
 		}

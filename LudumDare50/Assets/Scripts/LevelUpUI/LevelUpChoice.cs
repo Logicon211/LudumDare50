@@ -16,6 +16,8 @@ public class LevelUpChoice : MonoBehaviour
 
     public Sprite testSprite;
 
+    private Powerup powerup;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,11 @@ public class LevelUpChoice : MonoBehaviour
     public void ChooseLevelUp() {
         // TODO: Put some logic here on level up selection
         Debug.Log("Chose level up title: " + title.text);
+        if(powerup) {
+            powerup.LevelUp(1);
+        } else {
+            Debug.Log("ERROR: no powerup associated...");
+        }
         Time.timeScale = 1f;
         levelUpPopup.ClosePopUp();
     }
@@ -43,7 +50,11 @@ public class LevelUpChoice : MonoBehaviour
         content.text = text;
     }
 
-    public void setIcon() {
-        buttonIcon.sprite = testSprite;
+    public void setIcon(Sprite spriteIcon) {
+        buttonIcon.sprite = spriteIcon;
+    }
+
+    public void setPowerUp(Powerup powerupIn) {
+        powerup = powerupIn;
     }
 }

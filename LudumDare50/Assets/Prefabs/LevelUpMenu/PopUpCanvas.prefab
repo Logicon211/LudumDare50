@@ -298,8 +298,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7fe64a415fc8cc745adbf69c2eeb4233, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: fae488cb592f349298fcacc3012bd0da, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -431,6 +431,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7675927588573158447}
     m_Modifications:
+    - target: {fileID: 1825295798016068436, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295798016068436, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: efcf06717affc4fe28360a42e448a01e,
+        type: 3}
     - target: {fileID: 1825295798016068437, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -446,6 +457,42 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: LevelUpChoice, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 1825295798016068438, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 104.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295798016068438, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 104.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295798016068438, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 146.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295798016068438, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295798700679172, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -36.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295799994394332, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295799994394332, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 527038d03713948afa078942fac4c09b,
+        type: 3}
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
       propertyPath: m_Pivot.x
@@ -484,12 +531,12 @@ PrefabInstance:
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 431.35
+      value: 470.36
       objectReference: {fileID: 0}
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 164.56
+      value: 188.45
       objectReference: {fileID: 0}
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
@@ -529,12 +576,12 @@ PrefabInstance:
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 2.8
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 174.3
+      value: 179.08
       objectReference: {fileID: 0}
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
@@ -555,6 +602,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelUpOption1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295800039805155, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -91.1
       objectReference: {fileID: 0}
     - target: {fileID: 2459107173602590754, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
@@ -605,6 +657,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7675927588573158447}
     m_Modifications:
+    - target: {fileID: 1825295798016068436, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295798016068436, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: efcf06717affc4fe28360a42e448a01e,
+        type: 3}
     - target: {fileID: 1825295798016068437, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -620,6 +683,32 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: LevelUpChoice, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 1825295798016068438, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 104.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295798016068438, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 104.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295798700679172, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -34.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295799994394332, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295799994394332, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 527038d03713948afa078942fac4c09b,
+        type: 3}
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
       propertyPath: m_Pivot.x
@@ -658,12 +747,12 @@ PrefabInstance:
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 431.35
+      value: 474.25
       objectReference: {fileID: 0}
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 164.56
+      value: 197.73
       objectReference: {fileID: 0}
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
@@ -703,12 +792,12 @@ PrefabInstance:
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 2.8
+      value: -1.9351
       objectReference: {fileID: 0}
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -187.6
+      value: -184.11
       objectReference: {fileID: 0}
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
@@ -729,6 +818,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelUpOption3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295800039805155, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -82.3
       objectReference: {fileID: 0}
     - target: {fileID: 2459107173602590754, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
@@ -779,6 +873,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7675927588573158447}
     m_Modifications:
+    - target: {fileID: 1825295798016068436, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295798016068436, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: efcf06717affc4fe28360a42e448a01e,
+        type: 3}
     - target: {fileID: 1825295798016068437, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -794,6 +899,42 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: LevelUpChoice, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 1825295798016068438, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 104.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295798016068438, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 104.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295798016068438, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 145.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295798016068438, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295798700679172, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -35.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295799994394332, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295799994394332, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 527038d03713948afa078942fac4c09b,
+        type: 3}
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
       propertyPath: m_Pivot.x
@@ -832,12 +973,12 @@ PrefabInstance:
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 431.35
+      value: 470.36
       objectReference: {fileID: 0}
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 164.56
+      value: 192.49
       objectReference: {fileID: 0}
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
@@ -877,12 +1018,12 @@ PrefabInstance:
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 2.8
+      value: 0.0087414
       objectReference: {fileID: 0}
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3.9
+      value: 0.47
       objectReference: {fileID: 0}
     - target: {fileID: 1825295799994394333, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
@@ -903,6 +1044,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelUpOption2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825295800039805155, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -89.3
       objectReference: {fileID: 0}
     - target: {fileID: 2459107173602590754, guid: 3140e4ddd30ec2248a05ef622cb08dcf,
         type: 3}
