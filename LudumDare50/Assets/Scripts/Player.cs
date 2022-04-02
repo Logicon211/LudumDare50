@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D PlayerRigidBody;
     private Animator animator;
     // private Transform transform;
+    public HealthBar healthbar;
     
     private float maxPlayerHealth = 100f;
     private float currentPlayerHealth;
@@ -54,7 +55,7 @@ public class Player : MonoBehaviour
         verticalMove = Input.GetAxisRaw("Vertical");
     }
 
-    void TakeDamage(float damage) {
+    public void Damage(float damage) {
         currentPlayerHealth -= damage;
         if (currentPlayerHealth <= 0) {
             
@@ -63,7 +64,7 @@ public class Player : MonoBehaviour
         // if(damageTaken > 0f) {
         //     AS.PlayOneShot(hurtSound);
         // }
-        // healthbar.SetHealth(health/maxHealth);
+        healthbar.SetHealth(currentPlayerHealth/maxPlayerHealth);
     }
 
     public float GetHealth() {

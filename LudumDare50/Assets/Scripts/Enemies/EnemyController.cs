@@ -36,6 +36,9 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
     
     private Vector3 moveDir = Vector3.zero;
     private Vector3 velocity = Vector3.zero;
+
+    private float attackCooldown = 0.5f;
+    private float currentAttackCooldown = 0f;
     private void Awake() {
         enemyBody = GetComponent<Rigidbody2D>();
         audio = GetComponent<AudioSource>();
@@ -52,7 +55,9 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
 
      private void Update () {
         // float dist = Vector3.Distance(player.transform.position, transform.position);
-        // currentAttackCooldown -= Time.deltaTime;
+        if (currentAttackCooldown > 0f) {
+            currentAttackCooldown -= Time.deltaTime;
+        }
         // if (dist > maxDistance) {
         //     move = true;
         // }
@@ -132,5 +137,25 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
             transform.localScale = new Vector3(originalXScale, transform.localScale.y, transform.localScale.z);
         }
     }
+
+    private void OnCollisionStay2D(Collision2D other) {
+        if (other.gameObject.tag == "Player") {
+            if (currentAttackCooldown <= 0f) {
+                Player player = other.gameObject.GetComponent<Player>();
+                player.Damage(attackDamage);
+                Instantiate(hitEffect, other.transform.position, Quaternion.identity);
+                currentAttackCooldown = attackCooldown;
+            }
+        }
+    }
+    // void OnTriggerEnter2D(Collider2D other)
+	// {   
+    //     if (other.gameObject.tag == "Player") {
+    //         CraigController craig = other.gameObject.GetComponent<CraigController>();
+    //         craig.Damage(damage);
+    //     }
+	// 	Instantiate(hitEffect, transform.position, Quaternion.identity);
+	// 	Destroy(gameObject);
+	// }
 
 }
