@@ -1,20 +1,10 @@
 using UnityEngine;
 using Enemy.Interface;
-using System;
-using UnityEngine.UI;
 
 public abstract class Powerup : MonoBehaviour {
 
-    [Serializable]
-    protected struct stats {
-        [SerializeField] public float damage;
-        [SerializeField] public float speed;
-        [SerializeField] public float cooldown;
-        [SerializeField] public int projectiles;
-        [SerializeField] public float projectileSpeed;
-    }
     [SerializeField] protected string[] levelDescriptions;
-    [SerializeField] protected stats[] levelStats;
+    [SerializeField] protected Stats[] levelStats;
     private int Level;
     [SerializeField] protected int level {
         get {
@@ -25,7 +15,7 @@ public abstract class Powerup : MonoBehaviour {
             SetStats(Level);
         }
     }
-    [SerializeField] protected stats currentStats;
+    [SerializeField] protected Stats currentStats;
     [SerializeField] protected Sprite powerupIcon;
 
     [SerializeField] protected string powerupName = "";
