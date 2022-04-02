@@ -7,10 +7,15 @@ public class Punch : Powerup
   public BoxCollider2D leftPunch;
   string[] allowedDirections = new string[]{"left", "right"};
   string currentDirection = "down";
+  public GameObject punchProjectile;
 
   public override void UsePowerup() {
     Debug.Log("testestestest");
-    CheckForHit();
+    SpawnProjectile();
+  }
+
+  public void SpawnProjectile() {
+    Instantiate(punchProjectile, rightPunch.transform);
   }
   public void CheckForHit() {
     List<Collider2D> results = new List<Collider2D>();
