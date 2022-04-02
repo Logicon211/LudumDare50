@@ -173,7 +173,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 27e8a92a0bfb5434ab2fdd0b716000e7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5d7f75549e81e2148a55aafc11b926b4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d254bff799dd1c40aa3a09f585f09ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainTheme: {fileID: 8300000, guid: 27e8a92a0bfb5434ab2fdd0b716000e7, type: 3}
+  mainTheme: {fileID: 8300000, guid: 5d7f75549e81e2148a55aafc11b926b4, type: 3}
   finalBossTheme: {fileID: 8300000, guid: 2aa0fa93dbe3c0c46bf5a66fa6ec6f70, type: 3}
   midBossTheme: {fileID: 8300000, guid: 6b1936cccba520e4ca1b25821c555884, type: 3}
   shopTheme: {fileID: 1688189897099913927}
@@ -304,7 +304,7 @@ MonoBehaviour:
   volumeMax: 0.2
   levelUpMenu: {fileID: 0}
   powerupObjects:
-  - {fileID: 2745701221698915687, guid: f9a477d38bb6d1b4a9308a2556fb6321, type: 3}
-  - {fileID: 4832150350835955376, guid: e7a982e44e8592e418f050c5154c0d27, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
   inactivePowerups: []
   activePowerups: []

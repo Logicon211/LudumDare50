@@ -292,11 +292,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnLocations: []
-  bear: {fileID: 0}
-  skeleton: {fileID: 0}
+  bear: {fileID: 2551079741640418554, guid: 9cd607ca28fc35d4c93623c65eef123f, type: 3}
+  skeleton: {fileID: 4688262954328425720, guid: 3b1a551da2d05f847893a177c6ad933a,
+    type: 3}
   robot: {fileID: 5482988459403848574, guid: b347015e5047ba94f9a951a40e05228c, type: 3}
   ninja: {fileID: 0}
-  finalBoss: {fileID: 0}
+  finalBoss: {fileID: 589205886286965695, guid: 0a65f327e49eab74394a1baed601336b,
+    type: 3}
   spawnInterval: 30
   spawnPositions:
   - {fileID: 1329201439}
@@ -777,7 +779,7 @@ PrefabInstance:
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[0].cooldown
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
