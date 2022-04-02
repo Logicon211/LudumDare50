@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fecab55e19ee0264fab98af5a24646f1
+guid: cd01446864286c64fbd3b47d529076da
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 360
+  spritePixelsToUnits: 174
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,379 +128,421 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RunningCraig_0
+      name: spritesheet_robotsSide_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 360
-        width: 360
-        height: 360
+        y: 716
+        width: 192
+        height: 163
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 295599418160cd044920f810e795a665
-      internalID: -1701756488
+      spriteID: 1875a8a719f709341b1468f439439787
+      internalID: -591521622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RunningCraig_1
+      name: spritesheet_robotsSide_1
       rect:
         serializedVersion: 2
-        x: 360
-        y: 360
-        width: 360
-        height: 360
+        x: 192
+        y: 716
+        width: 192
+        height: 163
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49f598288a714124e997b0cd9b5957aa
-      internalID: 967988355
+      spriteID: 13f44f85f2b1c8646ba2a3c168701f40
+      internalID: -682118934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RunningCraig_2
+      name: spritesheet_robotsSide_2
       rect:
         serializedVersion: 2
-        x: 720
-        y: 360
-        width: 360
-        height: 360
+        x: 384
+        y: 716
+        width: 192
+        height: 163
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 150bfd09fe801584eb0305110d4eb780
-      internalID: -1050229708
+      spriteID: aee376c39b578d944aecdaa28976a770
+      internalID: -1691195801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RunningCraig_3
+      name: spritesheet_robotsSide_3
       rect:
         serializedVersion: 2
-        x: 1080
-        y: 360
-        width: 360
-        height: 360
+        x: 576
+        y: 716
+        width: 192
+        height: 163
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3de5006926048574f8965e7f0c403e6b
-      internalID: -25766394
+      spriteID: 2072295235617fc418b096df55146f7c
+      internalID: 1408655473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RunningCraig_4
-      rect:
-        serializedVersion: 2
-        x: 1440
-        y: 360
-        width: 360
-        height: 360
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 928fda2c3cca26f4fabe78b9a478a276
-      internalID: 1120886775
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RunningCraig_5
-      rect:
-        serializedVersion: 2
-        x: 1800
-        y: 360
-        width: 360
-        height: 360
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 855cfec68f5e6e44798dd7f0bbd57b8e
-      internalID: -663279600
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RunningCraig_6
-      rect:
-        serializedVersion: 2
-        x: 2160
-        y: 360
-        width: 360
-        height: 360
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce763cb643cac8a4183860fae13c4506
-      internalID: 397023243
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RunningCraig_7
-      rect:
-        serializedVersion: 2
-        x: 2520
-        y: 360
-        width: 360
-        height: 360
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0ae3cbbc328d174fb2fb0dd76b64a89
-      internalID: -2065966661
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RunningCraig_8
-      rect:
-        serializedVersion: 2
-        x: 2880
-        y: 360
-        width: 360
-        height: 360
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 59e758312b8cfa54eaaf615eea383904
-      internalID: 576962171
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RunningCraig_9
-      rect:
-        serializedVersion: 2
-        x: 3240
-        y: 360
-        width: 360
-        height: 360
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ce062667af5a3f42ba10af5a134d63b
-      internalID: 207190114
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RunningCraig_10
+      name: spritesheet_robotsSide_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 360
-        height: 360
+        y: 553
+        width: 192
+        height: 163
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 996862ca91079b6428d67f7456b69cd8
-      internalID: 1593760819
+      spriteID: d1c840659af84bb44a14b87f7385c28e
+      internalID: 105852179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RunningCraig_11
+      name: spritesheet_robotsSide_5
       rect:
         serializedVersion: 2
-        x: 360
-        y: 0
-        width: 360
-        height: 360
+        x: 192
+        y: 553
+        width: 192
+        height: 163
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 291e6367734c3d14ea46e57927a4778c
-      internalID: -1539939495
+      spriteID: 6fb24656e1a890f4495db63ca21ed848
+      internalID: 490733518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RunningCraig_12
+      name: spritesheet_robotsSide_6
       rect:
         serializedVersion: 2
-        x: 720
-        y: 0
-        width: 350
-        height: 360
-      alignment: 9
-      pivot: {x: 0.51, y: 0.5}
+        x: 384
+        y: 553
+        width: 192
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed3df6481f4507e4e9b94d8766075329
-      internalID: -161759049
+      spriteID: e2bacec45751d124fb3eca77a9b62af0
+      internalID: -993121022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RunningCraig_13
+      name: spritesheet_robotsSide_7
       rect:
         serializedVersion: 2
-        x: 1080
-        y: 0
-        width: 360
-        height: 360
+        x: 576
+        y: 553
+        width: 192
+        height: 163
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d16398904af5e6409f6651a05430e7c
-      internalID: 377378061
+      spriteID: 365e9a07568374f438989bc5ea3a2a03
+      internalID: -1375331189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RunningCraig_14
+      name: spritesheet_robotsSide_8
       rect:
         serializedVersion: 2
-        x: 1440
-        y: 0
-        width: 360
-        height: 360
+        x: 0
+        y: 390
+        width: 192
+        height: 163
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73a018d58e7fa744c91c084a66e784ed
-      internalID: 79214713
+      spriteID: 15de14f827f391845b8ae3d7ad3d018d
+      internalID: -835926332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RunningCraig_15
+      name: spritesheet_robotsSide_9
       rect:
         serializedVersion: 2
-        x: 1800
-        y: 0
-        width: 360
-        height: 360
+        x: 192
+        y: 390
+        width: 192
+        height: 163
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 590f7d0afec89874f96cb05bf5be2418
-      internalID: 1718876922
+      spriteID: dfb0a1f8c67e29a4ea178055daa81cbb
+      internalID: 625395518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RunningCraig_16
+      name: spritesheet_robotsSide_10
       rect:
         serializedVersion: 2
-        x: 2160
-        y: 0
-        width: 360
-        height: 360
+        x: 384
+        y: 390
+        width: 192
+        height: 163
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b3c4ed9c2067d44d90bc3ebfcefbb95
-      internalID: -445911135
+      spriteID: 7b84be73b9515b448bd28a8ff02a4393
+      internalID: -2026689145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RunningCraig_17
+      name: spritesheet_robotsSide_11
       rect:
         serializedVersion: 2
-        x: 3240
-        y: 0
-        width: 360
-        height: 360
+        x: 576
+        y: 390
+        width: 192
+        height: 163
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1e3699d06721fc4a83b441ff60c87a6
-      internalID: -1108276628
+      spriteID: 329f83db40ab30d4d9a30451e01525ef
+      internalID: 825688636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_robotsSide_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 227
+        width: 192
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63d2b5f5aad1e94da5d233cde85b5fa
+      internalID: -291142683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_robotsSide_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 227
+        width: 192
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2386897155ebfbb4c8533eff58430405
+      internalID: 1845237974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_robotsSide_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 227
+        width: 192
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b965bac632d497747a31a9cc1b1ea170
+      internalID: -1863405090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_robotsSide_15
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 227
+        width: 192
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3a7d2d77fcf8d48884337ab33fe76b
+      internalID: 299236287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_robotsSide_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 192
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c6bdf49edb51f4684aa090321ef488
+      internalID: -1554395507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_robotsSide_17
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 192
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8e8317e96bd7a4cacbc11f342a83de
+      internalID: -1852028785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_robotsSide_18
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 192
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee6f1d97c5a4ad741a75818a92870333
+      internalID: -1419266642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spritesheet_robotsSide_19
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 64
+        width: 192
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b3de6929f92dc4e9f64734e4913aee
+      internalID: -406348460
       vertices: []
       indices: 
       edges: []
@@ -516,24 +558,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RunningCraig_15: 1718876922
-      RunningCraig_10: 1593760819
-      RunningCraig_16: -445911135
-      RunningCraig_12: -161759049
-      RunningCraig_6: 397023243
-      RunningCraig_3: -25766394
-      RunningCraig_7: -2065966661
-      RunningCraig_11: -1539939495
-      RunningCraig_4: 1120886775
-      RunningCraig_2: -1050229708
-      RunningCraig_8: 576962171
-      RunningCraig_9: 207190114
-      RunningCraig_14: 79214713
-      RunningCraig_13: 377378061
-      RunningCraig_0: -1701756488
-      RunningCraig_17: -1108276628
-      RunningCraig_5: -663279600
-      RunningCraig_1: 967988355
+      spritesheet_robotsSide_10: -2026689145
+      spritesheet_robotsSide_3: 1408655473
+      spritesheet_robotsSide_7: -1375331189
+      spritesheet_robotsSide_13: 1845237974
+      spritesheet_robotsSide_0: -591521622
+      spritesheet_robotsSide_6: -993121022
+      spritesheet_robotsSide_15: 299236287
+      spritesheet_robotsSide_11: 825688636
+      spritesheet_robotsSide_19: -406348460
+      spritesheet_robotsSide_9: 625395518
+      spritesheet_robotsSide_17: -1852028785
+      spritesheet_robotsSide_14: -1863405090
+      spritesheet_robotsSide_5: 490733518
+      spritesheet_robotsSide_1: -682118934
+      spritesheet_robotsSide_2: -1691195801
+      spritesheet_robotsSide_8: -835926332
+      spritesheet_robotsSide_18: -1419266642
+      spritesheet_robotsSide_4: 105852179
+      spritesheet_robotsSide_12: -291142683
+      spritesheet_robotsSide_16: -1554395507
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
