@@ -1,6 +1,7 @@
 using UnityEngine;
 using Enemy.Interface;
 using System;
+using UnityEngine.UI;
 
 public abstract class Powerup : MonoBehaviour {
 
@@ -29,6 +30,7 @@ public abstract class Powerup : MonoBehaviour {
     [SerializeField] protected float cooldown;
     [SerializeField] protected int projectiles;
     [SerializeField] protected stats currentStats;
+    [SerializeField] protected Image powerupIcon;
 
     public bool active = false;
     float currentCooldown = 0f;
