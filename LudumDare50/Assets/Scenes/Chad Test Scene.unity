@@ -3943,8 +3943,18 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 2610910987554267853, guid: 4871e2cd11fb72c4b9f6eedf5c2d2cac,
         type: 3}
+      propertyPath: levelStats.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610910987554267853, guid: 4871e2cd11fb72c4b9f6eedf5c2d2cac,
+        type: 3}
       propertyPath: levelDescriptions.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610910987554267853, guid: 4871e2cd11fb72c4b9f6eedf5c2d2cac,
+        type: 3}
+      propertyPath: levelStats.Array.data[3].speed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2610910987554267853, guid: 4871e2cd11fb72c4b9f6eedf5c2d2cac,
         type: 3}
@@ -3965,6 +3975,61 @@ PrefabInstance:
         type: 3}
       propertyPath: levelDescriptions.Array.data[3]
       value: Martial ascension. Increased damage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610910987554267853, guid: 4871e2cd11fb72c4b9f6eedf5c2d2cac,
+        type: 3}
+      propertyPath: levelStats.Array.data[0].damage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610910987554267853, guid: 4871e2cd11fb72c4b9f6eedf5c2d2cac,
+        type: 3}
+      propertyPath: levelStats.Array.data[1].damage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610910987554267853, guid: 4871e2cd11fb72c4b9f6eedf5c2d2cac,
+        type: 3}
+      propertyPath: levelStats.Array.data[2].damage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610910987554267853, guid: 4871e2cd11fb72c4b9f6eedf5c2d2cac,
+        type: 3}
+      propertyPath: levelStats.Array.data[3].damage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610910987554267853, guid: 4871e2cd11fb72c4b9f6eedf5c2d2cac,
+        type: 3}
+      propertyPath: levelStats.Array.data[0].cooldown
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610910987554267853, guid: 4871e2cd11fb72c4b9f6eedf5c2d2cac,
+        type: 3}
+      propertyPath: levelStats.Array.data[1].cooldown
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610910987554267853, guid: 4871e2cd11fb72c4b9f6eedf5c2d2cac,
+        type: 3}
+      propertyPath: levelStats.Array.data[2].cooldown
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610910987554267853, guid: 4871e2cd11fb72c4b9f6eedf5c2d2cac,
+        type: 3}
+      propertyPath: levelStats.Array.data[3].cooldown
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610910987554267853, guid: 4871e2cd11fb72c4b9f6eedf5c2d2cac,
+        type: 3}
+      propertyPath: levelStats.Array.data[1].projectiles
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610910987554267853, guid: 4871e2cd11fb72c4b9f6eedf5c2d2cac,
+        type: 3}
+      propertyPath: levelStats.Array.data[2].projectiles
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610910987554267853, guid: 4871e2cd11fb72c4b9f6eedf5c2d2cac,
+        type: 3}
+      propertyPath: levelStats.Array.data[3].projectiles
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2610910988549659789, guid: 4871e2cd11fb72c4b9f6eedf5c2d2cac,
         type: 3}

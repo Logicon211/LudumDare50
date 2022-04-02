@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
         if (horizontalMove < 0f) {
             renderer.flipX = true;
             // transform.localScale = new Vector3(originalXScale * -1, transform.localScale.y, transform.localScale.z);
-        } else {
+        } else if (horizontalMove > 0f) {
             renderer.flipX = false;
             // transform.localScale = new Vector3(originalXScale, transform.localScale.y, transform.localScale.z);
         }
@@ -119,5 +119,12 @@ public class Player : MonoBehaviour
 
     public float GetHealth() {
         return currentPlayerHealth;
+    }
+
+    public string GetDirection() {
+        if (renderer.flipX) {
+            return "left";
+        }
+        return "right";
     }
 }

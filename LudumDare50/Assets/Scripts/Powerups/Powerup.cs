@@ -24,11 +24,13 @@ public abstract class Powerup : MonoBehaviour {
 
     public bool active = false;
     float currentCooldown = 0f;
-    protected GameObject player;
+    protected GameObject playerObject;
+    protected Player player;
     protected void Start() {
         gameArea = GameObject.FindGameObjectWithTag("ProjectileArea");
         level = 0;
-        player = GameObject.FindGameObjectWithTag("Player");
+        playerObject = GameObject.FindGameObjectWithTag("Player");
+        player = playerObject.GetComponent<Player>();
         // Get player object/manager script
     }
 
