@@ -24,7 +24,12 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        currentTime -= Time.deltaTime;
+        if(currentTime <= 0f) {
+            // TODO, Ramp up spawn times as the game progresses
+            Debug.Log("SPAWN STUFF");
+            currentTime = spawnInterval;
+        }
     }
 
     public void SpawnFinalBoss() {
