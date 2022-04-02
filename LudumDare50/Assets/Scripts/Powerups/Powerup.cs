@@ -25,10 +25,6 @@ public abstract class Powerup : MonoBehaviour {
             SetStats(Level);
         }
     }
-    [SerializeField] protected float damage;
-    [SerializeField] protected float speed;
-    [SerializeField] protected float cooldown;
-    [SerializeField] protected int projectiles;
     [SerializeField] protected stats currentStats;
     [SerializeField] protected Sprite powerupIcon;
 
@@ -99,7 +95,7 @@ public abstract class Powerup : MonoBehaviour {
 
     bool CanPerformAction() {
         currentCooldown += Time.deltaTime;
-        if (currentCooldown >= cooldown) {
+        if (currentCooldown >= currentStats.cooldown) {
             currentCooldown = 0f;
             return true;
         }
@@ -108,13 +104,16 @@ public abstract class Powerup : MonoBehaviour {
 
     // Probably will work, just a generic entry point that we might be able to hit to calculate damage
     // If we can get a generic summary of the players current bonuses, it'll make calculating damage faster
-    protected void DoDamage(GameObject target) {
+    protected void DoDamage(GameObject target, float damage) {
         IDamageable<float> targetDamage = target.GetComponent<IDamageable<float>>();
 
         // Get the players total bonus
 
         // Add total bonus to damage
         targetDamage.Damage(damage);
+    }
+    protected void DoDamage(GameObject target) {
+        DoDamage(target, currentStats.damage);
     }
 
     public string getPowerupName() {
