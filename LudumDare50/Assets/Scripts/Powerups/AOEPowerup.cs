@@ -37,8 +37,14 @@ public class AOEPowerup : Powerup
     {
         if (level == 2) {
             this.transform.localScale = new Vector3(initialScale.x * 1.18f, initialScale.y * 1.18f, initialScale.z * 1.18f);
-        } else if(level >= 3) {
+        } else if(level == 3) {
             this.transform.localScale = new Vector3(initialScale.x * 1.25f, initialScale.y * 1.25f, initialScale.z * 1.25f);
+        } else if(level >= 4 && level < 6) {
+            this.transform.localScale = new Vector3(initialScale.x * 1.33f, initialScale.y * 1.33f, initialScale.z * 1.33f);
+        } else if(level >= 6 && level < 8) {
+            this.transform.localScale = new Vector3(initialScale.x * 1.5f, initialScale.y * 1.5f, initialScale.z * 1.5f);
+        } else if(level >= 8) {
+            this.transform.localScale = new Vector3(initialScale.x * 1.7f, initialScale.y * 1.7f, initialScale.z * 1.7f);
         }
         if(active) {
             radiation.SetActive(true);

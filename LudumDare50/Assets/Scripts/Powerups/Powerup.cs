@@ -119,9 +119,6 @@ public abstract class Powerup : MonoBehaviour {
 
         // Add total bonus to damage
         if (targetDamage != null) {
-            Debug.Log(
-                damage
-            );
             targetDamage.Damage(damage);
         }
     }

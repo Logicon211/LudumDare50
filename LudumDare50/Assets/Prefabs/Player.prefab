@@ -1594,12 +1594,12 @@ PrefabInstance:
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelDescriptions.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
@@ -1609,11 +1609,21 @@ PrefabInstance:
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelDescriptions.Array.data[1]
-      value: +1 Damage per tick <br>Increase in laser range
+      value: +50% Increased laser range
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelDescriptions.Array.data[3]
+      value: +1 Damage per tick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: levelDescriptions.Array.data[4]
+      value: +50% Increase in laser range
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: levelDescriptions.Array.data[5]
       value: +1 Damage per tick
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
@@ -1624,16 +1634,26 @@ PrefabInstance:
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[1].damage
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[2].damage
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[3].damage
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: levelStats.Array.data[4].damage
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: levelStats.Array.data[5].damage
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
@@ -1654,6 +1674,16 @@ PrefabInstance:
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[3].cooldown
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: levelStats.Array.data[4].cooldown
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: levelStats.Array.data[5].cooldown
       value: 4.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2311,27 +2341,52 @@ PrefabInstance:
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
       propertyPath: levelStats.Array.size
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
       propertyPath: levelDescriptions.Array.size
-      value: 4
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
       propertyPath: levelDescriptions.Array.data[1]
-      value: + Wider Aura
+      value: Wider Aura
       objectReference: {fileID: 0}
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
       propertyPath: levelDescriptions.Array.data[2]
-      value: + Wider Aura
+      value: Wider Aura
       objectReference: {fileID: 0}
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
       propertyPath: levelDescriptions.Array.data[3]
-      value: +1 Damage per tick
+      value: Wider Aura
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelDescriptions.Array.data[4]
+      value: +2 Damage Per Tick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelDescriptions.Array.data[5]
+      value: Wider Aura
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelDescriptions.Array.data[6]
+      value: +2 Damage Per Tick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelDescriptions.Array.data[7]
+      value: Wider Aura
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelDescriptions.Array.data[8]
+      value: +1 Damage Per Tick
       objectReference: {fileID: 0}
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
@@ -2351,12 +2406,32 @@ PrefabInstance:
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
       propertyPath: levelStats.Array.data[3].damage
-      value: 9
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
       propertyPath: levelStats.Array.data[4].damage
-      value: 9
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelStats.Array.data[5].damage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelStats.Array.data[6].damage
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelStats.Array.data[7].damage
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelStats.Array.data[8].damage
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
@@ -2376,6 +2451,26 @@ PrefabInstance:
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
       propertyPath: levelStats.Array.data[4].cooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelStats.Array.data[5].cooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelStats.Array.data[6].cooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelStats.Array.data[7].cooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelStats.Array.data[8].cooldown
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4454520170228135314, guid: 983c68670ae12974db420626d80a7ddc,

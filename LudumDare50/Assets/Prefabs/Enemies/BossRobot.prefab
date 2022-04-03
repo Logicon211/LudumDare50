@@ -111,6 +111,10 @@ MonoBehaviour:
   xpOrb: {fileID: 5758188731844505645, guid: ae36cdaf4aed8334eb7dee17b89bb8a2, type: 3}
   explodeLocation: {fileID: 589205886286965636}
   debris: []
+  armor: 0
+  knockbackMultiplier: 100
+  healthPickup: {fileID: 3414384411010339876, guid: d443f668325d54c4286bde362de47c6d,
+    type: 3}
 --- !u!95 &589205886286965689
 Animator:
   serializedVersion: 4

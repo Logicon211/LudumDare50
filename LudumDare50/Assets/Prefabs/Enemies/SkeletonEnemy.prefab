@@ -113,6 +113,8 @@ MonoBehaviour:
   debris: []
   armor: 0
   knockbackMultiplier: 100
+  healthPickup: {fileID: 3414384411010339876, guid: d443f668325d54c4286bde362de47c6d,
+    type: 3}
 --- !u!70 &4688262954328425721
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

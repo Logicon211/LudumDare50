@@ -48,6 +48,8 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
     private float originalXScale;
 
     private float damageBonus = 1f, healthBonus = 1f, speedBonus = 1f;
+
+    public GameObject healthPickup;
     private void Awake() {
         enemyBody = GetComponent<Rigidbody2D>();
         audio = GetComponent<AudioSource>();
@@ -121,6 +123,11 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
             isDead = true;
             Instantiate(explosion, explodeLocation.position, Quaternion.identity);
             Instantiate(xpOrb, explodeLocation.position, Quaternion.identity);
+
+            float healthPickupRoll = Random.Range(0f, 100f);
+            if (healthPickupRoll <= 1f) {
+                Instantiate(healthPickup, explodeLocation.position, Quaternion.identity);
+            }
             // if(roomController) {
             //     roomController.DecrementAliveEnemyCount();
             // }

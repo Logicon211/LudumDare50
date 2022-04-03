@@ -113,6 +113,8 @@ MonoBehaviour:
   debris: []
   armor: 2
   knockbackMultiplier: 100
+  healthPickup: {fileID: 3414384411010339876, guid: d443f668325d54c4286bde362de47c6d,
+    type: 3}
 --- !u!50 &5482988459403848570
 Rigidbody2D:
   serializedVersion: 4

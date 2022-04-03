@@ -46,6 +46,7 @@ public class Laser : Powerup
             }
             float finalDamage = GetDamage();
             createdArm.GetComponent<LaserArm>().setDamage(finalDamage);
+            createdArm.GetComponent<LaserArm>().setLaser(this);
             // return closest;
         }
     }
