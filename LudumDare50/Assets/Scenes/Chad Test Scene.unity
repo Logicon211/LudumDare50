@@ -3925,7 +3925,7 @@ PrefabInstance:
     - target: {fileID: 2610910987554267853, guid: 4871e2cd11fb72c4b9f6eedf5c2d2cac,
         type: 3}
       propertyPath: levelStats.Array.data[3].damage
-      value: 8
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 2610910987554267853, guid: 4871e2cd11fb72c4b9f6eedf5c2d2cac,
         type: 3}

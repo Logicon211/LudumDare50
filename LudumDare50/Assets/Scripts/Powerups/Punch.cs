@@ -16,10 +16,12 @@ public class Punch : Powerup
   }
 
   private IEnumerator StartPowerup(int level) {
-    SpawnProjectile(false);
-    if (level == 2) {
+    bool mirrorAttack = false;
+    Debug.Log(currentStats.damage);
+    for (int i = 0; i < currentStats.projectiles + player.playerStats.overdrive ; i++) {
+      SpawnProjectile(mirrorAttack);
+      mirrorAttack = !mirrorAttack;
       yield return new WaitForSeconds(spawnDelay);
-      SpawnProjectile(true);
     }
     yield return null;
   }

@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
     private float horizontalMove;
     private float verticalMove;
 
@@ -32,6 +30,15 @@ public class Player : MonoBehaviour
     public AudioClip hurtSound;
 
     public bool lookingRight = true;
+
+    [Serializable]    
+    public struct PlayerStats{
+        public float damagePercentBonus;
+        public float cooldownPercentBonus;
+        public float overdrive;
+
+    };
+    public PlayerStats playerStats;
 
     // Start is called before the first frame update
     void Start()
