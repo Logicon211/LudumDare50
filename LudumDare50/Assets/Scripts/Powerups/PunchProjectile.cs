@@ -30,21 +30,21 @@ public class PunchProjectile : MonoBehaviour {
   public void CheckForHit() {
     List<Collider2D> results = new List<Collider2D>();
     Transform punchTransform = this.transform;
+    float offset = projectileBox.offset.x;
+    if (punch.GetDirection() == "left") {
+      offset = -projectileBox.offset.x;
+    }
     Physics2D.OverlapBox(
-      new Vector2(punchTransform.position.x, punchTransform.position.y),
+      new Vector2(punchTransform.position.x + offset, punchTransform.position.y),
       projectileBox.size,
       0,
       new ContactFilter2D(),
       results
     );
-    // Debug.Log(results.Count);
     if (results.Count > 0) {
       foreach (Collider2D enemy in results) {
        punch.DoDamage(enemy.gameObject, punch.currentStats.damage);
       }
     }
   }
-
-  // Probably will work, just a generic entry point that we might be able to hit to calculate damage
-  // If we can get a generic summary of the players current bonuses, it'll make calculating damage faster
 }
