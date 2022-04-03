@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelDescriptions:
   - An exploding barrel
-  - Still explodes
+  - Calls in an additional barrel
   - Exploding barrel
   - Still explodes
   levelStats:

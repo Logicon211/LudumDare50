@@ -5,12 +5,10 @@ public class Barrel : Powerup {
 
     public float spawnRadius;
     public GameObject barrelProjectile;
-    public GameObject teleport;
-
     // Dont want the bomb spawning near the player
     public float noSpawnArea;
     public float explosionRadius;
-    
+
     public override void UsePowerup() {
         StartCoroutine(StartPowerup());
     }
@@ -22,7 +20,7 @@ public class Barrel : Powerup {
         }
         yield return null;
     }
-    
+
     // https://answers.unity.com/questions/1580130/i-need-to-instantiate-an-object-inside-a-donut-ins.html
     private Vector3 GetRandomPointInsideDonut(float innerRadius, float outerRadius) {
         float ratio = innerRadius / outerRadius;
@@ -33,10 +31,6 @@ public class Barrel : Powerup {
         Vector2 randomPoint = GetRandomPointInsideDonut(noSpawnArea, spawnRadius) + transform.position;
 
         GameObject barrel = Instantiate(barrelProjectile, gameArea.transform, true);
-        // GameObject teleport = Instantiate(this.teleport, gameArea.transform, true);
         barrel.transform.position = randomPoint;
-        // teleport.transform.position = randomPoint;
     }
-
-
 }

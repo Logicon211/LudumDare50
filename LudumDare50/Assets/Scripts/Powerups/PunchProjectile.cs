@@ -17,6 +17,7 @@ public class PunchProjectile : MonoBehaviour {
     projectileBox = gameObject.GetComponent<BoxCollider2D>();
     player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     CheckForHit();
+    Gizmos.matrix = projectileBox.transform.localToWorldMatrix;
   }
 
   void FixedUpdate() {
@@ -32,18 +33,9 @@ public class PunchProjectile : MonoBehaviour {
 
   public void CheckForHit() {
     List<Collider2D> results = new List<Collider2D>();
-    Transform punchTransform = this.transform;
-    float offset = projectileBox.offset.x;
-    if (punch.GetDirection() == "left") {
-      offset = -projectileBox.offset.x;
-    }
-    Physics2D.OverlapBox(
-      new Vector2(punchTransform.position.x + offset, punchTransform.position.y),
-      projectileBox.size,
-      0,
-      new ContactFilter2D(),
-      results
-    );
+    Vector3 worldCenter = projectileBox.transform.TransformPoint(projectileBox.offset);
+    Vector3 worldHalfExtents = projectileBox.transform.TransformVector(projectileBox.size * 0.5f);
+    Physics2D.OverlapBox(worldCenter, worldHalfExtents, 0f, new ContactFilter2D(), results);
     if (results.Count > 0) {
       float finalDamage = punch.GetDamage();
       foreach (Collider2D enemy in results) {

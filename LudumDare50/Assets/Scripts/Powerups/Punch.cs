@@ -24,7 +24,7 @@ public class Punch : Powerup
   public void SpawnProjectile(bool reverse) {
     Vector3 spawn = new Vector3(playerObject.transform.position.x + 1.5f, playerObject.transform.position.y , 0);
     GameObject projectile = Instantiate(punchProjectile, player.transform, true);
-    if (player.GetDirection() == "left" && !reverse || (reverse && player.GetDirection() == "right")) {
+    if (!player.lookingRight && !reverse || (reverse && player.lookingRight)) {
      spawn.x = spawn.x - 3f;
      projectile.transform.Rotate(new Vector3(0,180,0));
      }
@@ -32,7 +32,7 @@ public class Punch : Powerup
     projectile.transform.parent = gameArea.transform;
   }
 
-  public string GetDirection() {
-    return player.GetDirection();
+  public bool LookingRight() {
+    return player.lookingRight;
   }
 }
