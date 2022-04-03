@@ -37,6 +37,7 @@ public abstract class Powerup : MonoBehaviour {
         player = playerObject.GetComponent<Player>();
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         currentCooldown = currentStats.cooldown;
+        maxLevel = levelStats.GetUpperBound(0) + 1;
         // Get player object/manager script
     }
 
@@ -66,16 +67,18 @@ public abstract class Powerup : MonoBehaviour {
     }
 
     public virtual void LevelUp(int numberOfLevels) {
-        if (level >= levelStats.Length) {
-            Debug.Log("Cannot level up anymore, already at max level");
-            return;
-        }
+        // if (level >= levelStats.Length) {
+        //     Debug.Log("Cannot level up anymore, already at max level");
+        //     return;
+        // }
+
+        // We can go above max now
         level += numberOfLevels;
     }
 
     public virtual void SetStats(int newLevel) {
         if (levelStats.Length < newLevel) {
-            Debug.Log("No stats for that level");
+            Debug.Log("We're overleveled here");
             return;
         }
         if (levelStats.Length <= level) {
@@ -136,5 +139,15 @@ public abstract class Powerup : MonoBehaviour {
 
     public GameManager getGameManager() {
         return gameManager;
+    }
+
+    // GET DAMAGE BASED ON MAX LEVEL
+    public float GetDamage() {
+        if(level > maxLevel) {
+            int overlevel = level - maxLevel;
+            return (currentStats.damage + overlevel) * player.playerStats.damagePercentBonus;
+        } else {
+            return currentStats.damage * player.playerStats.damagePercentBonus;
+        }
     }
 }

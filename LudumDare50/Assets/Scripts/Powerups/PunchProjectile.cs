@@ -45,7 +45,7 @@ public class PunchProjectile : MonoBehaviour {
       results
     );
     if (results.Count > 0) {
-      float finalDamage = punch.currentStats.damage * player.playerStats.damagePercentBonus;
+      float finalDamage = punch.GetDamage();
       foreach (Collider2D enemy in results) {
        punch.DoDamage(enemy.gameObject, finalDamage);
       }

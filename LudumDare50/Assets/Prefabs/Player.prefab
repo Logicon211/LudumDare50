@@ -1593,6 +1593,16 @@ PrefabInstance:
       objectReference: {fileID: 156964, guid: 55d9dca6fda674649b3dc9a1089b5ebc, type: 3}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
+      propertyPath: levelStats.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: levelDescriptions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
       propertyPath: levelDescriptions.Array.data[0]
       value: Fire a powerful long range laser dealing 3 damage per tick
       objectReference: {fileID: 0}
@@ -1600,6 +1610,11 @@ PrefabInstance:
         type: 3}
       propertyPath: levelDescriptions.Array.data[1]
       value: +1 Damage per tick <br>Increase in laser range
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: levelDescriptions.Array.data[3]
+      value: +1 Damage per tick
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
@@ -1618,6 +1633,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
+      propertyPath: levelStats.Array.data[3].damage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
       propertyPath: levelStats.Array.data[0].cooldown
       value: 5
       objectReference: {fileID: 0}
@@ -1629,6 +1649,11 @@ PrefabInstance:
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[2].cooldown
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: levelStats.Array.data[3].cooldown
       value: 4.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []

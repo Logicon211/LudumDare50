@@ -44,7 +44,7 @@ public class Laser : Powerup
                 SpriteRenderer renderer = createdArm.GetComponent<SpriteRenderer>();
                 renderer.flipY = true;
             }
-            float finalDamage = currentStats.damage * player.playerStats.damagePercentBonus;
+            float finalDamage = GetDamage();
             createdArm.GetComponent<LaserArm>().setDamage(finalDamage);
             // return closest;
         }
