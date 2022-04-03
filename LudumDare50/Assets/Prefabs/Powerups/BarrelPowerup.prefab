@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelDescriptions:
   - An exploding barrel
-  - Still explodes
+  - Calls in an additional barrel
   - Exploding barrel
   - Still explodes
   levelStats:
@@ -59,17 +59,17 @@ MonoBehaviour:
   - damage: 23
     speed: 1
     cooldown: 3
-    projectiles: 1
+    projectiles: 2
     projectileSpeed: 1
   - damage: 23
     speed: 1
     cooldown: 3
-    projectiles: 1
+    projectiles: 2
     projectileSpeed: 1
   - damage: 23
     speed: 1
     cooldown: 3
-    projectiles: 1
+    projectiles: 2
     projectileSpeed: 1
   Level: 0
   currentStats:
@@ -87,7 +87,7 @@ MonoBehaviour:
     type: 3}
   teleport: {fileID: 156964, guid: 55d9dca6fda674649b3dc9a1089b5ebc, type: 3}
   noSpawnArea: 10
-  explosionRadius: 10
+  explosionRadius: 2
 --- !u!120 &4429113296906363566
 LineRenderer:
   m_ObjectHideFlags: 0
