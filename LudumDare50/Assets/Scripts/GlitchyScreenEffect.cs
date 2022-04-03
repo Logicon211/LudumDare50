@@ -21,6 +21,8 @@ public class GlitchyScreenEffect : MonoBehaviour
     public Sprite altSlide;
 
     public SpriteRenderer spriteRenderer;
+
+    public bool showMainSlide = true;
     void Start()
     {
         currentGlitchTimer = glitchInterval;
@@ -30,11 +32,18 @@ public class GlitchyScreenEffect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(showMainSlide) {
+            spriteRenderer.sprite = mainSlide;
+        } else {
+            spriteRenderer.sprite = altSlide;
+        }
+
         if (currentGlitchTimer > 0f) {
             currentGlitchTimer -= Time.deltaTime;
         } else {
             currentGlitchTimer = Random.Range(glitchInterval - randomInterval, glitchInterval + randomInterval);
             isGlitchRunning = true;
+            ToggleSlide();
         }
 
         if(isGlitchRunning) {
@@ -51,5 +60,9 @@ public class GlitchyScreenEffect : MonoBehaviour
 
 
         }
+    }
+
+    void ToggleSlide(){
+        showMainSlide = !showMainSlide;
     }
 }
