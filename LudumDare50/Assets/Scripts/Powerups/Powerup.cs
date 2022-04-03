@@ -40,11 +40,11 @@ public abstract class Powerup : MonoBehaviour {
         }
     }
 
-    public void SetActive() {
+    public void SetPowerupActive() {
         active = true;
     }
 
-    public void SetInactive() {
+    public void SetPowerupInActive() {
         active = false;
     }
 

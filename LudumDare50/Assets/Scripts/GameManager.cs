@@ -267,13 +267,13 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void SetPowerupToActive(Powerup powerup) {
-		powerup.SetActive();
+		powerup.SetPowerupActive();
 		inactivePowerups.Remove(powerup);
 		activePowerups.Add(powerup);
 	}
 
 	public void SetPowerupToInactive(Powerup powerup) {
-		powerup.SetInactive();
+		powerup.SetPowerupInActive();
 		activePowerups.Remove(powerup);
 		inactivePowerups.Add(powerup);
 	}

@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections.Generic;
+using System.Collections;
 
 public class Punch : Powerup
 {
@@ -11,10 +11,16 @@ public class Punch : Powerup
 
   public override void UsePowerup() {
 
+    StartCoroutine(StartPowerup(GetLevel()));
+  }
+
+  private IEnumerator StartPowerup(int level) {
     SpawnProjectile(false);
-    if (GetLevel() == 2) {
+    if (level == 2) {
+      yield return new WaitForSeconds(.5f);
       SpawnProjectile(true);
     }
+    yield return null;
   }
 
   public void SpawnProjectile(bool reverse) {
