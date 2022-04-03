@@ -48,7 +48,8 @@ public class LevelUpChoice : MonoBehaviour
     }
 
     public void setContent(string text) {
-        content.text = text;
+        string parsedText = text.Replace("<br>", "\n");
+        content.text = parsedText;
     }
 
     public void setIcon(Sprite spriteIcon) {

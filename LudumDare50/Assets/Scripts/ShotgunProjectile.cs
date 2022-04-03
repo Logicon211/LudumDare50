@@ -5,6 +5,8 @@ using UnityEngine;
 public class ShotgunProjectile : MonoBehaviour
 {
     public float damage = 0f;
+
+    public float timeToLive = 5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +16,11 @@ public class ShotgunProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(timeToLive > 0f) {
+            timeToLive -= Time.deltaTime;
+        } else {
+            Destroy(this.gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

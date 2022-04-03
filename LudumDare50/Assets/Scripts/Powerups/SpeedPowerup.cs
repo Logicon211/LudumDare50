@@ -19,7 +19,6 @@ public class SpeedPowerup : Powerup
     }
 
     public override void SetStats(int newLevel) {
-        Debug.Log("Calling SpeedPowerup Set stats instead...");
         // DO nothing
     }
 
