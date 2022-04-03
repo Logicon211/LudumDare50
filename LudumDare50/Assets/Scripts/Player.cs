@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public HealthBar healthbar;
     public XPBar xpbar;
     
-    private float maxPlayerHealth = 100f;
+    // private float maxPlayerHealth = 100f;
     private float currentPlayerHealth;
 
     private float xpNeededToLevel = 100f;
@@ -37,6 +37,9 @@ public class Player : MonoBehaviour
         public float cooldownPercentBonus;
         public float overdrive;
 
+        public float maxPlayerHealth;
+        public int armor;
+
     };
     public PlayerStats playerStats;
 
@@ -45,7 +48,7 @@ public class Player : MonoBehaviour
     {
         PlayerRigidBody = this.GetComponent<Rigidbody2D>();
         animator = this.GetComponent<Animator>();
-        currentPlayerHealth = maxPlayerHealth;
+        currentPlayerHealth = playerStats.maxPlayerHealth;
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         renderer = this.GetComponent<SpriteRenderer>();
         AS = this.GetComponent<AudioSource>();
@@ -98,7 +101,7 @@ public class Player : MonoBehaviour
         // }
         // health -= damageTaken;
         AS.PlayOneShot(hurtSound);
-        healthbar.SetHealth(currentPlayerHealth/maxPlayerHealth);
+        healthbar.SetHealth(currentPlayerHealth/playerStats.maxPlayerHealth);
     }
 
     public void Heal(float health) {
@@ -106,10 +109,10 @@ public class Player : MonoBehaviour
         if(healSound) {
             AS.PlayOneShot(healSound);
         }
-        if(currentPlayerHealth > maxPlayerHealth) {
-            currentPlayerHealth = maxPlayerHealth;
+        if(currentPlayerHealth > playerStats.maxPlayerHealth) {
+            currentPlayerHealth = playerStats.maxPlayerHealth;
         }
-        healthbar.SetHealth(currentPlayerHealth/maxPlayerHealth);
+        healthbar.SetHealth(currentPlayerHealth/playerStats.maxPlayerHealth);
     }
 
     public void GainXP(float xpGained) {

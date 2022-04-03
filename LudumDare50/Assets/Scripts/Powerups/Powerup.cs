@@ -32,7 +32,7 @@ public abstract class Powerup : MonoBehaviour {
     private int maxLevel;
     protected void Start() {
         gameArea = GameObject.FindGameObjectWithTag("ProjectileArea");
-        level = 3;
+        level = 0;
         playerObject = GameObject.FindGameObjectWithTag("Player");
         player = playerObject.GetComponent<Player>();
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
@@ -77,8 +77,8 @@ public abstract class Powerup : MonoBehaviour {
             Debug.Log("No stats for that level");
             return;
         }
-        if (levelStats.Length < level) {
-            newLevel = levelStats.Length;
+        if (levelStats.Length <= level) {
+            newLevel = levelStats.GetUpperBound(0);
         }
         currentStats.damage = levelStats[newLevel].damage;
         currentStats.speed = levelStats[newLevel].speed;
