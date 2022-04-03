@@ -5,8 +5,9 @@ public class Barrel : Powerup {
 
     public float spawnRadius;
     public GameObject barrelProjectile;
-    /** dont want it spawning on you **/
     public GameObject teleport;
+
+    // Dont want the bomb spawning near the player
     public float noSpawnArea;
     public float explosionRadius;
     
@@ -32,9 +33,9 @@ public class Barrel : Powerup {
         Vector2 randomPoint = GetRandomPointInsideDonut(noSpawnArea, spawnRadius) + transform.position;
 
         GameObject barrel = Instantiate(barrelProjectile, gameArea.transform, true);
-        GameObject teleport = Instantiate(this.teleport, gameArea.transform, true);
+        // GameObject teleport = Instantiate(this.teleport, gameArea.transform, true);
         barrel.transform.position = randomPoint;
-        teleport.transform.position = randomPoint;
+        // teleport.transform.position = randomPoint;
     }
 
 
