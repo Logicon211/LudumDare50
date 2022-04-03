@@ -45,6 +45,8 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
     public float armor = 0f;
     public float knockbackMultiplier = 100f;
 
+    private float originalXScale;
+
     private float damageBonus = 1f, healthBonus = 1f, speedBonus = 1f;
     private void Awake() {
         enemyBody = GetComponent<Rigidbody2D>();
@@ -58,6 +60,7 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
     {
         Instantiate(poofEffect, transform.position, Quaternion.identity);
         currentHealth = health;
+        originalXScale = this.transform.localScale.x;
     }
 
      private void Update () {
@@ -158,9 +161,11 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
         Vector3 targetVelocity = new Vector2(tarX * 10f, tarY * 10f);
         enemyBody.velocity = Vector3.SmoothDamp(enemyBody.velocity, targetVelocity, ref velocity, movementSmoothing);
         if (targetVelocity.x < 0f) {
-            spriteRenderer.flipX = true;
+            // spriteRenderer.flipX = true;
+            this.transform.localScale = new Vector3(originalXScale * -1, transform.localScale.y, transform.localScale.y);
         } else {
-            spriteRenderer.flipX = false;
+            this.transform.localScale = new Vector3(originalXScale, transform.localScale.y, transform.localScale.y);
+            // spriteRenderer.flipX = false;
         }
     }
 
