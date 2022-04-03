@@ -1343,23 +1343,48 @@ PrefabInstance:
       objectReference: {fileID: 156964, guid: 55d9dca6fda674649b3dc9a1089b5ebc, type: 3}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
+      propertyPath: levelDescriptions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelDescriptions.Array.data[0]
+      value: Craig's Iconic shotgun shoots in the direction you move
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelDescriptions.Array.data[1]
+      value: +2 more bullets per shot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelDescriptions.Array.data[2]
+      value: +2 more bullets per shot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelDescriptions.Array.data[3]
+      value: +1 damage per bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
       propertyPath: levelStats.Array.data[0].damage
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
       propertyPath: levelStats.Array.data[1].damage
-      value: 3
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
       propertyPath: levelStats.Array.data[2].damage
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
       propertyPath: levelStats.Array.data[0].cooldown
-      value: 3
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
@@ -1373,18 +1398,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
-      propertyPath: levelStats.Array.data[0].projectileSpeed
+      propertyPath: levelStats.Array.data[0].projectiles
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelStats.Array.data[1].projectiles
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelStats.Array.data[2].projectiles
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelStats.Array.data[0].projectileSpeed
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
       propertyPath: levelStats.Array.data[1].projectileSpeed
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
       propertyPath: levelStats.Array.data[2].projectileSpeed
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6653655116029061252, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
@@ -1553,33 +1593,43 @@ PrefabInstance:
       objectReference: {fileID: 156964, guid: 55d9dca6fda674649b3dc9a1089b5ebc, type: 3}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
+      propertyPath: levelDescriptions.Array.data[0]
+      value: Fire a powerful long range laser dealing 3 damage per tick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: levelDescriptions.Array.data[1]
+      value: +1 Damage per tick <br>Increase in laser range
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
       propertyPath: levelStats.Array.data[0].damage
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[1].damage
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[2].damage
-      value: 10
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[0].cooldown
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[1].cooldown
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[2].cooldown
-      value: 3
+      value: 4.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9a477d38bb6d1b4a9308a2556fb6321, type: 3}
@@ -2236,7 +2286,7 @@ PrefabInstance:
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
       propertyPath: levelStats.Array.size
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
@@ -2256,7 +2306,22 @@ PrefabInstance:
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
       propertyPath: levelDescriptions.Array.data[3]
-      value: + Damage
+      value: +1 Damage per tick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelStats.Array.data[0].damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelStats.Array.data[1].damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelStats.Array.data[2].damage
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
@@ -2271,6 +2336,11 @@ PrefabInstance:
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
       propertyPath: levelStats.Array.data[0].cooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelStats.Array.data[1].cooldown
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
