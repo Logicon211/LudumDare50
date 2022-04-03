@@ -9,10 +9,13 @@ public class PunchProjectile : MonoBehaviour {
 
   BoxCollider2D projectileBox;
 
+  Player player;
+
   void Start() {
     currentTimeAlive = 0f;
     punch = GameObject.FindObjectOfType<Punch>();
     projectileBox = gameObject.GetComponent<BoxCollider2D>();
+    player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     CheckForHit();
   }
 
@@ -42,8 +45,9 @@ public class PunchProjectile : MonoBehaviour {
       results
     );
     if (results.Count > 0) {
+      float finalDamage = punch.currentStats.damage * player.playerStats.damagePercentBonus;
       foreach (Collider2D enemy in results) {
-       punch.DoDamage(enemy.gameObject, punch.currentStats.damage);
+       punch.DoDamage(enemy.gameObject, finalDamage);
       }
     }
   }

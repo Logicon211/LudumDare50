@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1298115620
 Transform:
   m_ObjectHideFlags: 0
@@ -29,11 +29,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298115619}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.738721, y: -0.042164482, z: 0}
-  m_LocalScale: {x: 5.6161904, y: 4.443289, z: 4.443289}
+  m_LocalPosition: {x: 5.598721, y: -0.042164482, z: 0}
+  m_LocalScale: {x: 5.6161904, y: 4.4432883, z: 4.4432883}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3677676972966338082}
+  m_Father: {fileID: 493866701640297769}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1298115622
@@ -243,6 +243,38 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &2417500253415664490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493866701640297769}
+  m_Layer: 0
+  m_Name: LaserPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &493866701640297769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2417500253415664490}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.14, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1298115620}
+  m_Father: {fileID: 3677676972966338082}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3677676972966338108
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +305,7 @@ Transform:
   m_LocalScale: {x: 0.7115, y: 0.7115, z: 0.7115}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1298115620}
+  - {fileID: 493866701640297769}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -341,7 +373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 858ede966a208aa468837cc8bf2291d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserProjectile: {fileID: 1298115619}
+  laserProjectile: {fileID: 2417500253415664490}
+  laserPivot: {fileID: 2417500253415664490}
   projectile: {fileID: 1298115624}
   delay: 0.8
   laserLifeTime: 3

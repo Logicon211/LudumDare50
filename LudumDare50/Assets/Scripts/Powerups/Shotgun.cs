@@ -57,7 +57,9 @@ public class Shotgun : Powerup
                 SpriteRenderer renderer = floatingShotgun.GetComponent<SpriteRenderer>();
                 renderer.flipY = true;
             }
-            floatingShotgun.GetComponent<FloatingShotgun>().setStats(currentStats.damage, currentStats.projectileSpeed, currentStats.projectiles);
+            int finalProjectiles = currentStats.projectiles + player.playerStats.overdrive;
+            float finalDamage = currentStats.damage * player.playerStats.damagePercentBonus;
+            floatingShotgun.GetComponent<FloatingShotgun>().setStats(finalDamage, currentStats.projectileSpeed, finalProjectiles);
             // return closest;
         }
     }

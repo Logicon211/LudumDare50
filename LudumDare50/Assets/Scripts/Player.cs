@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
     public struct PlayerStats{
         public float damagePercentBonus;
         public float cooldownPercentBonus;
-        public float overdrive;
+        public int overdrive;
 
         public float maxPlayerHealth;
         public int armor;

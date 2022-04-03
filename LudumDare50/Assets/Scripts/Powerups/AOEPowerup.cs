@@ -22,7 +22,8 @@ public class AOEPowerup : Powerup
             if (collision) {
                 if (collision.gameObject.tag == "Enemy") {
                     EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
-                    enemy.Damage(currentStats.damage);
+                    float finalDamage = currentStats.damage * player.playerStats.damagePercentBonus;
+                    enemy.Damage(finalDamage);
                 }
             }
         }

@@ -5,6 +5,9 @@ using UnityEngine;
 public class LaserArm : MonoBehaviour
 {
     public GameObject laserProjectile;
+    
+    // For growing laser:
+    public GameObject laserPivot;
     public LaserProjectile projectile;
 
     public float delay = 0.8f;

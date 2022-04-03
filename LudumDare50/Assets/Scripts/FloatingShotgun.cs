@@ -8,7 +8,7 @@ public class FloatingShotgun : MonoBehaviour
     // Start is called before the first frame update
     public Transform shootPosition;
 
-    public float delay = 0.5f;
+    public float delay = 0.2f;
     public float shotgunLifeTime = 1f;
 
     private float damage = 0f;
