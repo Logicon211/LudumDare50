@@ -267,7 +267,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void SetPowerupToActive(Powerup powerup) {
-		powerup.SetActive();
+		powerup.SetPowerupActive();
 		inactivePowerups.Remove(powerup);
 		if(!activePowerups.Contains(powerup)) {
 			activePowerups.Add(powerup);
@@ -275,7 +275,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void SetPowerupToInactive(Powerup powerup) {
-		powerup.SetInactive();
+		powerup.SetPowerupInActive();
 		activePowerups.Remove(powerup);
 		if(!inactivePowerups.Contains(powerup)) {
 			inactivePowerups.Add(powerup);

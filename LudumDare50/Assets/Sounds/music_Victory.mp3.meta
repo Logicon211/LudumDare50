@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:LudumDare50/Assets/Sounds/music_Victory.mp3.meta
 guid: 8808a8f62a4b2f743a9da920df62959d
+=======
+guid: 78c5b71c2c4e6f54c90132b4017e43df
+>>>>>>> 56960189e49b928e4a302e1170b57d8807c89e37:LudumDare50/Assets/Sounds/music_intro.mp3.meta
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6

@@ -5,7 +5,7 @@ public abstract class Powerup : MonoBehaviour {
 
     [SerializeField] protected string[] levelDescriptions;
     [SerializeField] protected Stats[] levelStats;
-    private int Level;
+    public int Level;
     [SerializeField] protected int level {
         get {
             return Level;
@@ -43,11 +43,11 @@ public abstract class Powerup : MonoBehaviour {
         }
     }
 
-    public void SetActive() {
+    public void SetPowerupActive() {
         active = true;
     }
 
-    public void SetInactive() {
+    public void SetPowerupInActive() {
         active = false;
     }
 

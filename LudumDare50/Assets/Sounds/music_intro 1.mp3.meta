@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:LudumDare50/Assets/Sounds/music_intro 1.mp3.meta
 guid: 1da3d2dac55dff74497990a4d82e95f9
+=======
+guid: c116fe0216d0d2b43a2841bad861c9f6
+>>>>>>> 56960189e49b928e4a302e1170b57d8807c89e37:LudumDare50/Assets/Sounds/music_maximum_overdrive.mp3.meta
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6
