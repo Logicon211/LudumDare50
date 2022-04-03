@@ -30,7 +30,6 @@ public class FloatingShotgun : MonoBehaviour
         this.damage = damageIn;
         this.projectileSpeed = projectileSpeedIn;
         this.numberOfProjectiles = numberOfProjectilesIn;
-        Debug.Log("SPEED SET: " + (this.projectileSpeed));
     }
 
     // Update is called once per frame

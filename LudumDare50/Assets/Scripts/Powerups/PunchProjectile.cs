@@ -37,7 +37,7 @@ public class PunchProjectile : MonoBehaviour {
       new ContactFilter2D(),
       results
     );
-    Debug.Log(results.Count);
+    // Debug.Log(results.Count);
     if (results.Count > 0) {
       foreach (Collider2D enemy in results) {
        punch.DoDamage(enemy.gameObject, punch.currentStats.damage);

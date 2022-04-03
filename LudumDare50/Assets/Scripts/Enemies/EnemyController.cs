@@ -43,6 +43,7 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
     private SpriteRenderer renderer;
     private Rigidbody2D RB;
 
+    public float armor = 0f;
     public float knockbackMultiplier = 100f;
     private void Awake() {
         enemyBody = GetComponent<Rigidbody2D>();
@@ -83,7 +84,11 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
 
     public void Damage(float damageTaken)
     {
-        currentHealth -= damageTaken;
+        float damageAfterArmor = damageTaken - armor;
+        if(damageAfterArmor < 0f) {
+            damageAfterArmor = 0f;
+        }
+        currentHealth -= damageAfterArmor;
         // Add force away from player?
         // Vector3 offsetPosition = new Vector3(player.transform.position.x + xOffset, player.transform.position.y + yOffset, player.transform.position.z);
 
@@ -95,7 +100,7 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
         // Quaternion rotation = Quaternion.LookRotation(Vector3.forward, direction);
         // Quaternion rotationAmount = Quaternion.Euler(0, 0, 90);
         // Quaternion postRotation = rotation * rotationAmount;
-        RB.AddForce(direction * (knockbackMultiplier * damageTaken));
+        RB.AddForce(direction * (knockbackMultiplier * damageAfterArmor));
         if (currentHealth <= 0f && !isDead)
             Kill();
         if (health > currentHealth) 

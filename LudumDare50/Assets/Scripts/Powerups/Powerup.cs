@@ -28,6 +28,8 @@ public abstract class Powerup : MonoBehaviour {
     protected Player player;
 
     protected GameManager gameManager;
+
+    private int maxLevel;
     protected void Start() {
         gameArea = GameObject.FindGameObjectWithTag("ProjectileArea");
         level = 0;
@@ -75,6 +77,9 @@ public abstract class Powerup : MonoBehaviour {
             Debug.Log("No stats for that level");
             return;
         }
+        if (levelStats.Length < level) {
+            newLevel = levelStats.Length;
+        }
         currentStats.damage = levelStats[newLevel].damage;
         currentStats.speed = levelStats[newLevel].speed;
         currentStats.cooldown = levelStats[newLevel].cooldown;
@@ -83,7 +88,6 @@ public abstract class Powerup : MonoBehaviour {
     }
 
     public string GetPowerupLevelDescription(int level) {
-        Debug.Log("Calling get description with index " + level);
         if (levelDescriptions.Length == 0) {
             return "No description";
         }
