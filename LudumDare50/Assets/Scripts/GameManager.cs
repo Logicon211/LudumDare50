@@ -183,7 +183,6 @@ public class GameManager : MonoBehaviour {
 			Powerup[] powerupList = new Powerup[3];
 			for (int i = 0; i < 3; i++) {
 				int randomSelection = Random.Range(0, powerupObjects.Length - 0);
-				Debug.Log("Chose Index: " + randomSelection);
 				powerupList[i] = powerupObjects[randomSelection].GetComponent<Powerup>();
 			}
 

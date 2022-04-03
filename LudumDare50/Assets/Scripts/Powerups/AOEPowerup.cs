@@ -8,6 +8,8 @@ public class AOEPowerup : Powerup
 
     public Collider2D aoeCollider;
     private Vector3 initialScale;
+
+    public GameObject radiation;
     public override void UsePowerup() {
         ContactFilter2D filter = new ContactFilter2D();//.NoFilter();;
 
@@ -76,6 +78,9 @@ public class AOEPowerup : Powerup
             this.transform.localScale = new Vector3(initialScale.x * 1.18f, initialScale.y * 1.18f, initialScale.z * 1.18f);
         } else if(level >= 3) {
             this.transform.localScale = new Vector3(initialScale.x * 1.25f, initialScale.y * 1.25f, initialScale.z * 1.25f);
+        }
+        if(active) {
+            radiation.SetActive(true);
         }
     }
 

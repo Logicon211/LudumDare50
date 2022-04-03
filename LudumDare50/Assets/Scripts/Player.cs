@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
     public AudioClip healSound;
     public AudioClip hurtSound;
 
+    public bool lookingRight = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,9 +62,11 @@ public class Player : MonoBehaviour
 
         if (horizontalMove < 0f) {
             renderer.flipX = true;
+            lookingRight = false;
             // transform.localScale = new Vector3(originalXScale * -1, transform.localScale.y, transform.localScale.z);
         } else if (horizontalMove > 0f) {
             renderer.flipX = false;
+            lookingRight = true;
             // transform.localScale = new Vector3(originalXScale, transform.localScale.y, transform.localScale.z);
         }
 

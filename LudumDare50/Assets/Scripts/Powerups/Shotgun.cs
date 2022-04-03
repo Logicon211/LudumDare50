@@ -24,12 +24,25 @@ public class Shotgun : Powerup
 
         if(closest) {
             // Generating a random area slightly around the player instead of directly on top
-            float xOffset = Random.Range(-2f, 2f);
-            float yOffset = Random.Range(-2f, 2f);
+            // float xOffset = Random.Range(-2f, 2f);
+            // float yOffset = Random.Range(-2f, 2f);
+            Rigidbody2D RB = player.GetComponent<Rigidbody2D>();
+            Vector2 velocity = Vector2.zero;
+            if(RB.velocity.magnitude <= 0f) {
+                Player playerScript = player.GetComponent<Player>();
+                if(playerScript.lookingRight) {
+                    velocity = Vector2.right;
+                } else {
+                    velocity = Vector2.left;
+                }
+            } else {
+                velocity = RB.velocity.normalized;
+            }
+            Vector3 playerMovementDirection = (velocity * 2);
+            Vector3 offsetPosition = new Vector3(player.transform.position.x + playerMovementDirection.x, player.transform.position.y + playerMovementDirection.y, player.transform.position.z);
 
-            Vector3 offsetPosition = new Vector3(player.transform.position.x + xOffset, player.transform.position.y + yOffset, player.transform.position.z);
-
-            Vector3 direction = closest.transform.position - offsetPosition;
+            // Vector3 direction = closest.transform.position - offsetPosition;
+            Vector3 direction = offsetPosition - player.transform.position;
             direction.Normalize();
 
             // if (direction != Vector2.zero)
