@@ -64,7 +64,7 @@ public abstract class Powerup : MonoBehaviour {
         level = newLevel;
     }
 
-    public void LevelUp(int numberOfLevels) {
+    public virtual void LevelUp(int numberOfLevels) {
         if (level >= levelStats.Length) {
             Debug.Log("Cannot level up anymore, already at max level");
             return;
@@ -72,7 +72,7 @@ public abstract class Powerup : MonoBehaviour {
         level += numberOfLevels;
     }
 
-    public void SetStats(int newLevel) {
+    public virtual void SetStats(int newLevel) {
         if (levelStats.Length < newLevel) {
             Debug.Log("No stats for that level");
             return;
