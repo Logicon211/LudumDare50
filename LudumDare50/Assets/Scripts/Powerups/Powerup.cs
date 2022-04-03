@@ -36,6 +36,7 @@ public abstract class Powerup : MonoBehaviour {
         playerObject = GameObject.FindGameObjectWithTag("Player");
         player = playerObject.GetComponent<Player>();
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        currentCooldown = currentStats.cooldown;
         // Get player object/manager script
     }
 
@@ -98,9 +99,9 @@ public abstract class Powerup : MonoBehaviour {
     }
 
     bool CanPerformAction() {
-        currentCooldown += Time.deltaTime;
-        if (currentCooldown >= currentStats.cooldown) {
-            currentCooldown = 0f;
+        currentCooldown -= Time.deltaTime;
+        if (currentCooldown <= 0) {
+            currentCooldown = currentStats.cooldown/player.playerStats.cooldownPercentBonus;
             return true;
         }
         return false;

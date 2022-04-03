@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
 
     public bool lookingRight = true;
 
+    public GameObject camera;
     [Serializable]    
     public struct PlayerStats{
         public float damagePercentBonus;
@@ -97,11 +98,12 @@ public class Player : MonoBehaviour
     }
 
     public void Damage(float damage) {
-        currentPlayerHealth -= damage;
-        // if (currentPlayerHealth <= 0) {
-            
-        // }
-        // health -= damageTaken;
+        float damageAfterArmor = damage - playerStats.armor;
+        if(damageAfterArmor < 0f) {
+            damageAfterArmor = 0f;
+        }
+        currentPlayerHealth -= damageAfterArmor;
+
         AS.PlayOneShot(hurtSound);
         healthbar.SetHealth(currentPlayerHealth/playerStats.maxPlayerHealth);
     }
@@ -141,5 +143,10 @@ public class Player : MonoBehaviour
             return "left";
         }
         return "right";
+    }
+
+    public void DisableOnDeath() {
+        camera.transform.parent = null;
+        this.gameObject.SetActive(false);
     }
 }

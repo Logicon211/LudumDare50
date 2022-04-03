@@ -39,10 +39,15 @@ public class EnemySpawner : MonoBehaviour
             // TODO, Ramp up spawn times as the game progresses
             currentSkeletonTime = skeletonSpawnInterval;
 
+            float healthBoost = timeElapsed/300f;
+            float damageBoost = timeElapsed/600f;
+            float speedBoost = timeElapsed/2000f;
+
             int skeletonGroup = 2 + Mathf.FloorToInt(timeElapsed/60f);
             for(int i = 0; i < skeletonGroup; i++) {
                 int spawnPositionIndex = Random.Range(0, spawnPositions.Length);
-                Instantiate(skeleton, new Vector3(spawnPositions[spawnPositionIndex].position.x, spawnPositions[spawnPositionIndex].position.y, spawnPositions[spawnPositionIndex].position.z), Quaternion.identity);
+                EnemyController enemy = Instantiate(skeleton, spawnPositions[spawnPositionIndex].position, Quaternion.identity).GetComponent<EnemyController>();
+                enemy.setTimeIncreaseStats(damageBoost, healthBoost, speedBoost);
             }
         }
         if (timeElapsed > 60f) {
@@ -50,10 +55,15 @@ public class EnemySpawner : MonoBehaviour
             if(currentRobotTime <= 0f) {
                 currentRobotTime = robotSpawnInterval;
 
+                float healthBoost = timeElapsed/300f;
+                float damageBoost = timeElapsed/600f;
+                float speedBoost = timeElapsed/2000f;
+
                 int robotGroup = 2 + Mathf.FloorToInt(timeElapsed/90f);
                 for(int i = 0; i < robotGroup; i++) {
                     int spawnPositionIndex = Random.Range(0, spawnPositions.Length);
-                    Instantiate(robot, new Vector3(spawnPositions[spawnPositionIndex].position.x, spawnPositions[spawnPositionIndex].position.y, spawnPositions[spawnPositionIndex].position.z), Quaternion.identity);
+                    EnemyController enemy = Instantiate(robot, spawnPositions[spawnPositionIndex].position, Quaternion.identity).GetComponent<EnemyController>();
+                    enemy.setTimeIncreaseStats(damageBoost, healthBoost, speedBoost);
                 }
             }
         }
@@ -63,10 +73,15 @@ public class EnemySpawner : MonoBehaviour
             if(currentBearTime <= 0f) {
                 currentBearTime = bearSpawnInterval;
 
+                float healthBoost = timeElapsed/300f;
+                float damageBoost = timeElapsed/600f;
+                float speedBoost = timeElapsed/2000f;
+
                 int bearGroup = 2 + Mathf.FloorToInt(timeElapsed/100f);
                 for(int i = 0; i < bearGroup; i++) {
                     int spawnPositionIndex = Random.Range(0, spawnPositions.Length);
-                    Instantiate(bear, new Vector3(spawnPositions[spawnPositionIndex].position.x, spawnPositions[spawnPositionIndex].position.y, spawnPositions[spawnPositionIndex].position.z), Quaternion.identity);
+                    EnemyController enemy = Instantiate(bear, spawnPositions[spawnPositionIndex].position, Quaternion.identity).GetComponent<EnemyController>();
+                    enemy.setTimeIncreaseStats(damageBoost, healthBoost, speedBoost);
                 }
             }
         }
@@ -76,10 +91,15 @@ public class EnemySpawner : MonoBehaviour
             if(currentNinjaTime <= 0f) {
                 currentNinjaTime = ninjaSpawnInterval;
 
+                float healthBoost = timeElapsed/300f;
+                float damageBoost = timeElapsed/600f;
+                float speedBoost = timeElapsed/2000f;
+
                 int ninjaGroup = 2 + Mathf.FloorToInt(timeElapsed/120f);
                 for(int i = 0; i < ninjaGroup; i++) {
                     int spawnPositionIndex = Random.Range(0, spawnPositions.Length);
-                    Instantiate(ninja, new Vector3(spawnPositions[spawnPositionIndex].position.x, spawnPositions[spawnPositionIndex].position.y, spawnPositions[spawnPositionIndex].position.z), Quaternion.identity);
+                    EnemyController enemy = Instantiate(ninja, spawnPositions[spawnPositionIndex].position, Quaternion.identity).GetComponent<EnemyController>();
+                    enemy.setTimeIncreaseStats(damageBoost, healthBoost, speedBoost);
                 }
             }
         }

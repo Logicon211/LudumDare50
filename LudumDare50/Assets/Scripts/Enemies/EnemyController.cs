@@ -40,17 +40,17 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
 
     private float attackCooldown = 0.5f;
     private float currentAttackCooldown = 0f;
-    private SpriteRenderer renderer;
     private Rigidbody2D RB;
 
     public float armor = 0f;
     public float knockbackMultiplier = 100f;
+
+    private float damageBonus = 1f, healthBonus = 1f, speedBonus = 1f;
     private void Awake() {
         enemyBody = GetComponent<Rigidbody2D>();
         audio = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player");
-        renderer = this.GetComponent<SpriteRenderer>();
         RB = this.GetComponent<Rigidbody2D>();
     }
     
@@ -78,7 +78,7 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
     private void FixedUpdate() {
         Vector3 normal = (player.transform.position - transform.position).normalized;
         moveDir = normal;	
-        Move(moveDir.x * speed * Time.fixedDeltaTime, moveDir.y * speed * Time.fixedDeltaTime);
+        Move(moveDir.x * (speed * speedBonus) * Time.fixedDeltaTime, moveDir.y * (speed * speedBonus) * Time.fixedDeltaTime);
         moveDir = Vector3.zero;
     }
 
@@ -89,17 +89,10 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
             damageAfterArmor = 0f;
         }
         currentHealth -= damageAfterArmor;
-        // Add force away from player?
-        // Vector3 offsetPosition = new Vector3(player.transform.position.x + xOffset, player.transform.position.y + yOffset, player.transform.position.z);
 
         Vector3 direction = this.transform.position - player.transform.position;
         direction.Normalize();
 
-        // if (direction != Vector2.zero)
-        // {
-        // Quaternion rotation = Quaternion.LookRotation(Vector3.forward, direction);
-        // Quaternion rotationAmount = Quaternion.Euler(0, 0, 90);
-        // Quaternion postRotation = rotation * rotationAmount;
         RB.AddForce(direction * (knockbackMultiplier * damageAfterArmor));
         if (currentHealth <= 0f && !isDead)
             Kill();
@@ -109,6 +102,14 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
             var healthPercentage = currentHealth/health;
             spriteRenderer.color = new Color(1f, healthPercentage, healthPercentage);
         }
+    }
+
+    public void setTimeIncreaseStats(float damageIncrease, float healthIncrease, float speedIncrease) {
+        damageBonus += damageIncrease;
+        healthIncrease += healthIncrease;
+        health = health * healthIncrease;
+        currentHealth = health;
+        speedBonus += speedIncrease;
     }
     
     public void Kill()
@@ -157,9 +158,9 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
         Vector3 targetVelocity = new Vector2(tarX * 10f, tarY * 10f);
         enemyBody.velocity = Vector3.SmoothDamp(enemyBody.velocity, targetVelocity, ref velocity, movementSmoothing);
         if (targetVelocity.x < 0f) {
-            renderer.flipX = true;
+            spriteRenderer.flipX = true;
         } else {
-            renderer.flipX = false;
+            spriteRenderer.flipX = false;
         }
     }
 
@@ -167,7 +168,9 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
         if (other.gameObject.tag == "Player") {
             if (currentAttackCooldown <= 0f) {
                 Player player = other.gameObject.GetComponent<Player>();
-                player.Damage(attackDamage);
+                float finalDamage = attackDamage * damageBonus;
+                Debug.Log("DAMAGING PLAYER FOR: " + damageBonus);
+                player.Damage(finalDamage);
                 // Instantiate(hitEffect, other.transform.position, Quaternion.identity);
                 currentAttackCooldown = attackCooldown;
             }

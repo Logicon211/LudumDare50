@@ -28,8 +28,10 @@ public class GameManager : MonoBehaviour {
 	public AudioClip finalBossTheme;
 	public AudioClip midBossTheme;
 
-	public AudioSource shopTheme;
+	public AudioSource oneShotAudioSource;
 	public AudioClip errorPurchaseNoise;
+
+	public AudioClip deathSound;
 
 	public float volumeMax = 0.2f;
 
@@ -63,26 +65,6 @@ public class GameManager : MonoBehaviour {
 		// CheckForWaveChange();
 		if (player != null)
 			CheckGameOver();
-
-		if (changeToShopMusic) {
-			shopTheme.volume += Time.deltaTime;
-			if(shopTheme.volume > volumeMax) {
-				shopTheme.volume = volumeMax;
-			}
-			AS.volume -= Time.deltaTime;
-			if(AS.volume < 0f) {
-				AS.volume = 0f;
-			}
-		} else {
-			AS.volume += Time.deltaTime;
-			if(AS.volume > volumeMax) {
-				AS.volume = volumeMax;
-			}
-			shopTheme.volume -= Time.deltaTime;
-			if(shopTheme.volume < 0f) {
-				shopTheme.volume = 0f;
-			}
-		}
 	}
 
 
@@ -92,7 +74,6 @@ public class GameManager : MonoBehaviour {
 
 	public void StartCutScene(int cutSceneIndex) {
 		AS.volume = volumeMax;
-		shopTheme.volume = 0f;
 		ResumeMainMusic();
 
 		Debug.Log("START SCENE INDEX: " + cutSceneIndex);
@@ -112,12 +93,29 @@ public class GameManager : MonoBehaviour {
 
 	public void CheckGameOver() {
 		if (SceneManager.GetActiveScene().name != "GameOverScreen" && !victory){
-			if (playerScript.GetHealth() <= 0f){
+			if (playerScript.GetHealth() <= 0f && !loss){
 				loss = true;
-				SceneManager.LoadScene("GameOverScreen", LoadSceneMode.Single);
+				oneShotAudioSource.PlayOneShot(deathSound);
+				playerScript.DisableOnDeath();
+				IEnumerator coroutine = GameOverCoRoutine(1.5f);
+				StartCoroutine(coroutine);
 			}
 		}
 	}
+
+	// public void GoToGameOverScreen() {
+	// 	SceneManager.LoadScene("GameOverScreen", LoadSceneMode.Single);
+	// }
+
+    private IEnumerator GameOverCoRoutine(float waitTime)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(waitTime);
+			SceneManager.LoadScene("GameOverScreen", LoadSceneMode.Single);
+            print("WaitAndPrint " + Time.time);
+        }
+    }
 
 	public void Victory() {
 		Debug.Log("YOU WIN");
@@ -161,13 +159,13 @@ public class GameManager : MonoBehaviour {
 		AS.Play();
 	}
 
-	public void PlayErrorNoise() {
-		if(changeToShopMusic) {
-			shopTheme.PlayOneShot(errorPurchaseNoise);
-		} else {
-			AS.PlayOneShot(errorPurchaseNoise);
-		}
-	}
+	// public void PlayErrorNoise() {
+	// 	if(changeToShopMusic) {
+	// 		shopTheme.PlayOneShot(errorPurchaseNoise);
+	// 	} else {
+	// 		AS.PlayOneShot(errorPurchaseNoise);
+	// 	}
+	// }
 
 	public void enableLowPassFilter() {
 		lpFilter.enabled = true;
