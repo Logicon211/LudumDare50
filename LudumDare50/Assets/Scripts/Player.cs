@@ -40,6 +40,8 @@ public class Player : MonoBehaviour
         public float maxPlayerHealth;
         public int armor;
 
+        public float speedBonus;
+
     };
     public PlayerStats playerStats;
 
@@ -60,7 +62,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Vector2 velocity = Vector3.Normalize(new Vector2(horizontalMove * playerspeed, verticalMove * playerspeed));
-        PlayerRigidBody.velocity = playerspeed * velocity;
+        PlayerRigidBody.velocity = (playerspeed * playerStats.speedBonus) * velocity;
         if (horizontalMove != 0f || verticalMove != 0f)
         {
             animator.SetBool("isWalking", true);
