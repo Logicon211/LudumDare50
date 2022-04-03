@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
     public AudioClip xpSound;
     public AudioClip levelUpSound;
     public AudioClip healSound;
+    public AudioClip hurtSound;
 
     // Start is called before the first frame update
     void Start()
@@ -85,9 +86,7 @@ public class Player : MonoBehaviour
             
         // }
         // health -= damageTaken;
-        // if(damageTaken > 0f) {
-        //     AS.PlayOneShot(hurtSound);
-        // }
+        AS.PlayOneShot(hurtSound);
         healthbar.SetHealth(currentPlayerHealth/maxPlayerHealth);
     }
 
