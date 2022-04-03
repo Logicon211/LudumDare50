@@ -986,6 +986,7 @@ MonoBehaviour:
   healSound: {fileID: 0}
   hurtSound: {fileID: 8300000, guid: d08a17c1c8b887d41a55b7f201694b18, type: 3}
   lookingRight: 1
+  camera: {fileID: 419738830620979987}
   playerStats:
     damagePercentBonus: 1
     cooldownPercentBonus: 1
