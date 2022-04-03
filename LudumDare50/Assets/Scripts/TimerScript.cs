@@ -11,10 +11,13 @@ public class TimerScript : MonoBehaviour
 
     public TMP_Text timerTxt;
 
+    private GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
         TimerOn = true;
+        gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -29,6 +32,7 @@ public class TimerScript : MonoBehaviour
                 Debug.Log("TIMES UP");
                 TimerOn = false;
                 // TODO: Something when time's up
+                gameManager.TimesUp();
             }
         }
     }

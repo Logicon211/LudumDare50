@@ -106,6 +106,7 @@ public class EnemySpawner : MonoBehaviour
     }
 
     public void SpawnFinalBoss() {
-        // TODO: spawn big bad boy
+        int spawnPositionIndex = Random.Range(0, spawnPositions.Length);
+        EnemyController enemy = Instantiate(finalBoss, spawnPositions[spawnPositionIndex].position, Quaternion.identity).GetComponent<EnemyController>();
     }
 }

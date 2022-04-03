@@ -44,6 +44,9 @@ public class GameManager : MonoBehaviour {
 	public List<Powerup> inactivePowerups = new List<Powerup>();
 	public List<Powerup> activePowerups = new List<Powerup>();
 
+	private EnemySpawner enemySpawner;
+
+	private bool awaitingVictoryScreen = false;
 	private void Awake() {
 		// Load powerups
 		LoadPowerups();
@@ -57,6 +60,7 @@ public class GameManager : MonoBehaviour {
 		playerScript = player.GetComponent<Player>();
 		AS = GetComponent<AudioSource>();
 		lpFilter = GetComponent<AudioLowPassFilter>();
+		enemySpawner = GameObject.FindGameObjectWithTag("EnemySpawner").GetComponent<EnemySpawner>();
 
 	}
 	
@@ -100,6 +104,14 @@ public class GameManager : MonoBehaviour {
 				IEnumerator coroutine = GameOverCoRoutine(1.5f);
 				StartCoroutine(coroutine);
 			}
+		} else if(SceneManager.GetActiveScene().name != "VictoryScene" && victory && playerScript.GetHealth() <= 0f) {
+			if(!awaitingVictoryScreen) {
+				awaitingVictoryScreen = true;
+				oneShotAudioSource.PlayOneShot(deathSound);
+				playerScript.DisableOnDeath();
+				IEnumerator coroutine = VictoryCoRoutine(0.5f);
+				StartCoroutine(coroutine);
+			}
 		}
 	}
 
@@ -117,13 +129,29 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+	private IEnumerator VictoryCoRoutine(float waitTime)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(waitTime);
+			if (SceneManager.GetActiveScene().name != "VictoryScene") {
+				SceneManager.LoadScene("VictoryScene", LoadSceneMode.Single);
+			}
+        }
+    }
+
 	public void Victory() {
 		Debug.Log("YOU WIN");
-		if (SceneManager.GetActiveScene().name != "VictoryScene" && !loss) {
+		if (SceneManager.GetActiveScene().name != "VictoryScene") {
 			victory = true;
 			SceneManager.LoadScene("VictoryScene", LoadSceneMode.Single);
 		}
 
+	}
+
+	public void TimesUp() {
+		victory = true;
+		enemySpawner.SpawnFinalBoss();
 	}
 
 	public void PauseGame() {
