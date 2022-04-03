@@ -26,11 +26,14 @@ public abstract class Powerup : MonoBehaviour {
     float currentCooldown = 0f;
     protected GameObject playerObject;
     protected Player player;
+
+    protected GameManager gameManager;
     protected void Start() {
         gameArea = GameObject.FindGameObjectWithTag("ProjectileArea");
         level = 0;
         playerObject = GameObject.FindGameObjectWithTag("Player");
         player = playerObject.GetComponent<Player>();
+        gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         // Get player object/manager script
     }
 
@@ -124,5 +127,9 @@ public abstract class Powerup : MonoBehaviour {
 
     public Sprite getPowerupIcon() {
         return powerupIcon;
+    }
+
+    public GameManager getGameManager() {
+        return gameManager;
     }
 }

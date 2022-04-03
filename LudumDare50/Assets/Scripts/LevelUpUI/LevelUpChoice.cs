@@ -35,6 +35,7 @@ public class LevelUpChoice : MonoBehaviour
         Debug.Log("Chose level up title: " + title.text);
         if(powerup) {
             powerup.LevelUp(1);
+            powerup.getGameManager().SetPowerupToActive(powerup);
         } else {
             Debug.Log("ERROR: no powerup associated...");
         }

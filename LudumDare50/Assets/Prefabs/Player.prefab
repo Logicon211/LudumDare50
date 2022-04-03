@@ -413,8 +413,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthbar: {fileID: 2199327758232903992}
   xpbar: {fileID: 1996416199943588866}
-  xpSound: {fileID: 8300000, guid: a795e2a1ba418e44c8d1192d91c724a0, type: 3}
-  levelUpSound: {fileID: 8300000, guid: a184f718cb3fa394290ab00bcefbe016, type: 3}
+  xpSound: {fileID: 8300000, guid: ff283de6b2215bb40bb25d1edf8be4a3, type: 3}
+  levelUpSound: {fileID: 8300000, guid: 8c24962c483028e448e81d07ba861f7b, type: 3}
   healSound: {fileID: 0}
 --- !u!50 &419738830537969643
 Rigidbody2D:
@@ -750,7 +750,7 @@ PrefabInstance:
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
       propertyPath: active
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
@@ -763,6 +763,36 @@ PrefabInstance:
       propertyPath: phaseInEffect
       value: 
       objectReference: {fileID: 156964, guid: 55d9dca6fda674649b3dc9a1089b5ebc, type: 3}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelStats.Array.data[0].damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelStats.Array.data[1].damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelStats.Array.data[2].damage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelStats.Array.data[0].cooldown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelStats.Array.data[1].cooldown
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelStats.Array.data[2].cooldown
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
       propertyPath: levelStats.Array.data[0].projectileSpeed

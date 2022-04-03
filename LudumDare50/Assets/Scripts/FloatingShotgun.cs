@@ -19,9 +19,11 @@ public class FloatingShotgun : MonoBehaviour
     private bool fired = false;
 
     private Animator animator;
+    private AudioSource AS;
     void Start()
     {
         animator = this.gameObject.GetComponent<Animator>();
+        AS = this.gameObject.GetComponent<AudioSource>();
     }
 
     public void setStats(float damageIn, float projectileSpeedIn, int numberOfProjectilesIn) {
@@ -49,6 +51,7 @@ public class FloatingShotgun : MonoBehaviour
                     
                     fired = true;
                     animator.SetBool("Shoot", true);
+                    AS.Play();
                     // Debug.Log("SHOTGUN SHOOTING AT: " + (projectileSpeed));
                 }
             } else {

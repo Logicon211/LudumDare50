@@ -21,6 +21,7 @@ public class ShotgunProjectile : MonoBehaviour
         if (other.gameObject.tag == "Enemy") {
             EnemyController enemy = other.gameObject.GetComponent<EnemyController>();
             enemy.Damage(damage);
+            Destroy(this.gameObject);
         }
     }
 }
