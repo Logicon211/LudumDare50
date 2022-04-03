@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -13,7 +14,7 @@ public class LevelUpPopup : MonoBehaviour
 	void Start() {
 		gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
 	}
-	public void PopUp (Powerup[] powerupList) {
+	public void PopUp (List<Powerup> powerupList) {
 		if (powerupList[0]) {
 			choice1.setPowerUp(powerupList[0]);
 			choice1.setTitle(powerupList[0].getPowerupName());

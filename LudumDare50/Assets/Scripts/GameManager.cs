@@ -178,10 +178,16 @@ public class GameManager : MonoBehaviour {
 	public void LevelUp() {
 		if (levelUpMenu) {
 			// Generate 3 level up choices;
-			Powerup[] powerupList = new Powerup[3];
+			List<Powerup> powerupList = new List<Powerup>(3);
 			for (int i = 0; i < 3; i++) {
-				int randomSelection = Random.Range(0, powerupObjects.Length - 0);
-				powerupList[i] = powerupObjects[randomSelection].GetComponent<Powerup>();
+				bool selectedPowerup = false;
+				while(!selectedPowerup) {
+					int randomSelection = Random.Range(0, powerupObjects.Length - 0);
+					if(!powerupList.Contains(powerupObjects[randomSelection].GetComponent<Powerup>())) {
+						powerupList.Add(powerupObjects[randomSelection].GetComponent<Powerup>());
+						selectedPowerup = true;
+					}
+				}
 			}
 
 			levelUpMenu.SetActive(true);
