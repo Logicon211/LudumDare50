@@ -905,16 +905,13 @@ Transform:
   - {fileID: 2552278505188499689}
   - {fileID: 1391673970105904773}
   - {fileID: 419738831913370485}
-<<<<<<< HEAD
   - {fileID: 419738832069395998}
   - {fileID: 419738830532878108}
   - {fileID: 419738830596322263}
   - {fileID: 4858655398029305744}
   - {fileID: 7214011519176739022}
   - {fileID: 419738830499145013}
-=======
-  - {fileID: 4449071155583671798}
->>>>>>> start work on barrel powerup. adding it to player prefab
+  - {fileID: 2747556306508042745}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -984,7 +981,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthbar: {fileID: 2199327758232903992}
   xpbar: {fileID: 1996416199943588866}
-  currentPlayerHealth: 0
   xpSound: {fileID: 8300000, guid: ff283de6b2215bb40bb25d1edf8be4a3, type: 3}
   levelUpSound: {fileID: 8300000, guid: 8c24962c483028e448e81d07ba861f7b, type: 3}
   healSound: {fileID: 0}
@@ -996,11 +992,7 @@ MonoBehaviour:
     overdrive: 0
     maxPlayerHealth: 100
     armor: 0
-<<<<<<< HEAD
     speedBonus: 1
-=======
-    speedBonus: 0
->>>>>>> start work on barrel powerup. adding it to player prefab
 --- !u!50 &419738830537969643
 Rigidbody2D:
   serializedVersion: 4
@@ -1405,6 +1397,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1176069649551156908, guid: 303f3fe00cd8f4048ba91291bb92d195,
     type: 3}
   m_PrefabInstance: {fileID: 216741260961810473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &379751241638940955
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 419738830537969556}
+    m_Modifications:
+    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238254496942365407, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: m_Name
+      value: BarrelPowerup
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 87d35e2dcec2eda438854b4ebd0a13df, type: 3}
+--- !u!4 &2747556306508042745 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+    type: 3}
+  m_PrefabInstance: {fileID: 379751241638940955}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &419738830958985171
 PrefabInstance:
@@ -1863,18 +1930,13 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 419738832259489634}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
 --- !u!1001 &1939171438127398048
-=======
---- !u!1001 &2223130037323603220
->>>>>>> start work on barrel powerup. adding it to player prefab
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 419738830537969556}
     m_Modifications:
-<<<<<<< HEAD
     - target: {fileID: 2250221018242898325, guid: e485f5ba9eaba0a44bd17a43bd6de9e1,
         type: 3}
       propertyPath: m_RootOrder
@@ -2001,34 +2063,10 @@ PrefabInstance:
       value: -0.07730925
       objectReference: {fileID: 0}
     - target: {fileID: 4888087173198029744, guid: 37c7132a842f0434ab2b6b19ee2c4dd0,
-=======
-    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
->>>>>>> start work on barrel powerup. adding it to player prefab
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 4888087173198029744, guid: 37c7132a842f0434ab2b6b19ee2c4dd0,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -2045,47 +2083,20 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4888087173198029744, guid: 37c7132a842f0434ab2b6b19ee2c4dd0,
-=======
-    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
->>>>>>> start work on barrel powerup. adding it to player prefab
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 4888087173198029744, guid: 37c7132a842f0434ab2b6b19ee2c4dd0,
-=======
-    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
->>>>>>> start work on barrel powerup. adding it to player prefab
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 4888087173198029744, guid: 37c7132a842f0434ab2b6b19ee2c4dd0,
-=======
-    - target: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
->>>>>>> start work on barrel powerup. adding it to player prefab
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 7813347955064445460, guid: 37c7132a842f0434ab2b6b19ee2c4dd0,
         type: 3}
       propertyPath: m_Name
@@ -2193,20 +2204,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3831116161072814588, guid: 7b501626384c06349b1ea9b79c9aec63,
     type: 3}
   m_PrefabInstance: {fileID: 3529113362269039147}
-=======
-    - target: {fileID: 4238254496942365407, guid: 87d35e2dcec2eda438854b4ebd0a13df,
-        type: 3}
-      propertyPath: m_Name
-      value: BarrelPowerup
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 87d35e2dcec2eda438854b4ebd0a13df, type: 3}
---- !u!4 &4449071155583671798 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2550271424819151074, guid: 87d35e2dcec2eda438854b4ebd0a13df,
-    type: 3}
-  m_PrefabInstance: {fileID: 2223130037323603220}
->>>>>>> start work on barrel powerup. adding it to player prefab
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4035951218707724007
 PrefabInstance:
