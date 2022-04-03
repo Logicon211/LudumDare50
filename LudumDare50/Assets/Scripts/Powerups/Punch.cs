@@ -3,10 +3,6 @@ using System.Collections;
 
 public class Punch : Powerup
 {
-  public BoxCollider2D rightPunch;
-  public BoxCollider2D leftPunch;
-  string[] allowedDirections = new string[]{"left", "right"};
-  string currentDirection = "down";
   public GameObject punchProjectile;
   public float spawnDelay = .2f;
 
@@ -17,7 +13,6 @@ public class Punch : Powerup
 
   private IEnumerator StartPowerup(int level) {
     bool mirrorAttack = false;
-    Debug.Log(currentStats.damage);
     for (int i = 0; i < currentStats.projectiles + player.playerStats.overdrive ; i++) {
       SpawnProjectile(mirrorAttack);
       mirrorAttack = !mirrorAttack;
