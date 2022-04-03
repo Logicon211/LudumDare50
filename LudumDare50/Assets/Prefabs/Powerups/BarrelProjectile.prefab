@@ -131,7 +131,7 @@ Transform:
   m_GameObject: {fileID: 5477320502135090832}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3946918408853617646}
@@ -240,7 +240,7 @@ MonoBehaviour:
   explosion: {fileID: 9174872887290341322, guid: b3117e9218839ee46b1e6aba30d3f357,
     type: 3}
   teleport: {fileID: 156964, guid: 55d9dca6fda674649b3dc9a1089b5ebc, type: 3}
-  childAnimator: {fileID: 2794150389512071093}
+  circle: {fileID: 5477320502135090832}
   timeToLive: 4
   timeTillExplosion: 0
   markerTimer: 1
