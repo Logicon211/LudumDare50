@@ -32,7 +32,8 @@ public abstract class Powerup : MonoBehaviour {
     private int maxLevel;
     protected virtual void Start() {
         gameArea = GameObject.FindGameObjectWithTag("ProjectileArea");
-        level = 0;
+        // level = 0;
+        SetStats(level);
         playerObject = GameObject.FindGameObjectWithTag("Player");
         player = playerObject.GetComponent<Player>();
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();

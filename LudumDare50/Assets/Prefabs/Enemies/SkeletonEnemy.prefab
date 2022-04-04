@@ -102,8 +102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSmoothing: 0.05
   health: 8
-  attackDamage: 10
-  speed: 3
+  attackDamage: 9
+  speed: 9
   animator: {fileID: 0}
   explosion: {fileID: 156964, guid: 15ff87b027731ae4cbf07bb092fba046, type: 3}
   poofEffect: {fileID: 156964, guid: bfe13d3159b77fd479831552255c3a41, type: 3}

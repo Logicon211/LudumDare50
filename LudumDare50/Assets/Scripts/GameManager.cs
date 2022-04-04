@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour {
 
 	private bool awaitingVictoryScreen = false;
 
-	private bool firstLevelUp = false;
+	public bool firstLevelUp = true;
 	private void Awake() {
 		// Load powerups
 		LoadPowerups();
@@ -212,7 +212,12 @@ public class GameManager : MonoBehaviour {
 			for (int i = 0; i < 3; i++) {
 				bool selectedPowerup = false;
 				while(!selectedPowerup) {
-					int randomSelection = Random.Range(0, powerupObjects.Length - 0);
+					int randomSelection = 0;
+					if (firstLevelUp) {
+						randomSelection = Random.Range(0, Mathf.CeilToInt(powerupObjects.Length/2) - 0);
+					} else {
+						randomSelection = Random.Range(0, powerupObjects.Length - 0);
+					}
 					if(!powerupList.Contains(powerupObjects[randomSelection].GetComponent<Powerup>())) {
 						powerupList.Add(powerupObjects[randomSelection].GetComponent<Powerup>());
 						selectedPowerup = true;

@@ -48,7 +48,7 @@ public class Barrel : Powerup {
         return Random.insideUnitCircle.normalized * radius;
     }
     private void SpawnProjectile() {
-        Debug.Log("spawning");
+        // Debug.Log("spawning");
         Vector2 randomPoint = GetRandomPointInsideDonut(noSpawnArea, spawnRadius) + transform.position;
 
         GameObject barrel = Instantiate(barrelProjectile, gameArea.transform, true);

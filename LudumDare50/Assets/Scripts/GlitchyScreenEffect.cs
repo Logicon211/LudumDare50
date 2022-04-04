@@ -22,9 +22,13 @@ public class GlitchyScreenEffect : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
+    public AudioClip staticSound;
+    private AudioSource AS;
+
     public bool showMainSlide = true;
     void Start()
     {
+        AS = this.GetComponent<AudioSource>();
         currentGlitchTimer = glitchInterval;
         glitchRunningTimer = glitchDuration;
     }
@@ -43,6 +47,7 @@ public class GlitchyScreenEffect : MonoBehaviour
         } else {
             currentGlitchTimer = Random.Range(glitchInterval - randomInterval, glitchInterval + randomInterval);
             isGlitchRunning = true;
+            AS.PlayOneShot(staticSound);
             ToggleSlide();
         }
 

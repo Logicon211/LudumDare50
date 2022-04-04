@@ -8,7 +8,7 @@ public class Laser : Powerup
     public GameObject phaseInEffect;
     public override void UsePowerup() {
         int numberOfShots = 1 + Mathf.CeilToInt(player.playerStats.overdrive/2);
-        for(int i = 0; i <= numberOfShots; i++) {
+        for(int i = 0; i < numberOfShots; i++) {
             float delay = i*0.3f;
             IEnumerator coroutine = FireLaser(delay);
             StartCoroutine(coroutine);

@@ -193,7 +193,7 @@ PrefabInstance:
         type: 3}
       propertyPath: jingle
       value: 
-      objectReference: {fileID: 8300000, guid: 8776e219433fd0f4c939f0f44c6d1c41, type: 3}
+      objectReference: {fileID: 8300000, guid: 4520692f153636c4890380c5ec12de81, type: 3}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: ProgressBar
@@ -237,12 +237,17 @@ PrefabInstance:
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: slides.Array.size
-      value: 16
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: sprite.Array.size
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
+        type: 3}
+      propertyPath: stopMusicOnJingle
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
@@ -253,31 +258,31 @@ PrefabInstance:
         type: 3}
       propertyPath: slides.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 0e29a5614f2d0ae498fc86413420cdb7,
+      objectReference: {fileID: 21300000, guid: 7ff1d95c76369a943b5ef6db3083140a,
         type: 3}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: slides.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 4b6102b55c8498f47856d06386519816,
+      objectReference: {fileID: 21300000, guid: 74d7bb98881c1124eb05b60b640b6070,
         type: 3}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: slides.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: b68e2632ebb9a4740bdc6978db69cb57,
+      objectReference: {fileID: 21300000, guid: 9095acc5e1cfff04183b222003aefc82,
         type: 3}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: slides.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: 02f9f04aac25a3841ba45d23edfc7105,
+      objectReference: {fileID: 21300000, guid: dc483ec0418426b4c8ea07379a21b20e,
         type: 3}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: slides.Array.data[4]
       value: 
-      objectReference: {fileID: 21300000, guid: 3a229aaaecc71c342837ca3e885b50a5,
+      objectReference: {fileID: 21300000, guid: 43223fc90fcffa5409b408fbb7bd5f88,
         type: 3}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
@@ -947,7 +952,7 @@ PrefabInstance:
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: voiceLines.Array.size
-      value: 16
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
@@ -1751,27 +1756,27 @@ PrefabInstance:
         type: 3}
       propertyPath: voiceLines.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 7bcf9a7beb01ead40a9700aa675e9e15, type: 3}
+      objectReference: {fileID: 8300000, guid: 9e7f3a496e362e84a9b84ec97e77d517, type: 3}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: voiceLines.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: a49fea47d071c4b488a6e273c25f8b1f, type: 3}
+      objectReference: {fileID: 8300000, guid: 16a038d436f1aad4b9e8a936d6fe2571, type: 3}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: voiceLines.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: c1b6b1d3db8932b4796a5a432cbfa8a5, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: voiceLines.Array.data[3]
       value: 
-      objectReference: {fileID: 8300000, guid: b415cca46e0d96b44b3b93b1d4952136, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: voiceLines.Array.data[4]
       value: 
-      objectReference: {fileID: 8300000, guid: 64e8743b0d548964fadaa7d0f5413680, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: voiceLines.Array.data[5]
@@ -1800,7 +1805,7 @@ PrefabInstance:
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: slideToStopMusicAndJingle
-      value: 14
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
@@ -2039,9 +2044,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1da3d2dac55dff74497990a4d82e95f9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.186
+  m_Volume: 0.192
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2612,6 +2617,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1849150120641370492, guid: f40b2a2bd63eca2498539d50ead3f6e2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1849150120641370493, guid: f40b2a2bd63eca2498539d50ead3f6e2,
         type: 3}
       propertyPath: m_RootOrder
@@ -2671,6 +2681,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ContinuousMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849150120641370494, guid: f40b2a2bd63eca2498539d50ead3f6e2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849150120641370495, guid: f40b2a2bd63eca2498539d50ead3f6e2,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.192
       objectReference: {fileID: 0}
     - target: {fileID: 1849150120641370495, guid: f40b2a2bd63eca2498539d50ead3f6e2,
         type: 3}

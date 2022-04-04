@@ -53,6 +53,8 @@ public class IntroSpriteFlow : MonoBehaviour
 	public float initialInputLock = 0.5f;
 
 	public bool isFirstSceneReset = false;
+
+	public bool stopMusicOnJingle = true;
 	void Start ()
 	{
 		if (isFirstSceneReset) {
@@ -128,13 +130,14 @@ public class IntroSpriteFlow : MonoBehaviour
 					slideIndex++;
 					//Stop music and play jingle;
 					if (slideIndex == slideToStopMusicAndJingle && audioSource != null) {
-						GameObject[] objs = GameObject.FindGameObjectsWithTag("GlobalMusic");
-						foreach(var music in objs) {
-							Destroy(music);
+						if(stopMusicOnJingle) {
+							GameObject[] objs = GameObject.FindGameObjectsWithTag("GlobalMusic");
+							foreach(var music in objs) {
+								Destroy(music);
+							}
+							audioSource.Stop();
 						}
-						Debug.Log ("JINGLE");
-						audioSource.Stop();
-						audioSource.PlayOneShot (jingle);
+						voiceAudioSource.PlayOneShot (jingle);
 					}
 
 					if(voiceLines.Length > slideIndex && voiceLines[slideIndex] != null) {

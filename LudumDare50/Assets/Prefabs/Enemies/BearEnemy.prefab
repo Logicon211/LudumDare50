@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7622172168266006056}
   - component: {fileID: 8702816617126598231}
   - component: {fileID: 292245553}
+  - component: {fileID: 292245554}
   m_Layer: 11
   m_Name: BearEnemy
   m_TagString: Enemy
@@ -101,8 +102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSmoothing: 0.05
   health: 13
-  attackDamage: 13
-  speed: 2.5
+  attackDamage: 12
+  speed: 8
   animator: {fileID: 0}
   explosion: {fileID: 156964, guid: 15ff87b027731ae4cbf07bb092fba046, type: 3}
   poofEffect: {fileID: 156964, guid: bfe13d3159b77fd479831552255c3a41, type: 3}
@@ -151,3 +152,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0.037558556, y: -0.047813773}
   m_Size: {x: 1.7131386, y: 2.7390945}
   m_Direction: 0
+--- !u!95 &292245554
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2551079741640418554}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fa047333f2cfadc4db35aa689587df6b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

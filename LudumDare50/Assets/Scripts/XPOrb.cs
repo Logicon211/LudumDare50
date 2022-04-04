@@ -22,12 +22,14 @@ public class XPOrb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distanceToPlayer = Vector2.Distance(player.transform.position, this.transform.position);
-        if(distanceToPlayer <= magnetDistance) {
-            Vector3 normal = (player.transform.position - transform.position).normalized;
-           
-            Vector3 targetVelocity = new Vector2((normal.x * magnetSpeed * Time.fixedDeltaTime) * 10f, (normal.y * magnetSpeed * Time.fixedDeltaTime) * 10f);
-            RB.velocity = Vector3.SmoothDamp(RB.velocity, targetVelocity, ref velocity, movementSmoothing);
+        if(player) {
+            float distanceToPlayer = Vector2.Distance(player.transform.position, this.transform.position);
+            if(distanceToPlayer <= magnetDistance) {
+                Vector3 normal = (player.transform.position - transform.position).normalized;
+            
+                Vector3 targetVelocity = new Vector2((normal.x * magnetSpeed * Time.fixedDeltaTime) * 10f, (normal.y * magnetSpeed * Time.fixedDeltaTime) * 10f);
+                RB.velocity = Vector3.SmoothDamp(RB.velocity, targetVelocity, ref velocity, movementSmoothing);
+            }
         }
     }
 

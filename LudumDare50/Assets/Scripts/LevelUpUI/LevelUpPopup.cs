@@ -42,6 +42,7 @@ public class LevelUpPopup : MonoBehaviour
 	public void ClosePopUp() {
 		gameObject.SetActive(false);
 		gameManager.disableLowPassFilter();
+		gameManager.firstLevelUp = false;
 	}
 
 }

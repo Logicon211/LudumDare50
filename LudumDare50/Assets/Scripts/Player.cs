@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     private float currentPlayerHealth;
 
     private float xpNeededToLevel = 100f;
+    public float xpNeededRampUp = 1.1f;
     private float currentPlayerXP = 0f;
     private float playerspeed = 4.2f;
 
@@ -129,6 +130,7 @@ public class Player : MonoBehaviour
                 AS.PlayOneShot(levelUpSound);
             }
             currentPlayerXP = currentPlayerXP - xpNeededToLevel;
+            xpNeededToLevel = xpNeededToLevel * xpNeededRampUp;
             gameManager.LevelUp();
         }
         xpbar.SetXP(currentPlayerXP/xpNeededToLevel);

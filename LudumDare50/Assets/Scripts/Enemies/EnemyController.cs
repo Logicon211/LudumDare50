@@ -181,7 +181,6 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
             if (currentAttackCooldown <= 0f) {
                 Player player = other.gameObject.GetComponent<Player>();
                 float finalDamage = attackDamage * damageBonus;
-                Debug.Log("DAMAGING PLAYER FOR: " + damageBonus);
                 player.Damage(finalDamage);
                 // Instantiate(hitEffect, other.transform.position, Quaternion.identity);
                 currentAttackCooldown = attackCooldown;

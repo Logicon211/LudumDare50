@@ -981,9 +981,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthbar: {fileID: 2199327758232903992}
   xpbar: {fileID: 1996416199943588866}
+  xpNeededRampUp: 1.1
   xpSound: {fileID: 8300000, guid: ff283de6b2215bb40bb25d1edf8be4a3, type: 3}
   levelUpSound: {fileID: 8300000, guid: 8c24962c483028e448e81d07ba861f7b, type: 3}
-  healSound: {fileID: 0}
+  healSound: {fileID: 8300000, guid: 84db6e6a726ab9e4c91e65bd4a321a1a, type: 3}
   hurtSound: {fileID: 8300000, guid: d08a17c1c8b887d41a55b7f201694b18, type: 3}
   lookingRight: 1
   camera: {fileID: 419738830620979987}
@@ -1343,6 +1344,11 @@ PrefabInstance:
       objectReference: {fileID: 156964, guid: 55d9dca6fda674649b3dc9a1089b5ebc, type: 3}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
+      propertyPath: levelStats.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
       propertyPath: levelDescriptions.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -1383,6 +1389,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
+      propertyPath: levelStats.Array.data[3].damage
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelStats.Array.data[4].damage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
       propertyPath: levelStats.Array.data[0].cooldown
       value: 1.8
       objectReference: {fileID: 0}
@@ -1398,17 +1414,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
+      propertyPath: levelStats.Array.data[3].cooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelStats.Array.data[4].cooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
       propertyPath: levelStats.Array.data[0].projectiles
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
       propertyPath: levelStats.Array.data[1].projectiles
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
       propertyPath: levelStats.Array.data[2].projectiles
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelStats.Array.data[3].projectiles
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelStats.Array.data[4].projectiles
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
@@ -1424,6 +1460,16 @@ PrefabInstance:
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
       propertyPath: levelStats.Array.data[2].projectileSpeed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelStats.Array.data[3].projectileSpeed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
+        type: 3}
+      propertyPath: levelStats.Array.data[4].projectileSpeed
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6653655116029061252, guid: 303f3fe00cd8f4048ba91291bb92d195,
@@ -1506,6 +1552,32 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarrelPowerup
       objectReference: {fileID: 0}
+    - target: {fileID: 7331074160731979281, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: Level
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331074160731979281, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: active
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331074160731979281, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: powerupIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: c722ef6707a424142b0b9026310728a2,
+        type: 3}
+    - target: {fileID: 7331074160731979281, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: powerupName
+      value: Nuclear Barrels
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331074160731979281, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: levelStats.Array.data[3].damage
+      value: 24
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87d35e2dcec2eda438854b4ebd0a13df, type: 3}
 --- !u!4 &2747556306508042745 stripped
@@ -1583,8 +1655,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
+      propertyPath: Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
       propertyPath: active
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
@@ -1594,7 +1671,7 @@ PrefabInstance:
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
@@ -1644,7 +1721,7 @@ PrefabInstance:
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[3].damage
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
@@ -1654,6 +1731,11 @@ PrefabInstance:
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[5].damage
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: levelStats.Array.data[6].damage
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
@@ -1669,7 +1751,7 @@ PrefabInstance:
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[2].cooldown
-      value: 4.4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
@@ -1684,6 +1766,11 @@ PrefabInstance:
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[5].cooldown
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
+      propertyPath: levelStats.Array.data[6].cooldown
       value: 4.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2341,7 +2428,7 @@ PrefabInstance:
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
       propertyPath: levelStats.Array.size
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
@@ -2411,7 +2498,7 @@ PrefabInstance:
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
       propertyPath: levelStats.Array.data[4].damage
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
@@ -2421,7 +2508,7 @@ PrefabInstance:
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
       propertyPath: levelStats.Array.data[6].damage
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
@@ -2432,6 +2519,11 @@ PrefabInstance:
         type: 3}
       propertyPath: levelStats.Array.data[8].damage
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelStats.Array.data[9].damage
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
@@ -2471,6 +2563,11 @@ PrefabInstance:
     - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
         type: 3}
       propertyPath: levelStats.Array.data[8].cooldown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4454520170228135313, guid: 983c68670ae12974db420626d80a7ddc,
+        type: 3}
+      propertyPath: levelStats.Array.data[9].cooldown
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4454520170228135314, guid: 983c68670ae12974db420626d80a7ddc,
@@ -2667,7 +2764,7 @@ PrefabInstance:
     - target: {fileID: 8345003295027470925, guid: 640beef165fcf944d89296eecc76462f,
         type: 3}
       propertyPath: levelDescriptions.Array.data[0]
-      value: Increases AOE or number of projectiles in all attacks
+      value: Increases number of projectiles in all attacks
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 640beef165fcf944d89296eecc76462f, type: 3}
@@ -2854,6 +2951,41 @@ PrefabInstance:
         type: 3}
       propertyPath: powerupName
       value: Nuclear Fist
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832150350835955379, guid: e7a982e44e8592e418f050c5154c0d27,
+        type: 3}
+      propertyPath: levelStats.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832150350835955379, guid: e7a982e44e8592e418f050c5154c0d27,
+        type: 3}
+      propertyPath: levelStats.Array.data[4].speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832150350835955379, guid: e7a982e44e8592e418f050c5154c0d27,
+        type: 3}
+      propertyPath: levelDescriptions.Array.data[1]
+      value: Throw an extra punch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832150350835955379, guid: e7a982e44e8592e418f050c5154c0d27,
+        type: 3}
+      propertyPath: levelStats.Array.data[4].damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832150350835955379, guid: e7a982e44e8592e418f050c5154c0d27,
+        type: 3}
+      propertyPath: levelStats.Array.data[4].cooldown
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832150350835955379, guid: e7a982e44e8592e418f050c5154c0d27,
+        type: 3}
+      propertyPath: levelStats.Array.data[1].projectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832150350835955379, guid: e7a982e44e8592e418f050c5154c0d27,
+        type: 3}
+      propertyPath: levelStats.Array.data[4].projectiles
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a982e44e8592e418f050c5154c0d27, type: 3}
