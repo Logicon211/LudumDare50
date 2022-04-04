@@ -675,7 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6121ee17dd8b50245ba92e9c0fee585a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLeft: 600
+  TimeLeft: 1
   TimerOn: 0
   timerTxt: {fileID: 1534064734}
 --- !u!1 &1569185078
@@ -2506,7 +2506,7 @@ PrefabInstance:
     - target: {fileID: 3831116161072814587, guid: 7b501626384c06349b1ea9b79c9aec63,
         type: 3}
       propertyPath: levelDescriptions.Array.data[0]
-      value: +30 Increased Maximum Life
+      value: +30 Increased Maximum Life<br>Also heals you this amount
       objectReference: {fileID: 0}
     - target: {fileID: 3831116161072814588, guid: 7b501626384c06349b1ea9b79c9aec63,
         type: 3}
@@ -3001,7 +3001,7 @@ PrefabInstance:
     - target: {fileID: 6352049525195246628, guid: 605444ad9baa0d44e928bc6277c31d2a,
         type: 3}
       propertyPath: speedIncrease
-      value: 0.8
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 6352049525195246628, guid: 605444ad9baa0d44e928bc6277c31d2a,
         type: 3}
@@ -3312,12 +3312,12 @@ PrefabInstance:
     - target: {fileID: 8189931620753189365, guid: 2c91baa55e2ef94499ab56d5a6aa1ceb,
         type: 3}
       propertyPath: armorIncrease
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8189931620753189365, guid: 2c91baa55e2ef94499ab56d5a6aa1ceb,
         type: 3}
       propertyPath: levelDescriptions.Array.data[0]
-      value: +5 Flat damage reduction per hit
+      value: +3 Flat damage reduction per hit
       objectReference: {fileID: 0}
     - target: {fileID: 8189931620753189366, guid: 2c91baa55e2ef94499ab56d5a6aa1ceb,
         type: 3}

@@ -24,16 +24,16 @@ public class TimerScript : MonoBehaviour
     void Update()
     {
         if(TimerOn) {
-            if(TimeLeft > 0) {
-                TimeLeft -= Time.deltaTime;
-                updateTimer(TimeLeft);
-            }
-            else {
-                Debug.Log("TIMES UP");
-                TimerOn = false;
-                // TODO: Something when time's up
-                gameManager.TimesUp();
-            }
+            // if(TimeLeft > 0) {
+            TimeLeft += Time.deltaTime;
+            updateTimer(TimeLeft);
+            // }
+            // else {
+            //     Debug.Log("TIMES UP");
+            //     TimerOn = false;
+            //     // TODO: Something when time's up
+            //     gameManager.TimesUp();
+            // }
         }
     }
 
