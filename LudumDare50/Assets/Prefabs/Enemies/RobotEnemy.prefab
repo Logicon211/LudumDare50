@@ -114,7 +114,8 @@ MonoBehaviour:
   explodeLocation: {fileID: 5482988459403848571}
   debris: []
   armor: 2
-  knockbackMultiplier: 100
+  knockbackMultiplier: 20
+  maxSpeed: 1000
   healthPickup: {fileID: 3414384411010339876, guid: d443f668325d54c4286bde362de47c6d,
     type: 3}
 --- !u!50 &5482988459403848570

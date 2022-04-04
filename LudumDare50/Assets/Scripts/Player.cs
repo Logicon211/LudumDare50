@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     private float xpNeededToLevel = 100f;
     public float xpNeededRampUp = 1.1f;
     private float currentPlayerXP = 0f;
-    private float playerspeed = 4.2f;
+    private float playerspeed = 4f;
 
     private GameManager gameManager;
 

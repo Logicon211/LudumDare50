@@ -33,6 +33,7 @@ public class LaserProjectile : MonoBehaviour
 
             LayerMask mask = LayerMask.GetMask("Enemies");
             filter.SetLayerMask(mask);
+            filter.useTriggers = true;
             
             List<Collider2D> results = new List<Collider2D>();
             boxCollider.OverlapCollider(filter, results);

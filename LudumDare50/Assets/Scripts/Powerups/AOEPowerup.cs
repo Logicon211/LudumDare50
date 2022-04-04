@@ -15,6 +15,7 @@ public class AOEPowerup : Powerup
 
         LayerMask mask = LayerMask.GetMask("Enemies");
         filter.SetLayerMask(mask);
+        filter.useTriggers = true;
         
         List<Collider2D> results = new List<Collider2D>();
         aoeCollider.OverlapCollider(filter, results);

@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelDescriptions:
-  - Increased Maximum Life
+  - +30 Increased Maximum Life
   levelStats: []
   Level: 0
   currentStats:
@@ -58,4 +58,4 @@ MonoBehaviour:
   powerupName: Vitality Boost
   gameArea: {fileID: 0}
   active: 0
-  healthIncrease: 10
+  healthIncrease: 30

@@ -563,7 +563,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -57.9}
+  m_AnchoredPosition: {x: 0, y: -41.8}
   m_SizeDelta: {x: 200, y: 50.000015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1534064735
@@ -1071,7 +1071,7 @@ MonoBehaviour:
   xpSound: {fileID: 8300000, guid: ff283de6b2215bb40bb25d1edf8be4a3, type: 3}
   levelUpSound: {fileID: 8300000, guid: 8c24962c483028e448e81d07ba861f7b, type: 3}
   healSound: {fileID: 8300000, guid: 84db6e6a726ab9e4c91e65bd4a321a1a, type: 3}
-  hurtSound: {fileID: 8300000, guid: d08a17c1c8b887d41a55b7f201694b18, type: 3}
+  hurtSound: {fileID: 8300000, guid: 9db353efa1d3b204d9a85da5ed7adc24, type: 3}
   lookingRight: 1
   camera: {fileID: 419738830620979987}
   playerStats:
@@ -1251,7 +1251,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419738830537969558}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -1459,7 +1459,7 @@ PrefabInstance:
         type: 3}
       propertyPath: phaseInEffect
       value: 
-      objectReference: {fileID: 156964, guid: 55d9dca6fda674649b3dc9a1089b5ebc, type: 3}
+      objectReference: {fileID: 156964, guid: 653749e0ff6ef97479852edaa122b1a7, type: 3}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
       propertyPath: levelStats.Array.size
@@ -1859,7 +1859,7 @@ PrefabInstance:
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelDescriptions.Array.data[0]
-      value: Fire a powerful long range laser dealing 3 damage per tick
+      value: Fire a powerful long range laser
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
@@ -1868,13 +1868,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
+      propertyPath: levelDescriptions.Array.data[2]
+      value: Reduced Cooldown<br> +1 Damage per tick
+      objectReference: {fileID: 0}
+    - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
+        type: 3}
       propertyPath: levelDescriptions.Array.data[3]
-      value: +2 Damage per tick
+      value: +1 Damage per tick
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelDescriptions.Array.data[4]
-      value: +50% Increase in laser range
+      value: +50% Increase in laser range <br> +1 Damage Per Tick
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
@@ -1884,7 +1889,7 @@ PrefabInstance:
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[0].damage
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
@@ -1899,7 +1904,7 @@ PrefabInstance:
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[3].damage
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
@@ -1909,12 +1914,12 @@ PrefabInstance:
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[5].damage
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[6].damage
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
@@ -1999,12 +2004,12 @@ PrefabInstance:
     - target: {fileID: 5576239129637097199, guid: 25bd2e7afafd8b346bbb6f0021e363a3,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5576239129637097199, guid: 25bd2e7afafd8b346bbb6f0021e363a3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.9
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 7551398682029797145, guid: 25bd2e7afafd8b346bbb6f0021e363a3,
         type: 3}
@@ -2496,12 +2501,12 @@ PrefabInstance:
     - target: {fileID: 3831116161072814587, guid: 7b501626384c06349b1ea9b79c9aec63,
         type: 3}
       propertyPath: healthIncrease
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3831116161072814587, guid: 7b501626384c06349b1ea9b79c9aec63,
         type: 3}
       propertyPath: levelDescriptions.Array.data[0]
-      value: +10 Increased Maximum Life
+      value: +30 Increased Maximum Life
       objectReference: {fileID: 0}
     - target: {fileID: 3831116161072814588, guid: 7b501626384c06349b1ea9b79c9aec63,
         type: 3}
@@ -2963,9 +2968,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8345003295027470925, guid: 640beef165fcf944d89296eecc76462f,
         type: 3}
+      propertyPath: powerupIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 5e8b74ac0c4670540926048d8a769479,
+        type: 3}
+    - target: {fileID: 8345003295027470925, guid: 640beef165fcf944d89296eecc76462f,
+        type: 3}
       propertyPath: levelDescriptions.Array.data[0]
-      value: Increases AOE/Projectiles for each ability <br>Laser is upgraded per
-        2 Overdrives
+      value: Increases AOE/Projectiles for every ability <br>(Laser is upgraded per
+        2 Overdrives)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 640beef165fcf944d89296eecc76462f, type: 3}
@@ -2990,12 +3001,12 @@ PrefabInstance:
     - target: {fileID: 6352049525195246628, guid: 605444ad9baa0d44e928bc6277c31d2a,
         type: 3}
       propertyPath: speedIncrease
-      value: 0.1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 6352049525195246628, guid: 605444ad9baa0d44e928bc6277c31d2a,
         type: 3}
       propertyPath: levelDescriptions.Array.data[0]
-      value: + 10% Increased Movement Speed
+      value: + 8% Increased Movement Speed
       objectReference: {fileID: 0}
     - target: {fileID: 6352049525195246629, guid: 605444ad9baa0d44e928bc6277c31d2a,
         type: 3}
@@ -3175,8 +3186,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4832150350835955379, guid: e7a982e44e8592e418f050c5154c0d27,
         type: 3}
-      propertyPath: levelStats.Array.data[4].damage
+      propertyPath: levelStats.Array.data[0].damage
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832150350835955379, guid: e7a982e44e8592e418f050c5154c0d27,
+        type: 3}
+      propertyPath: levelStats.Array.data[1].damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832150350835955379, guid: e7a982e44e8592e418f050c5154c0d27,
+        type: 3}
+      propertyPath: levelStats.Array.data[2].damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832150350835955379, guid: e7a982e44e8592e418f050c5154c0d27,
+        type: 3}
+      propertyPath: levelStats.Array.data[3].damage
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832150350835955379, guid: e7a982e44e8592e418f050c5154c0d27,
+        type: 3}
+      propertyPath: levelStats.Array.data[4].damage
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4832150350835955379, guid: e7a982e44e8592e418f050c5154c0d27,
         type: 3}
@@ -3281,12 +3312,12 @@ PrefabInstance:
     - target: {fileID: 8189931620753189365, guid: 2c91baa55e2ef94499ab56d5a6aa1ceb,
         type: 3}
       propertyPath: armorIncrease
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8189931620753189365, guid: 2c91baa55e2ef94499ab56d5a6aa1ceb,
         type: 3}
       propertyPath: levelDescriptions.Array.data[0]
-      value: Increased flat damage reduction per hit
+      value: +5 Flat damage reduction per hit
       objectReference: {fileID: 0}
     - target: {fileID: 8189931620753189366, guid: 2c91baa55e2ef94499ab56d5a6aa1ceb,
         type: 3}

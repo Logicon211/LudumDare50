@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelDescriptions:
-  - Increased Damage Reduction
+  - Increased Damage Reduction (-5 per hit)
   levelStats: []
   Level: 0
   currentStats:
@@ -58,4 +58,4 @@ MonoBehaviour:
   powerupName: Armor
   gameArea: {fileID: 0}
   active: 0
-  armorIncrease: 1
+  armorIncrease: 5

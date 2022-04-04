@@ -51,22 +51,22 @@ MonoBehaviour:
   - Call in bigger barrels
   - Explosion damage increased
   levelStats:
-  - damage: 23
+  - damage: 19
     speed: 1
     cooldown: 3
     projectiles: 1
     projectileSpeed: 0.2
-  - damage: 23
+  - damage: 19
     speed: 1
     cooldown: 3
     projectiles: 2
     projectileSpeed: 0.2
-  - damage: 23
+  - damage: 21
     speed: 1
     cooldown: 3
     projectiles: 2
     projectileSpeed: 0.2
-  - damage: 23
+  - damage: 22
     speed: 1
     cooldown: 3
     projectiles: 2

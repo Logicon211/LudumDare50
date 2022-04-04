@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 589205886286965689}
   - component: {fileID: 589205886286965688}
   - component: {fileID: 589205886286965637}
+  - component: {fileID: 62237705}
   m_Layer: 17
   m_Name: BossRobot
   m_TagString: Enemy
@@ -108,11 +109,13 @@ MonoBehaviour:
   explosion: {fileID: 156964, guid: 15ff87b027731ae4cbf07bb092fba046, type: 3}
   poofEffect: {fileID: 156964, guid: bfe13d3159b77fd479831552255c3a41, type: 3}
   hitEffect: {fileID: 1410727943527182, guid: fd5f37cdce8bb924ca437ea0068f84af, type: 3}
+  currentHealth: 0
   xpOrb: {fileID: 5758188731844505645, guid: ae36cdaf4aed8334eb7dee17b89bb8a2, type: 3}
   explodeLocation: {fileID: 589205886286965636}
   debris: []
   armor: 0
-  knockbackMultiplier: 100
+  knockbackMultiplier: 1
+  maxSpeed: 1000
   healthPickup: {fileID: 3414384411010339876, guid: d443f668325d54c4286bde362de47c6d,
     type: 3}
 --- !u!95 &589205886286965689
@@ -166,7 +169,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -181,4 +184,30 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1.8, y: 1.5}
+  m_EdgeRadius: 0
+--- !u!61 &62237705
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589205886286965695}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.8, y: 1.5}
+    newSize: {x: 1.8, y: 1.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.3}
   m_EdgeRadius: 0
