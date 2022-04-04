@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 6347cd3499ac0bb4bada0b87bd5d6cbc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -114,7 +114,8 @@ MonoBehaviour:
   explodeLocation: {fileID: 5482988459403848571}
   debris: []
   armor: 2
-  knockbackMultiplier: 100
+  knockbackMultiplier: 20
+  maxSpeed: 1000
   healthPickup: {fileID: 3414384411010339876, guid: d443f668325d54c4286bde362de47c6d,
     type: 3}
 --- !u!50 &5482988459403848570

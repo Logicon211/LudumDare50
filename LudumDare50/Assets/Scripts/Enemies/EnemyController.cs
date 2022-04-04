@@ -47,6 +47,8 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
 
     private float originalXScale;
 
+    public float maxSpeed = 10f;
+
     private float damageBonus = 1f, healthBonus = 1f, speedBonus = 1f;
 
     public GameObject healthPickup;
@@ -81,6 +83,10 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
     }
 
     private void FixedUpdate() {
+        if(RB.velocity.magnitude > maxSpeed)
+        {
+            RB.velocity = RB.velocity.normalized * maxSpeed;
+        }
         Vector3 normal = (player.transform.position - transform.position).normalized;
         moveDir = normal;	
         Move(moveDir.x * (speed * speedBonus) * Time.fixedDeltaTime, moveDir.y * (speed * speedBonus) * Time.fixedDeltaTime);
@@ -188,7 +194,7 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
     //     }
     // }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerStay2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
             if (currentAttackCooldown <= 0f) {
                 Player player = other.gameObject.GetComponent<Player>();

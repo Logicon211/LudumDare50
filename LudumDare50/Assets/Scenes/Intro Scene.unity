@@ -264,7 +264,7 @@ PrefabInstance:
         type: 3}
       propertyPath: slides.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 7ff1d95c76369a943b5ef6db3083140a,
+      objectReference: {fileID: 21300000, guid: 73463bbd6c95bef4680f41575de280a8,
         type: 3}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
@@ -1761,7 +1761,7 @@ PrefabInstance:
         type: 3}
       propertyPath: voiceLines.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 9e7f3a496e362e84a9b84ec97e77d517, type: 3}
+      objectReference: {fileID: 8300000, guid: 2cac6d11ed580854f82bb834c0066f09, type: 3}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: voiceLines.Array.data[2]
