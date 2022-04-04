@@ -22,7 +22,7 @@ public class BarrelProjectile : MonoBehaviour {
     animator = gameObject.GetComponentInChildren<Animator>();
     timeTillExplosion = timeToLive + markerTimer;
     if (barrel.GetLevel() > 2) {
-        sprite.gameObject.transform.localScale *= 2; 
+        sprite.gameObject.transform.localScale *= 1.7f; 
     }
   }
 
@@ -37,7 +37,7 @@ public class BarrelProjectile : MonoBehaviour {
         CheckForHit();
         GameObject barrelExplosion = Instantiate(explosion, transform.position, new Quaternion(), barrel.gameArea.transform);
         if (barrel.GetLevel() > 2) {
-            barrelExplosion.gameObject.transform.localScale *= 2; 
+            barrelExplosion.gameObject.transform.localScale *= 1.7f; 
         }
         Destroy(gameObject);
     }
@@ -47,7 +47,7 @@ public class BarrelProjectile : MonoBehaviour {
       List<Collider2D> results = new List<Collider2D>();
       Physics2D.OverlapCircle(
           new Vector2(this.transform.position.x, this.transform.position.y),
-          barrel.actualExplosionRadius * 2f,
+          barrel.actualExplosionRadius * 1.58f,
           new ContactFilter2D(),
           results
       );

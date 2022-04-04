@@ -176,7 +176,19 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
         }
     }
 
-    private void OnCollisionStay2D(Collision2D other) {
+    // private void OnCollisionStay2D(Collision2D other) {
+    //     if (other.gameObject.tag == "Player") {
+    //         if (currentAttackCooldown <= 0f) {
+    //             Player player = other.gameObject.GetComponent<Player>();
+    //             float finalDamage = attackDamage * damageBonus;
+    //             player.Damage(finalDamage);
+    //             // Instantiate(hitEffect, other.transform.position, Quaternion.identity);
+    //             currentAttackCooldown = attackCooldown;
+    //         }
+    //     }
+    // }
+
+    private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
             if (currentAttackCooldown <= 0f) {
                 Player player = other.gameObject.GetComponent<Player>();
@@ -187,14 +199,5 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
             }
         }
     }
-    // void OnTriggerEnter2D(Collider2D other)
-	// {   
-    //     if (other.gameObject.tag == "Player") {
-    //         CraigController craig = other.gameObject.GetComponent<CraigController>();
-    //         craig.Damage(damage);
-    //     }
-	// 	Instantiate(hitEffect, transform.position, Quaternion.identity);
-	// 	Destroy(gameObject);
-	// }
 
 }

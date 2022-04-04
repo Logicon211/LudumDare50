@@ -258,19 +258,19 @@ PrefabInstance:
         type: 3}
       propertyPath: slides.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 7ff1d95c76369a943b5ef6db3083140a,
+      objectReference: {fileID: 21300000, guid: 9095acc5e1cfff04183b222003aefc82,
         type: 3}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: slides.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 74d7bb98881c1124eb05b60b640b6070,
+      objectReference: {fileID: 21300000, guid: 7ff1d95c76369a943b5ef6db3083140a,
         type: 3}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: slides.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: 9095acc5e1cfff04183b222003aefc82,
+      objectReference: {fileID: 21300000, guid: 74d7bb98881c1124eb05b60b640b6070,
         type: 3}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
@@ -288,7 +288,7 @@ PrefabInstance:
         type: 3}
       propertyPath: slides.Array.data[5]
       value: 
-      objectReference: {fileID: 21300000, guid: a163c75e58e95a94cabfe4ebb3d85a8d,
+      objectReference: {fileID: 21300000, guid: dc18d5a7ee704544ebe20ce2ea187e13,
         type: 3}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
@@ -1756,17 +1756,17 @@ PrefabInstance:
         type: 3}
       propertyPath: voiceLines.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 9e7f3a496e362e84a9b84ec97e77d517, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: voiceLines.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 16a038d436f1aad4b9e8a936d6fe2571, type: 3}
+      objectReference: {fileID: 8300000, guid: 9e7f3a496e362e84a9b84ec97e77d517, type: 3}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: voiceLines.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 16a038d436f1aad4b9e8a936d6fe2571, type: 3}
     - target: {fileID: 114275543527505588, guid: d5aebe7870488f946853beed4c5d3d95,
         type: 3}
       propertyPath: voiceLines.Array.data[3]
