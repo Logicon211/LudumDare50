@@ -111,8 +111,8 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
 
     public void setTimeIncreaseStats(float damageIncrease, float healthIncrease, float speedIncrease) {
         damageBonus += damageIncrease;
-        healthIncrease += healthIncrease;
-        health = health * healthIncrease;
+        healthBonus += healthIncrease;
+        health = health * healthBonus;
         currentHealth = health;
         speedBonus += speedIncrease;
     }

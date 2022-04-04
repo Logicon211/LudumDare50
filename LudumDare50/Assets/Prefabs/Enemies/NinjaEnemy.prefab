@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1414555143190850568}
   - component: {fileID: 8945010907073386735}
   - component: {fileID: 7530201616194589544}
+  - component: {fileID: 563385960}
   m_Layer: 11
   m_Name: NinjaEnemy
   m_TagString: Enemy
@@ -155,3 +156,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &563385960
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343231284118407337}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.6531335, y: -0.23750341}
+  serializedVersion: 2
+  m_Radius: 1.7281142

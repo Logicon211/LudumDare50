@@ -19,7 +19,7 @@ public class PunchProjectile : MonoBehaviour {
     player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     CheckForHit();
     // Gizmos.matrix = projectileBox.transform.localToWorldMatrix;
-    if(punch.GetLevel() >= 2) {
+    if(punch.GetLevel() >= 3) {
       this.transform.localScale = new Vector3(this.transform.localScale.x * 2, this.transform.localScale.y * 2, this.transform.localScale.z * 2);
     }
   }

@@ -1400,7 +1400,7 @@ PrefabInstance:
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
       propertyPath: levelStats.Array.data[0].cooldown
-      value: 1.8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
@@ -1410,17 +1410,17 @@ PrefabInstance:
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
       propertyPath: levelStats.Array.data[2].cooldown
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
       propertyPath: levelStats.Array.data[3].cooldown
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
       propertyPath: levelStats.Array.data[4].cooldown
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1505169007178923628, guid: 303f3fe00cd8f4048ba91291bb92d195,
         type: 3}
@@ -1575,8 +1575,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7331074160731979281, guid: 87d35e2dcec2eda438854b4ebd0a13df,
         type: 3}
+      propertyPath: levelStats.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331074160731979281, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: levelStats.Array.data[4].speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331074160731979281, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: levelDescriptions.Array.data[0]
+      value: An exploding barrel teleports in every so often
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331074160731979281, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
       propertyPath: levelStats.Array.data[3].damage
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331074160731979281, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: levelStats.Array.data[4].damage
       value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331074160731979281, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: levelStats.Array.data[4].cooldown
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331074160731979281, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: levelStats.Array.data[1].projectiles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331074160731979281, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: levelStats.Array.data[4].projectiles
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7331074160731979281, guid: 87d35e2dcec2eda438854b4ebd0a13df,
+        type: 3}
+      propertyPath: levelStats.Array.data[4].projectileSpeed
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87d35e2dcec2eda438854b4ebd0a13df, type: 3}
@@ -1656,12 +1696,12 @@ PrefabInstance:
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: Level
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: active
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
@@ -2764,7 +2804,7 @@ PrefabInstance:
     - target: {fileID: 8345003295027470925, guid: 640beef165fcf944d89296eecc76462f,
         type: 3}
       propertyPath: levelDescriptions.Array.data[0]
-      value: Increases number of projectiles in all attacks
+      value: Increases AOE/Projectiles for each ability
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 640beef165fcf944d89296eecc76462f, type: 3}
@@ -3071,6 +3111,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8189931620753189365, guid: 2c91baa55e2ef94499ab56d5a6aa1ceb,
+        type: 3}
+      propertyPath: armorIncrease
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8189931620753189366, guid: 2c91baa55e2ef94499ab56d5a6aa1ceb,
         type: 3}
