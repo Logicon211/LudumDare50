@@ -35,4 +35,8 @@ public class Punch : Powerup
   public bool LookingRight() {
     return player.lookingRight;
   }
+
+  public override bool isUtilityPowerup() {
+        return false;
+  }
 }

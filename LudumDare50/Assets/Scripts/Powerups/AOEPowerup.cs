@@ -58,4 +58,8 @@ public class AOEPowerup : Powerup
         base.Start();
         initialScale = new Vector3(this.transform.localScale.x, this.transform.localScale.y, this.transform.localScale.z);
     }
+
+    public override bool isUtilityPowerup() {
+        return false;
+    }
 }

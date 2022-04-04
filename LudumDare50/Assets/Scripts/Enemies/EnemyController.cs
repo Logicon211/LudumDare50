@@ -23,7 +23,7 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
 
     private GameObject player;
 
-    private float currentHealth;
+    public float currentHealth;
     private SpriteRenderer spriteRenderer;
 
     private bool isDead = false;

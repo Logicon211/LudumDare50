@@ -879,6 +879,8 @@ GameObject:
   - component: {fileID: 2086226242}
   - component: {fileID: 3577011901717793386}
   - component: {fileID: 1820835688}
+  - component: {fileID: 743671821}
+  - component: {fileID: 743671822}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -1043,7 +1045,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 419738830537969558}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1158,6 +1160,38 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!58 &743671821
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419738830537969558}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.45
+--- !u!58 &743671822
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419738830537969558}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.3
 --- !u!1 &419738830620979987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,7 +1765,7 @@ PrefabInstance:
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelDescriptions.Array.data[3]
-      value: +1 Damage per tick
+      value: +2 Damage per tick
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
@@ -1766,17 +1800,17 @@ PrefabInstance:
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[4].damage
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[5].damage
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
       propertyPath: levelStats.Array.data[6].damage
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8931695305986435299, guid: f9a477d38bb6d1b4a9308a2556fb6321,
         type: 3}
@@ -2360,6 +2394,11 @@ PrefabInstance:
       propertyPath: healthIncrease
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3831116161072814587, guid: 7b501626384c06349b1ea9b79c9aec63,
+        type: 3}
+      propertyPath: levelDescriptions.Array.data[0]
+      value: +10 Increased Maximum Life
+      objectReference: {fileID: 0}
     - target: {fileID: 3831116161072814588, guid: 7b501626384c06349b1ea9b79c9aec63,
         type: 3}
       propertyPath: m_RootOrder
@@ -2804,7 +2843,8 @@ PrefabInstance:
     - target: {fileID: 8345003295027470925, guid: 640beef165fcf944d89296eecc76462f,
         type: 3}
       propertyPath: levelDescriptions.Array.data[0]
-      value: Increases AOE/Projectiles for each ability
+      value: Increases AOE/Projectiles for each ability <br>Laser is upgraded per
+        2 Overdrives
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 640beef165fcf944d89296eecc76462f, type: 3}
@@ -2829,7 +2869,12 @@ PrefabInstance:
     - target: {fileID: 6352049525195246628, guid: 605444ad9baa0d44e928bc6277c31d2a,
         type: 3}
       propertyPath: speedIncrease
-      value: 0.2
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352049525195246628, guid: 605444ad9baa0d44e928bc6277c31d2a,
+        type: 3}
+      propertyPath: levelDescriptions.Array.data[0]
+      value: + 10% Increased Movement Speed
       objectReference: {fileID: 0}
     - target: {fileID: 6352049525195246629, guid: 605444ad9baa0d44e928bc6277c31d2a,
         type: 3}
@@ -3116,6 +3161,11 @@ PrefabInstance:
         type: 3}
       propertyPath: armorIncrease
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8189931620753189365, guid: 2c91baa55e2ef94499ab56d5a6aa1ceb,
+        type: 3}
+      propertyPath: levelDescriptions.Array.data[0]
+      value: Increased flat damage reduction per hit
       objectReference: {fileID: 0}
     - target: {fileID: 8189931620753189366, guid: 2c91baa55e2ef94499ab56d5a6aa1ceb,
         type: 3}

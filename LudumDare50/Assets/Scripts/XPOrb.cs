@@ -40,4 +40,12 @@ public class XPOrb : MonoBehaviour
            Destroy(this.gameObject);
         }
     }
+
+    // private void OnCollisionEnter2D(Collision2D other) {
+    //    if (other.gameObject.tag == "Player") {
+    //        Player player = other.gameObject.GetComponent<Player>();
+    //        player.GainXP(xpGained);
+    //        Destroy(this.gameObject);
+    //     }
+    // }
 }

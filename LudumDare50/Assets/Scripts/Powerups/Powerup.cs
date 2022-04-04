@@ -148,4 +148,8 @@ public abstract class Powerup : MonoBehaviour {
             return currentStats.damage * player.playerStats.damagePercentBonus;
         }
     }
+
+    public virtual bool isUtilityPowerup() {
+        return true;
+    }
 }

@@ -44,11 +44,14 @@ public class GameManager : MonoBehaviour {
 	public List<Powerup> inactivePowerups = new List<Powerup>();
 	public List<Powerup> activePowerups = new List<Powerup>();
 
+	public List<Powerup> powerupListForUI = new List<Powerup>();
+
 	private EnemySpawner enemySpawner;
 
 	private bool awaitingVictoryScreen = false;
 
 	public bool firstLevelUp = true;
+	public bool isInLevelUpScreen = false;
 	private void Awake() {
 		// Load powerups
 		LoadPowerups();
@@ -205,6 +208,9 @@ public class GameManager : MonoBehaviour {
 		lpFilter.enabled = false;
 	}
 
+	public Player GetPlayer() {
+		return playerScript;
+	}
 	public void LevelUp() {
 		if (levelUpMenu) {
 			// Generate 3 level up choices;
@@ -226,6 +232,7 @@ public class GameManager : MonoBehaviour {
 			}
 
 			levelUpMenu.SetActive(true);
+			isInLevelUpScreen = true;
 			LevelUpPopup popUp = levelUpMenu.GetComponent<LevelUpPopup>();
 			enableLowPassFilter();
 			// Disable constant laser sounds while this pop up is here:
@@ -299,7 +306,12 @@ public class GameManager : MonoBehaviour {
 			Powerup powerup = g.GetComponent<Powerup>();
 			if (powerup != null) {
 				if (!powerup.active)	inactivePowerups.Add(powerup);
-				else activePowerups.Add(powerup);
+				else {
+					activePowerups.Add(powerup);
+					if(!powerup.isUtilityPowerup()) {
+						powerupListForUI.Add(powerup);
+					}
+				} 
 			}
 		}
 	}
@@ -309,6 +321,9 @@ public class GameManager : MonoBehaviour {
 		inactivePowerups.Remove(powerup);
 		if(!activePowerups.Contains(powerup)) {
 			activePowerups.Add(powerup);
+			if(!powerup.isUtilityPowerup()) {
+				powerupListForUI.Add(powerup);
+			}
 		}
 	}
 

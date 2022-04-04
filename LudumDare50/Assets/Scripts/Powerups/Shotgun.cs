@@ -38,7 +38,7 @@ public class Shotgun : Powerup
             } else {
                 velocity = RB.velocity.normalized;
             }
-            Vector3 playerMovementDirection = (velocity * 2);
+            Vector3 playerMovementDirection = (velocity * 0.7f);
             Vector3 offsetPosition = new Vector3(player.transform.position.x + playerMovementDirection.x, player.transform.position.y + playerMovementDirection.y, player.transform.position.z);
 
             // Vector3 direction = closest.transform.position - offsetPosition;
@@ -57,7 +57,7 @@ public class Shotgun : Powerup
                 SpriteRenderer renderer = floatingShotgun.GetComponent<SpriteRenderer>();
                 renderer.flipY = true;
             }
-            int finalProjectiles = currentStats.projectiles + player.playerStats.overdrive;
+            int finalProjectiles = currentStats.projectiles + (player.playerStats.overdrive * 2);
             float finalDamage = GetDamage();
             floatingShotgun.GetComponent<FloatingShotgun>().setStats(finalDamage, currentStats.projectileSpeed, finalProjectiles);
             // return closest;
@@ -71,5 +71,9 @@ public class Shotgun : Powerup
     void Update()
     {
         
+    }
+
+    public override bool isUtilityPowerup() {
+        return false;
     }
 }

@@ -73,4 +73,8 @@ public class Laser : Powerup
     {
         
     }
+
+    public override bool isUtilityPowerup() {
+        return false;
+    }
 }

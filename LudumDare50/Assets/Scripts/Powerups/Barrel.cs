@@ -54,4 +54,8 @@ public class Barrel : Powerup {
         GameObject barrel = Instantiate(barrelProjectile, gameArea.transform, true);
         barrel.transform.position = randomPoint;
     }
+
+    public override bool isUtilityPowerup() {
+        return false;
+    }
 }

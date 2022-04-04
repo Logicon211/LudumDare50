@@ -120,6 +120,18 @@ public class Player : MonoBehaviour
         healthbar.SetHealth(currentPlayerHealth/playerStats.maxPlayerHealth);
     }
 
+    public void HealPercentage(float healthPercentageGained) {
+        float health = playerStats.maxPlayerHealth * (healthPercentageGained/100);
+        currentPlayerHealth += health;
+        if(healSound) {
+            AS.PlayOneShot(healSound);
+        }
+        if(currentPlayerHealth > playerStats.maxPlayerHealth) {
+            currentPlayerHealth = playerStats.maxPlayerHealth;
+        }
+        healthbar.SetHealth(currentPlayerHealth/playerStats.maxPlayerHealth);
+    }
+
     public void GainXP(float xpGained) {
         currentPlayerXP += xpGained;
         if(xpSound) {
