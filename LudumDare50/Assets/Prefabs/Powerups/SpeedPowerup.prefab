@@ -58,4 +58,4 @@ MonoBehaviour:
   powerupName: Speed Boost
   gameArea: {fileID: 0}
   active: 0
-  speedIncrease: 0.2
+  speedIncrease: 0.1

@@ -19,12 +19,14 @@ public class StatsScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float damagePercentage = (gameManager.GetPlayer().playerStats.damagePercentBonus - 1f) * 100f;
-        float cooldownPercentage = (gameManager.GetPlayer().playerStats.cooldownPercentBonus - 1f) * 100f;
+        float damagePercentage = Mathf.FloorToInt((gameManager.GetPlayer().playerStats.damagePercentBonus - 1f) * 100f);
+        float cooldownPercentage = Mathf.FloorToInt((gameManager.GetPlayer().playerStats.cooldownPercentBonus - 1f) * 100f);
+        float speedPercentage = Mathf.FloorToInt((gameManager.GetPlayer().playerStats.speedBonus - 1f) * 100f);
 
         string stats = "";
         stats += "Max Health:      " + gameManager.GetPlayer().playerStats.maxPlayerHealth + "\n";
         stats += "Armor:                " + gameManager.GetPlayer().playerStats.armor + "\n";
+        stats += "Speed:              +" + speedPercentage + "%\n";
         stats += "Damage:          +" + damagePercentage + "%\n";
         stats += "Cooldown:      +" + cooldownPercentage + "%\n";
         stats += "Overdrives:       " + gameManager.GetPlayer().playerStats.overdrive + "\n";

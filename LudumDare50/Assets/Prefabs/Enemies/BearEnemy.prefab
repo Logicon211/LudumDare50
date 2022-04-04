@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8702816617126598231}
   - component: {fileID: 292245553}
   - component: {fileID: 292245554}
+  - component: {fileID: 1101359266}
   m_Layer: 11
   m_Name: BearEnemy
   m_TagString: Enemy
@@ -103,11 +104,12 @@ MonoBehaviour:
   movementSmoothing: 0.05
   health: 13
   attackDamage: 12
-  speed: 8
+  speed: 6
   animator: {fileID: 0}
   explosion: {fileID: 156964, guid: 15ff87b027731ae4cbf07bb092fba046, type: 3}
   poofEffect: {fileID: 156964, guid: bfe13d3159b77fd479831552255c3a41, type: 3}
   hitEffect: {fileID: 1410727943527182, guid: fd5f37cdce8bb924ca437ea0068f84af, type: 3}
+  currentHealth: 0
   xpOrb: {fileID: 5758188731844505645, guid: ae36cdaf4aed8334eb7dee17b89bb8a2, type: 3}
   explodeLocation: {fileID: 7715723585435119596}
   debris: []
@@ -146,7 +148,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.016998291, y: 0.04711902}
@@ -172,3 +174,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &1101359266
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2551079741640418554}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.05611658, y: 0.15}
+  serializedVersion: 2
+  m_Radius: 0.6
