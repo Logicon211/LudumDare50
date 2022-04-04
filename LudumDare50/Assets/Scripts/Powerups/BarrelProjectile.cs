@@ -36,6 +36,9 @@ public class BarrelProjectile : MonoBehaviour {
     if (timeTillExplosion <= 0f) {
         CheckForHit();
         GameObject barrelExplosion = Instantiate(explosion, transform.position, new Quaternion(), barrel.gameArea.transform);
+        if (barrel.GetLevel() > 2) {
+            barrelExplosion.gameObject.transform.localScale *= 2; 
+        }
         Destroy(gameObject);
     }
   }
