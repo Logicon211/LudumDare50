@@ -56,7 +56,7 @@ public class EnemySpawner : MonoBehaviour
                 currentRobotTime = robotSpawnInterval;
 
                 float healthBoost = timeElapsed/150f;
-                float damageBoost = timeElapsed/300f;
+                float damageBoost = timeElapsed/600f;
                 float speedBoost = timeElapsed/1500f;
 
                 int robotGroup = 2 + Mathf.FloorToInt(timeElapsed/90f);
@@ -74,7 +74,7 @@ public class EnemySpawner : MonoBehaviour
                 currentBearTime = bearSpawnInterval;
 
                 float healthBoost = timeElapsed/120f;
-                float damageBoost = timeElapsed/200f;
+                float damageBoost = timeElapsed/600f;
                 float speedBoost = timeElapsed/1000f;
 
                 int bearGroup = 2 + Mathf.FloorToInt(timeElapsed/100f);
@@ -92,7 +92,7 @@ public class EnemySpawner : MonoBehaviour
                 currentNinjaTime = ninjaSpawnInterval;
 
                 float healthBoost = timeElapsed/300f;
-                float damageBoost = timeElapsed/200f;
+                float damageBoost = timeElapsed/600f;
                 float speedBoost = timeElapsed/500f;
 
                 int ninjaGroup = 2 + Mathf.FloorToInt(timeElapsed/120f);

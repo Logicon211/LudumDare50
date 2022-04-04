@@ -194,7 +194,7 @@ public class EnemyController: MonoBehaviour, IDamageable<float>, IKillable, IEne
     //     }
     // }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerStay2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
             if (currentAttackCooldown <= 0f) {
                 Player player = other.gameObject.GetComponent<Player>();
