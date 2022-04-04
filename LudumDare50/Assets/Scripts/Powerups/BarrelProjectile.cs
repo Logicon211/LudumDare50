@@ -5,7 +5,7 @@ public class BarrelProjectile : MonoBehaviour {
 
     public GameObject explosion;
     public GameObject teleport;
-    public GameObject childAnimator;
+    public GameObject circle;
     public float timeToLive;
     public float timeTillExplosion;
     public float markerTimer;
@@ -21,6 +21,9 @@ public class BarrelProjectile : MonoBehaviour {
     sprite = gameObject.GetComponent<SpriteRenderer>();
     animator = gameObject.GetComponentInChildren<Animator>();
     timeTillExplosion = timeToLive + markerTimer;
+    if (barrel.GetLevel() > 2) {
+        sprite.gameObject.transform.localScale *= 2; 
+    }
   }
 
   void FixedUpdate() {
@@ -41,11 +44,12 @@ public class BarrelProjectile : MonoBehaviour {
       List<Collider2D> results = new List<Collider2D>();
       Physics2D.OverlapCircle(
           new Vector2(this.transform.position.x, this.transform.position.y),
-          barrel.explosionRadius,
+          barrel.actualExplosionRadius * 2f,
           new ContactFilter2D(),
           results
       );
       if (results.Count > 0) {
+          Debug.Log(results.Count);
           float finalDamage = barrel.currentStats.damage + (12 * barrel.Level) * ( 1 + player.playerStats.damagePercentBonus);
           foreach(Collider2D enemy in results) {
               barrel.DoDamage(enemy.gameObject, finalDamage);
