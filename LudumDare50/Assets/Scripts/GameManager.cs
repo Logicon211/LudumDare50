@@ -47,6 +47,8 @@ public class GameManager : MonoBehaviour {
 	private EnemySpawner enemySpawner;
 
 	private bool awaitingVictoryScreen = false;
+
+	private bool firstLevelUp = false;
 	private void Awake() {
 		// Load powerups
 		LoadPowerups();

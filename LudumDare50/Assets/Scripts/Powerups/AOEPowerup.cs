@@ -35,16 +35,19 @@ public class AOEPowerup : Powerup
     // Update is called once per frame
     void Update()
     {
-        if (level == 2) {
-            this.transform.localScale = new Vector3(initialScale.x * 1.18f, initialScale.y * 1.18f, initialScale.z * 1.18f);
+        float overdriveIncrease = 0.08f * player.playerStats.overdrive;
+        if (level == 1) {
+            this.transform.localScale = new Vector3(initialScale.x * (1f + overdriveIncrease), initialScale.y * (1f + overdriveIncrease), initialScale.z * (1f + overdriveIncrease));
+        } else if (level == 2) {
+            this.transform.localScale = new Vector3(initialScale.x * (1.18f + overdriveIncrease), initialScale.y * (1.18f + overdriveIncrease), initialScale.z * (1.18f + overdriveIncrease));
         } else if(level == 3) {
-            this.transform.localScale = new Vector3(initialScale.x * 1.25f, initialScale.y * 1.25f, initialScale.z * 1.25f);
+            this.transform.localScale = new Vector3(initialScale.x * (1.25f + overdriveIncrease), initialScale.y * (1.25f + overdriveIncrease), initialScale.z * (1.25f + overdriveIncrease));
         } else if(level >= 4 && level < 6) {
-            this.transform.localScale = new Vector3(initialScale.x * 1.33f, initialScale.y * 1.33f, initialScale.z * 1.33f);
+            this.transform.localScale = new Vector3(initialScale.x * (1.33f + overdriveIncrease), initialScale.y * (1.33f + overdriveIncrease), initialScale.z * (1.33f + overdriveIncrease));
         } else if(level >= 6 && level < 8) {
-            this.transform.localScale = new Vector3(initialScale.x * 1.5f, initialScale.y * 1.5f, initialScale.z * 1.5f);
+            this.transform.localScale = new Vector3(initialScale.x * (1.5f + overdriveIncrease), initialScale.y * (1.5f + overdriveIncrease), initialScale.z * (1.5f + overdriveIncrease));
         } else if(level >= 8) {
-            this.transform.localScale = new Vector3(initialScale.x * 1.7f, initialScale.y * 1.7f, initialScale.z * 1.7f);
+            this.transform.localScale = new Vector3(initialScale.x * (1.7f + overdriveIncrease), initialScale.y * (1.7f + overdriveIncrease), initialScale.z * (1.7f + overdriveIncrease));
         }
         if(active) {
             radiation.SetActive(true);

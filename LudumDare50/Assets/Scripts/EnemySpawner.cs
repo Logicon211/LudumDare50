@@ -92,8 +92,8 @@ public class EnemySpawner : MonoBehaviour
                 currentNinjaTime = ninjaSpawnInterval;
 
                 float healthBoost = timeElapsed/300f;
-                float damageBoost = timeElapsed/600f;
-                float speedBoost = timeElapsed/2000f;
+                float damageBoost = timeElapsed/200f;
+                float speedBoost = timeElapsed/500f;
 
                 int ninjaGroup = 2 + Mathf.FloorToInt(timeElapsed/120f);
                 for(int i = 0; i < ninjaGroup; i++) {
